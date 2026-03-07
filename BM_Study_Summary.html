@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Marketing — Study Summary</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --blue: #1a3a6b;
+    --accent: #e8760a;
+    --accent2: #3b82f6;
+    --cream: #f5f0e8;
+    --light: #eef2f8;
+    --white: #ffffff;
+    --text: #1a2340;
+    --muted: #6b7a99;
+    --success: #10b981;
+    --border: #dde3ef;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--navy);
+    padding: 3rem 2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,118,10,0.18) 0%, transparent 70%);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 10%;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+  }
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .course-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--white);
+    line-height: 1.15;
+    font-weight: 900;
+  }
+  .header h1 span { color: var(--accent); }
+  .header-sub {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+    font-weight: 300;
+  }
+  .header-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.75);
+    font-size: 0.78rem;
+    padding: 5px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .meta-pill svg { opacity: 0.7; }
+
+  /* NAV TABS */
+  .tabs-bar {
+    background: var(--white);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(10,22,40,0.06);
+  }
+  .tabs-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 1rem;
+  }
+  .tabs-inner::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--muted);
+    padding: 1rem 1.1rem;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .tab-btn:hover { color: var(--blue); }
+  .tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* MAIN CONTENT */
+  .main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .section { display: none; }
+  .section.active { display: block; animation: fadeIn 0.3s ease; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.6rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 6px rgba(10,22,40,0.04);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 18px rgba(10,22,40,0.08); }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-title .icon {
+    width: 28px; height: 28px;
+    background: var(--light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  /* QUOTE BLOCK */
+  .quote-block {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .quote-block::before {
+    content: '"';
+    position: absolute;
+    top: -10px; left: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    color: rgba(255,255,255,0.07);
+    line-height: 1;
+  }
+  .quote-block p {
+    color: rgba(255,255,255,0.92);
+    font-size: 1rem;
+    line-height: 1.65;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  .quote-block p strong { color: var(--accent); font-style: normal; }
+  .quote-attr {
+    margin-top: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* STAT GRID */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .stat-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.4rem;
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(10,22,40,0.04);
+  }
+  .stat-card .number {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-card .label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  /* KEY POINT LIST */
+  .key-list { list-style: none; }
+  .key-list li {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text);
+  }
+  .key-list li:last-child { border-bottom: none; }
+  .key-list li::before {
+    content: '→';
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .key-list li strong { color: var(--blue); }
+
+  /* COMPARE TABLE */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .compare-table th {
+    background: var(--navy);
+    color: white;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+  }
+  .compare-table th:first-child { border-radius: 8px 0 0 0; }
+  .compare-table th:last-child { border-radius: 0 8px 0 0; }
+  .compare-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  .compare-table tr:nth-child(even) td { background: #f7f9fc; }
+  .compare-table .dim { color: var(--accent2); font-weight: 600; }
+  .compare-table .cat { color: var(--muted); font-size: 0.8rem; font-weight: 500; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent2));
+    border-radius: 2px;
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 1.4rem;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.75rem; top: 5px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .tl-date {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+  }
+  .tl-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--blue);
+  }
+  .tl-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  /* GRADE VISUAL */
+  .grade-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .grade-half {
+    border-radius: 12px;
+    padding: 1.4rem;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+  .grade-half.team { background: linear-gradient(135deg, #fff7ed, #fef3c7); }
+  .grade-half.exam { background: linear-gradient(135deg, #eff6ff, #e0f2fe); }
+  .grade-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .grade-half.team .grade-pct { color: var(--accent); }
+  .grade-half.exam .grade-pct { color: var(--accent2); }
+  .grade-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-top: 0.4rem;
+    color: var(--text);
+  }
+  .grade-detail {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+    line-height: 1.4;
+  }
+
+  /* OBJECTIVES */
+  .obj-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .obj-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+  }
+  .obj-card:nth-child(2) { border-left-color: var(--accent2); }
+  .obj-card:nth-child(3) { border-left-color: var(--success); }
+  .obj-card:nth-child(4) { border-left-color: #a855f7; }
+  .obj-num {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .obj-text {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* SECTION HEADER */
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ALERT */
+  .alert {
+    background: #fff7ed;
+    border: 1px solid #fde68a;
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.85rem;
+    color: #92400e;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+  }
+  .alert strong { color: #7c2d12; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 0;
+    font-size: 0.88rem;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+    border-radius: 4px;
+    padding-left: 4px;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li:hover { background: #f7f9fc; }
+  .chk {
+    width: 18px; height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-size: 0.65rem;
+    color: white;
+  }
+  .checklist li.done .chk {
+    background: var(--success);
+    border-color: var(--success);
+  }
+  .checklist li.done .chk::after { content: '✓'; }
+  .checklist li.done span { text-decoration: line-through; color: var(--muted); }
+
+  /* SESSION 1 SUB-NAV */
+  .s1-subnav {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 4px rgba(10,22,40,0.06);
+  }
+  .s1-btn {
+    padding: 0.45rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    background: var(--light);
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .s1-btn:hover { background: var(--cream); color: var(--blue); border-color: var(--blue); }
+  .s1-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+  .s1-section { display: none; }
+  .s1-section.active { display: block; }
+
+  @media (max-width: 580px) {
+    .stat-grid, .grade-split, .obj-grid { grid-template-columns: 1fr; }
+    .s1-subnav { gap: 0.3rem; }
+    .s1-btn { font-size: 0.72rem; padding: 0.4rem 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="course-tag">F001003A · Ghent University</div>
+    <h1>Business<br><span>Marketing</span></h1>
+    <div class="header-sub">Course Introduction — Prof. Dr. Willem Standaert</div>
+    <div class="header-meta">
+      <div class="meta-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Exam: March 9 · 9–11am
+      </div>
+      <div class="meta-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 Sessions + Exam
+      </div>
+      <div class="meta-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Max 5 per team
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs-bar">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="showTab('overview')">📋 Overview</button>
+    <button class="tab-btn" onclick="showTab('concepts')">💡 Key Concepts</button>
+    <button class="tab-btn" onclick="showTab('b2b')">🏭 B2B vs B2C</button>
+    <button class="tab-btn" onclick="showTab('session1')">📗 Session 1</button>
+    <button class="tab-btn" onclick="showTab('exam')">📝 Exam Info</button>
+    <button class="tab-btn" onclick="showTab('checklist')">✅ Checklist</button>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- OVERVIEW -->
+  <div class="section active" id="overview">
+    <div class="section-label">Course at a Glance</div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🎯</span>Learning Objectives</div>
+      <div class="obj-grid">
+        <div class="obj-card">
+          <div class="obj-num">Objective 01</div>
+          <div class="obj-text">Understand critical differences between consumer & business marketing</div>
+        </div>
+        <div class="obj-card">
+          <div class="obj-num">Objective 02</div>
+          <div class="obj-text">Formulate a B2B marketing strategy and execute a plan</div>
+        </div>
+        <div class="obj-card">
+          <div class="obj-num">Objective 03</div>
+          <div class="obj-text">Gain insight into the complex, dynamic, international, digital & sustainable B2B environment</div>
+        </div>
+        <div class="obj-card">
+          <div class="obj-num">Objective 04</div>
+          <div class="obj-text">Apply theoretical insights to real-life case studies</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📅</span>Session Schedule</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Feb 18 · 9am–12pm</div>
+          <div class="tl-title">Session 1</div>
+          <div class="tl-desc">Lecture Room 1.4 – Ledeganck</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Feb 23 · 9am–12pm</div>
+          <div class="tl-title">Session 2</div>
+          <div class="tl-desc">Aud D (T2) – Ufo</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Feb 25 · 9am–12pm</div>
+          <div class="tl-title">Session 3 — Case Session</div>
+          <div class="tl-desc">Lecture Room 1.4 – Ledeganck</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">March 6 · 9am–4pm</div>
+          <div class="tl-title">Sessions 4–5 — Company Visit</div>
+          <div class="tl-desc">Beaulieu International Group (Bus)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">March 9 · 9am–11am</div>
+          <div class="tl-title">🎓 EXAM</div>
+          <div class="tl-desc">Aud 3 – Ledeganck · Closed book</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY CONCEPTS -->
+  <div class="section" id="concepts">
+    <div class="section-label">Foundational Ideas</div>
+
+    <div class="quote-block">
+      <p>"The purpose of business is to <strong>create a customer</strong>. The business enterprise has two — and only two — basic functions: <strong>marketing and innovation</strong>. Marketing and innovation produce results; all the rest are costs."</p>
+      <div class="quote-attr">— Peter Drucker</div>
+    </div>
+
+    <div class="quote-block" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%);">
+      <p>"Marketing is the science and art of <strong>exploring, creating, and delivering value</strong> to satisfy the needs of a target market at a profit."</p>
+      <div class="quote-attr">— Philip Kotler</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📌</span>Core Takeaways</div>
+      <ul class="key-list">
+        <li>A business exists to <strong>create customers</strong> — marketing is not a department, it's the core purpose</li>
+        <li>Marketing = <strong>exploring + creating + delivering value</strong> profitably</li>
+        <li>B2B (Business-to-Business) marketing targets <strong>organizations, not individual consumers</strong></li>
+        <li>B2B and B2C differ in <strong>degree, not in kind</strong> — but those degrees are substantial (Webster)</li>
+        <li>Many of the world's most valuable brands operate in <strong>both B2B and B2C</strong> (e.g., Microsoft, Amazon, Samsung)</li>
+        <li>Belgian B2B companies like Barco, Barry Callebaut, Bekaert, and Beaulieu are <strong>global leaders</strong> but largely invisible to consumers</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- B2B VS B2C -->
+  <div class="section" id="b2b">
+    <div class="section-label">B2B Market Significance & Differences</div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="number">$150–180T</div>
+        <div class="label">Annual B2B payment volume<br>(2026 estimate)</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">$20–30T</div>
+        <div class="label">Annual B2C payment<br>volume by comparison</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">$36T+</div>
+        <div class="label">B2B e-commerce<br>market by 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">$6.4T</div>
+        <div class="label">Global B2C e-commerce<br>value (much smaller!)</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">⚖️</span>B2B vs. B2C: Key Differences</div>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>B2B</th>
+            <th>B2C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cat">Buyer</td>
+            <td>Organizations / professionals</td>
+            <td>Individual consumers</td>
+          </tr>
+          <tr>
+            <td class="cat">Transaction size</td>
+            <td class="dim">Very high $</td>
+            <td>Typically small $</td>
+          </tr>
+          <tr>
+            <td class="cat">Transaction frequency</td>
+            <td>Lower</td>
+            <td class="dim">Higher</td>
+          </tr>
+          <tr>
+            <td class="cat">Decision process</td>
+            <td>Complex, rational, multi-person</td>
+            <td>Simpler, emotional, individual</td>
+          </tr>
+          <tr>
+            <td class="cat">Relationships</td>
+            <td class="dim">Long-term, strategic</td>
+            <td>Often transactional</td>
+          </tr>
+          <tr>
+            <td class="cat">Brand visibility</td>
+            <td>Often invisible to public</td>
+            <td class="dim">High consumer visibility</td>
+          </tr>
+          <tr>
+            <td class="cat">Market size ($)</td>
+            <td class="dim">~5–9× larger than B2C</td>
+            <td>Smaller by dollar volume</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🏭</span>Notable B2B Companies (Belgian Examples)</div>
+      <ul class="key-list">
+        <li><strong>Barco</strong> — visualization technology ("Visibly yours")</li>
+        <li><strong>Barry Callebaut</strong> — world's largest chocolate manufacturer (sells to food brands, not consumers)</li>
+        <li><strong>Bekaert</strong> — steel wire products ("better together")</li>
+        <li><strong>Beaulieu International Group</strong> — polymers, engineered solutions, flooring (case study company)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EXAM INFO -->
+  <div class="section" id="exam">
+    <div class="section-label">Assessment Structure</div>
+
+    <div class="grade-split">
+      <div class="grade-half team">
+        <div class="grade-pct">50%</div>
+        <div class="grade-name">Team Work</div>
+        <div class="grade-detail">Case assignments + company visit<br>Submit before plenary discussion<br>Max 5 members per team</div>
+      </div>
+      <div class="grade-half exam">
+        <div class="grade-pct">50%</div>
+        <div class="grade-name">Written Exam</div>
+        <div class="grade-detail">March 9 · 9–11am<br>Closed book<br>Open + maybe MCQ questions</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      ⚠️ <strong>Fail rule:</strong> Scoring below 10/20 on either component results in a total score capped at <strong>9/20</strong>, regardless of the other component.
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🔁</span>Resit</div>
+      <ul class="key-list">
+        <li>Resit is a <strong>written exam only (100%)</strong> — team work grade is not carried over</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">👥</span>Peer Evaluation Criteria</div>
+      <ul class="key-list">
+        <li>Prepares cases <strong>thoroughly and delivers high quality</strong></li>
+        <li><strong>Cooperates positively</strong> and works well with others</li>
+        <li>Is <strong>reliable</strong> — meets deadlines, attends meetings, is punctual</li>
+        <li><strong>Takes initiative</strong> during group meetings</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📚</span>Course Materials (on Ufora)</div>
+      <ul class="key-list">
+        <li>Slides + your own notes</li>
+        <li>Cases</li>
+        <li>Exercises</li>
+        <li>Guest lectures / Company visit materials</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SESSION 1 -->
+  <div class="section" id="session1">
+    <div class="section-label">Session 1 — Business Customers, DMU, Buying Processes &amp; Value</div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🎯</span>Session Objectives</div>
+      <div class="obj-grid">
+        <div class="obj-card"><div class="obj-num">01</div><div class="obj-text">Understand firms as customers</div></div>
+        <div class="obj-card"><div class="obj-num">02</div><div class="obj-text">Understand the role of different DMU members</div></div>
+        <div class="obj-card"><div class="obj-num">03</div><div class="obj-text">Analyse B2B buying processes</div></div>
+        <div class="obj-card"><div class="obj-num">04</div><div class="obj-text">Distinguish purchasing orientations</div></div>
+        <div class="obj-card"><div class="obj-num">05</div><div class="obj-text">Manage a purchasing portfolio (Kraljic Matrix)</div></div>
+        <div class="obj-card"><div class="obj-num">06</div><div class="obj-text">Apply responsible sourcing & build a customer value model</div></div>
+      </div>
+    </div>
+
+
+    <!-- SESSION 1 SUB-NAV -->
+    <div class="s1-subnav" id="s1-subnav">
+      <button class="s1-btn active" onclick="showS1('s1-customers')">🏢 Business Customers</button>
+      <button class="s1-btn" onclick="showS1('s1-dmu')">👥 DMU</button>
+      <button class="s1-btn" onclick="showS1('s1-buying')">🔄 Buying Process</button>
+      <button class="s1-btn" onclick="showS1('s1-procurement')">📦 Procurement</button>
+      <button class="s1-btn" onclick="showS1('s1-kraljic')">♟️ Kraljic</button>
+      <button class="s1-btn" onclick="showS1('s1-value')">💎 Value Model</button>
+    </div>
+
+    <!-- SUB-TAB: BUSINESS CUSTOMERS -->
+    <div class="s1-section active" id="s1-customers">
+    <!-- BUSINESS CUSTOMERS -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🏢</span>Business Customers — Definition & Types</div>
+      <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color: var(--accent2); color:#1e3a5f;">
+        <strong>Definition (Anderson & Narus):</strong> Business market customers are firms, institutions, or governments that acquire goods/services for their own use, to incorporate into products they produce, or for resale.<br><br>
+        <strong>Why it matters:</strong> Unlike consumers who buy for personal satisfaction, business customers buy to <em>create value or reduce costs</em> in their own operations. This makes the purchase decision more rational, complex, and often involving multiple people — which is why B2B marketing requires a completely different approach than B2C.
+      </div>
+      <ul class="key-list">
+        <li><strong>B2B — OEM (Original Equipment Manufacturer):</strong> buys components to build own products (e.g., Land Rover buying parts) — <em style="color:var(--muted);">Why: core competency is assembly/design, not making every part; cheaper and faster to source externally</em></li>
+        <li><strong>B2B — User:</strong> buys to use in own operations (e.g., a factory buying machinery) — <em style="color:var(--muted);">Why: the product directly enables or improves their internal processes</em></li>
+        <li><strong>B2B — Intermediaries:</strong> buys to resell (distributors, retailers) — <em style="color:var(--muted);">Why: suppliers don't want to invest in reaching every end customer themselves; intermediaries reduce distribution costs and complexity by acting as partners who already have the reach</em></li>
+        <li><strong>B2B2C / B2R2C:</strong> sells to a business that then sells to consumers (e.g., Barry Callebaut → chocolate brands → consumers) — <em style="color:var(--muted);">Why: the B2B supplier specializes in production at scale; the consumer-facing brand handles marketing, packaging, and retail</em></li>
+        <li><strong>B2B2B:</strong> multiple business layers before end customer — <em style="color:var(--muted);">Why: complex supply chains where each layer adds a specific capability or value (e.g., raw material → component → product → reseller)</em></li>
+        <li><strong>B2G:</strong> sells to government institutions — <em style="color:var(--muted);">Why: governments are massive buyers of infrastructure, IT, defense, and services; winning a government contract means large, stable, long-term revenue</em></li>
+        <li><strong>Dual Marketing:</strong> same supplier targets both B2B and B2C channels simultaneously — <em style="color:var(--muted);">Why: maximizes revenue by serving multiple market segments with the same or adapted product (e.g., Microsoft sells Office to businesses AND consumers)</em></li>
+      </ul>
+      <div style="margin-top:1rem; padding:1rem; background:var(--light); border-radius:8px; font-size:0.83rem; color:var(--muted);">
+        <strong style="color:var(--blue);">Example — Digital Cinema Value System:</strong><br>
+        Texas Instruments (chips) → <strong>Barco</strong> (laser projectors) → CinemaNext (integrator) → Kinepolis (cinema) → End consumer
+      </div>
+    </div>
+
+
+    </div>
+
+    <!-- SUB-TAB: DMU -->
+    <div class="s1-section" id="s1-dmu">
+    <!-- DMU -->
+    <div class="card">
+      <div class="card-title"><span class="icon">👥</span>Decision Making Unit (DMU)</div>
+      <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">The DMU is the group of people involved in a B2B purchase decision. Each plays a distinct role:</p>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Role</th><th>Key Responsibilities</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="dim">Buyer</td><td>Pre-qualifies suppliers (gatekeeper), negotiates terms, evaluates suppliers. Increasingly strategic role.</td></tr>
+          <tr><td class="dim">Gatekeeper</td><td>Controls information flow to/from suppliers; filters who gets access</td></tr>
+          <tr><td class="dim">Influencer</td><td>Influences decisions for strategic goals; can be internal or external experts (consultants); formal or informal</td></tr>
+          <tr><td class="dim">User</td><td>Actually uses the product/service; often involved in performance feedback</td></tr>
+          <tr><td class="dim">Decision Maker</td><td>Has final authority on the purchase</td></tr>
+        </tbody>
+      </table>
+      <div class="alert" style="margin-top:1rem;">
+        ⚠️ <strong>Key insight (Bonoma):</strong> Power does not correlate perfectly with organizational rank. Those with little formal power may block or hinder a purchase.
+      </div>
+    </div>
+
+    <!-- DMU EXAMPLE: MRI SCANNER -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🏥</span>DMU Example — Buying an MRI Scanner</div>
+      <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1.2rem; line-height:1.6;">
+        An MRI scanner is a classic B2B purchase: expensive, complex, long decision cycle, and involves many people across the hospital. Here's how the DMU typically looks — and <em>why</em> each role exists.
+      </div>
+
+      <!-- SEGMENTS -->
+      <div style="margin-bottom:1.2rem;">
+        <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.6rem;">Customer Segments (who might buy an MRI scanner)</div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:0.7rem;">
+          <div style="padding:0.8rem; background:#eff6ff; border-radius:8px; font-size:0.78rem; text-align:center;">
+            <div style="font-size:1.2rem; margin-bottom:0.3rem;">🏥</div>
+            <div style="font-weight:700; color:var(--blue);">Public Hospital</div>
+            <div style="color:var(--muted); margin-top:0.2rem;">Budget-driven, long approval process, government funding constraints</div>
+          </div>
+          <div style="padding:0.8rem; background:#f0fdf4; border-radius:8px; font-size:0.78rem; text-align:center;">
+            <div style="font-size:1.2rem; margin-bottom:0.3rem;">🏢</div>
+            <div style="font-weight:700; color:#166534;">Private Clinic</div>
+            <div style="color:var(--muted); margin-top:0.2rem;">ROI-focused, faster decisions, willing to pay for premium features</div>
+          </div>
+          <div style="padding:0.8rem; background:#fff7ed; border-radius:8px; font-size:0.78rem; text-align:center;">
+            <div style="font-size:1.2rem; margin-bottom:0.3rem;">🔬</div>
+            <div style="font-weight:700; color:#92400e;">Research Institute</div>
+            <div style="color:var(--muted); margin-top:0.2rem;">Needs advanced specs, grant-funded, heavily influenced by academic experts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DMU ROLES -->
+      <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.8rem;">DMU Roles — Who Is Involved & Why</div>
+
+      <div style="display:grid; gap:0.7rem;">
+
+        <div style="display:flex; gap:1rem; align-items:flex-start; padding:1rem; border-radius:10px; background:#fff3e0; border-left:4px solid #f97316;">
+          <div style="font-size:1.5rem; flex-shrink:0;">🚨</div>
+          <div>
+            <div style="font-weight:700; color:#c2410c; font-size:0.88rem;">Initiator — Head of Radiology</div>
+            <div style="font-size:0.8rem; color:#78350f; margin-top:0.3rem; line-height:1.5;">
+              Recognizes the need — e.g., the current MRI is outdated, wait times are too long, or image quality is insufficient for diagnosis.<br>
+              <em>Why this role exists: someone inside the organization has to first say "we need this" before anything else can happen.</em>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:flex-start; padding:1rem; border-radius:10px; background:#eff6ff; border-left:4px solid var(--accent2);">
+          <div style="font-size:1.5rem; flex-shrink:0;">🛒</div>
+          <div>
+            <div style="font-weight:700; color:var(--blue); font-size:0.88rem;">Buyer — Procurement / Purchasing Manager</div>
+            <div style="font-size:0.8rem; color:#1e3a5f; margin-top:0.3rem; line-height:1.5;">
+              Handles the formal process: sends out RFPs, negotiates price and contract terms, manages supplier relationships (Siemens, Philips, GE).<br>
+              <em>Why this role exists: clinical staff shouldn't be negotiating contracts — a dedicated buyer ensures the hospital gets the best deal and follows procurement policy.</em>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:flex-start; padding:1rem; border-radius:10px; background:#fdf4ff; border-left:4px solid #a855f7;">
+          <div style="font-size:1.5rem; flex-shrink:0;">✅</div>
+          <div>
+            <div style="font-weight:700; color:#7e22ce; font-size:0.88rem;">Decision Maker — Hospital CEO / Board of Directors</div>
+            <div style="font-size:0.8rem; color:#581c87; margin-top:0.3rem; line-height:1.5;">
+              Gives final approval, especially for a multi-million euro capital investment. Focuses on budget, strategic fit, and long-term value.<br>
+              <em>Why this role exists: an MRI scanner can cost €1–3M+. No single department head has that authority — it must be signed off at the top.</em>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:flex-start; padding:1rem; border-radius:10px; background:#f0fdf4; border-left:4px solid var(--success);">
+          <div style="font-size:1.5rem; flex-shrink:0;">🔗</div>
+          <div>
+            <div style="font-weight:700; color:#166534; font-size:0.88rem;">Coordinator — Project Manager / IT & Facilities Manager</div>
+            <div style="font-size:0.8rem; color:#14532d; margin-top:0.3rem; line-height:1.5;">
+              Coordinates across departments — ensures the room is built to spec, the IT infrastructure supports the scanner, installation is on schedule, and staff training is arranged.<br>
+              <em>Why this role exists: buying an MRI isn't just purchasing a machine — it involves construction, IT integration, safety compliance, and logistics. Someone needs to manage it all.</em>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:flex-start; padding:1rem; border-radius:10px; background:#fff1f2; border-left:4px solid #f43f5e;">
+          <div style="font-size:1.5rem; flex-shrink:0;">👩‍⚕️</div>
+          <div>
+            <div style="font-weight:700; color:#be123c; font-size:0.88rem;">Users — MRI Technicians & Radiologists</div>
+            <div style="font-size:0.8rem; color:#9f1239; margin-top:0.3rem; line-height:1.5;">
+              Operate the machine daily. Care about image quality, ease of use, software interface, scan speed, and patient comfort.<br>
+              <em>Why this role exists: they know exactly what works in practice. A machine that looks great on paper but is painful to use daily will cause problems — their input prevents bad purchases.</em>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:flex-start; padding:1rem; border-radius:10px; background:#f8fafc; border-left:4px solid var(--muted);">
+          <div style="font-size:1.5rem; flex-shrink:0;">💬</div>
+          <div>
+            <div style="font-weight:700; color:var(--text); font-size:0.88rem;">Influencers — Medical Physicists, External Consultants & Peer Hospitals</div>
+            <div style="font-size:0.8rem; color:var(--muted); margin-top:0.3rem; line-height:1.5;">
+              Provide technical expertise — evaluate Tesla strength, magnet technology, software capabilities, radiation safety, and maintenance costs. Peer hospitals share real-world experiences.<br>
+              <em>Why this role exists: the procurement team and CEO can't evaluate technical specs alone. Expert opinion carries huge weight and can make or break a supplier's chances — even informally.</em>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BONOMA REMINDER -->
+      <div class="alert" style="margin-top:1.2rem;">
+        ⚠️ <strong>Remember Bonoma:</strong> The radiologist (User) might have no formal authority, but if they refuse to work with a certain scanner, the purchase won't happen. Power ≠ rank.
+      </div>
+
+      <!-- BUYING PROCESS LINK -->
+      <div style="margin-top:1rem; padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; color:var(--muted); line-height:1.55;">
+        <strong style="color:var(--blue);">🔗 Link to Buying Process:</strong> For a hospital buying its first MRI (New Task), all 8 buying steps are followed. For an upgrade from an existing brand (Modified Rebuy), steps 1–6 are shortened. For a routine maintenance contract renewal (Straight Rebuy), it goes straight to Order.
+      </div>
+    </div>
+
+
+    </div>
+
+    <!-- SUB-TAB: BUYING PROCESS -->
+    <div class="s1-section" id="s1-buying">
+    <!-- BUYING PROCESS -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🔄</span>B2B Buying Process (Robinson et al., 1967)</div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">Step 1</div><div class="tl-title">Problem Recognition</div><div class="tl-desc">A need is identified within the organization</div></div>
+        <div class="tl-item"><div class="tl-date">Step 2</div><div class="tl-title">Solution Determination</div><div class="tl-desc">Define what kind of solution is needed</div></div>
+        <div class="tl-item"><div class="tl-date">Step 3</div><div class="tl-title">Solution Description</div><div class="tl-desc">Specify exact requirements, quantities, quality</div></div>
+        <div class="tl-item"><div class="tl-date">Step 4</div><div class="tl-title">Search & Qualify Suppliers</div><div class="tl-desc">Identify and screen potential vendors</div></div>
+        <div class="tl-item"><div class="tl-date">Step 5</div><div class="tl-title">Obtain Proposals</div><div class="tl-desc">Request quotes / tenders from shortlisted suppliers</div></div>
+        <div class="tl-item"><div class="tl-date">Step 6</div><div class="tl-title">Evaluate Proposals & Select</div><div class="tl-desc">Score and compare offers; choose supplier</div></div>
+        <div class="tl-item"><div class="tl-date">Step 7</div><div class="tl-title">Order</div><div class="tl-desc">Place the purchase order</div></div>
+        <div class="tl-item"><div class="tl-date">Step 8</div><div class="tl-title">Performance Feedback & Evaluation</div><div class="tl-desc">Assess supplier performance post-delivery</div></div>
+      </div>
+      <div style="margin-top:1.2rem; padding:1rem; background:var(--light); border-radius:8px; font-size:0.83rem;">
+        <strong style="color:var(--blue);">BuyGrid Model — Buying Situation:</strong>
+        <table class="compare-table" style="margin-top:0.6rem; font-size:0.78rem;">
+          <thead><tr><th>Step</th><th>New Task</th><th>Modified Rebuy</th><th>Straight Rebuy</th></tr></thead>
+          <tbody>
+            <tr><td>1–6 (analysis steps)</td><td style="color:var(--success); font-weight:600;">✓ Full</td><td style="color:var(--accent); font-weight:600;">✓ Partial</td><td style="color:var(--muted);">— Skip</td></tr>
+            <tr><td>7–8 (order + review)</td><td style="color:var(--success); font-weight:600;">✓</td><td style="color:var(--success); font-weight:600;">✓</td><td style="color:var(--success); font-weight:600;">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <!-- BUYING PROCESS EXAMPLE -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🏭</span>Voorbeeld — Soudal NV koopt een CNC-freesmachine (New Task)</div>
+      <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1.2rem; line-height:1.6;">
+        <strong>Context:</strong> Soudal NV, een Belgische producent van kit, schuim en lijmen (hoofdkantoor Turnhout), wil haar productielijn uitbreiden. De huidige freesmachines voor het maken van mallen zijn 12 jaar oud en kunnen de nieuwe precisie-eisen voor R&amp;D-prototypes niet meer aan. Dit is een <strong>New Task</strong> — Soudal heeft nog nooit zelf CNC-machines aangekocht; dit was altijd uitbesteed.
+      </div>
+
+      <!-- TIMELINE STEPS -->
+      <div style="position:relative; padding-left:2rem;">
+
+        <!-- Step 1 -->
+        <div style="position:relative; margin-bottom:1.4rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:var(--navy); color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">1</div>
+          <div style="padding:0.9rem 1rem; background:#f8fafc; border-radius:8px; border-left:3px solid var(--navy);">
+            <div style="font-weight:700; font-size:0.85rem; color:var(--navy); margin-bottom:0.3rem;">Problem Recognition</div>
+            <div style="font-size:0.8rem; color:var(--text); line-height:1.6; margin-bottom:0.5rem;">
+              Thomas De Smedt, hoofd van de R&amp;D-afdeling, stelt vast dat de prototypemallen voor nieuwe kitformules 3 weken vertraging oplopen door capaciteitstekort op de oude machines. Hij dient een intern rapport in bij de operationeel directeur: <em>"We verliezen 2 productcycles per kwartaal. We hebben in-house CNC-capaciteit nodig."</em>
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#e0e7ff; border-radius:5px; color:#3730a3; display:inline-block;">
+              👤 <strong>DMU:</strong> Initiator = Thomas (R&amp;D hoofd) · Tijdstip: week 1
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div style="position:relative; margin-bottom:1.4rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:var(--blue); color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">2</div>
+          <div style="padding:0.9rem 1rem; background:#f8fafc; border-radius:8px; border-left:3px solid var(--blue);">
+            <div style="font-weight:700; font-size:0.85rem; color:var(--blue); margin-bottom:0.3rem;">Solution Determination</div>
+            <div style="font-size:0.8rem; color:var(--text); line-height:1.6; margin-bottom:0.5rem;">
+              Een cross-functioneel team (R&amp;D + productie + IT) vergadert. Twee oplossingen worden afgewogen: <br>
+              (A) Blijven uitbesteden aan een loonfrezer in Olen — goedkoper op korte termijn, maar levertijd oncontroleerbaar.<br>
+              (B) Eigen 5-assige CNC-freesmachine aanschaffen — hogere investering, maar volledige controle over doorlooptijd en IP-bescherming voor nieuwe formules.<br>
+              Het team kiest voor optie B.
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#e0e7ff; border-radius:5px; color:#3730a3; display:inline-block;">
+              👥 <strong>DMU:</strong> Influencers = productiechef + IT-manager · Beslissing door operationeel directeur · Tijdstip: week 2–3
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div style="position:relative; margin-bottom:1.4rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:#6366f1; color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">3</div>
+          <div style="padding:0.9rem 1rem; background:#f8fafc; border-radius:8px; border-left:3px solid #6366f1;">
+            <div style="font-weight:700; font-size:0.85rem; color:#6366f1; margin-bottom:0.3rem;">Solution Description (Lastenboek)</div>
+            <div style="font-size:0.8rem; color:var(--text); line-height:1.6; margin-bottom:0.5rem;">
+              Thomas stelt samen met de productiechef een technisch lastenboek op. Vereisten:
+              <div style="margin-top:0.5rem; display:grid; grid-template-columns:1fr 1fr; gap:0.4rem;">
+                <div style="padding:0.35rem 0.6rem; background:white; border-radius:5px; border:1px solid var(--border); font-size:0.75rem;">5-assige bewerking</div>
+                <div style="padding:0.35rem 0.6rem; background:white; border-radius:5px; border:1px solid var(--border); font-size:0.75rem;">Spilsnelheid ≥ 12.000 rpm</div>
+                <div style="padding:0.35rem 0.6rem; background:white; border-radius:5px; border:1px solid var(--border); font-size:0.75rem;">Werkveld min. 600×500×400 mm</div>
+                <div style="padding:0.35rem 0.6rem; background:white; border-radius:5px; border:1px solid var(--border); font-size:0.75rem;">Siemens 840D of gelijkwaardig</div>
+                <div style="padding:0.35rem 0.6rem; background:white; border-radius:5px; border:1px solid var(--border); font-size:0.75rem;">Levering binnen 16 weken</div>
+                <div style="padding:0.35rem 0.6rem; background:white; border-radius:5px; border:1px solid var(--border); font-size:0.75rem;">5 jaar garantie + SLA onderhoud</div>
+              </div>
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#e0e7ff; border-radius:5px; color:#3730a3; display:inline-block; margin-top:0.4rem;">
+              👤 <strong>DMU:</strong> Influencer = externe machineadviseur ingehuurd · Tijdstip: week 3–5
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div style="position:relative; margin-bottom:1.4rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:var(--accent); color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">4</div>
+          <div style="padding:0.9rem 1rem; background:#f8fafc; border-radius:8px; border-left:3px solid var(--accent);">
+            <div style="font-weight:700; font-size:0.85rem; color:var(--accent); margin-bottom:0.3rem;">Search &amp; Qualify Suppliers</div>
+            <div style="font-size:0.8rem; color:var(--text); line-height:1.6; margin-bottom:0.5rem;">
+              De aankoopafdeling stuurt een RFI (Request for Information) naar 9 leveranciers. Na eerste screening blijven 4 over:
+              <div style="margin-top:0.6rem; border-radius:7px; overflow:hidden; border:1px solid var(--border);">
+                <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; background:var(--navy); color:white; font-size:0.72rem; font-weight:700; padding:0.4rem 0.8rem; gap:0.5rem;">
+                  <div>Leverancier</div><div>Land</div><div>Status</div>
+                </div>
+                <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; font-size:0.75rem; padding:0.4rem 0.8rem; gap:0.5rem; border-bottom:1px solid var(--border);">
+                  <div><strong>DMG Mori</strong></div><div>Duitsland/Japan</div><div style="color:var(--success);">✓ Shortlist</div>
+                </div>
+                <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; font-size:0.75rem; padding:0.4rem 0.8rem; gap:0.5rem; border-bottom:1px solid var(--border); background:#fafafa;">
+                  <div><strong>Mazak</strong></div><div>Japan</div><div style="color:var(--success);">✓ Shortlist</div>
+                </div>
+                <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; font-size:0.75rem; padding:0.4rem 0.8rem; gap:0.5rem; border-bottom:1px solid var(--border);">
+                  <div><strong>Heller</strong></div><div>Duitsland</div><div style="color:var(--success);">✓ Shortlist</div>
+                </div>
+                <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; font-size:0.75rem; padding:0.4rem 0.8rem; gap:0.5rem;">
+                  <div><strong>Lokale reseller X</strong></div><div>België</div><div style="color:#ef4444;">✗ Afgevoerd (geen 5-as)</div>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#e0e7ff; border-radius:5px; color:#3730a3; display:inline-block; margin-top:0.4rem;">
+              👤 <strong>DMU:</strong> Buyer (aankoopafdeling) = Gatekeeper — filtert leveranciers voor ze bij Thomas geraken · Tijdstip: week 5–7
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div style="position:relative; margin-bottom:1.4rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:#0891b2; color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">5</div>
+          <div style="padding:0.9rem 1rem; background:#f8fafc; border-radius:8px; border-left:3px solid #0891b2;">
+            <div style="font-weight:700; font-size:0.85rem; color:#0891b2; margin-bottom:0.3rem;">Obtain Proposals (RFQ)</div>
+            <div style="font-size:0.8rem; color:var(--text); line-height:1.6; margin-bottom:0.5rem;">
+              De 3 shortlisted leveranciers ontvangen een formele RFQ (Request for Quotation) met het volledige lastenboek. Ze worden uitgenodigd voor een demo-dag in Turnhout. DMG Mori brengt een salesengineer mee die ter plaatse testfreeswerk uitvoert op aluminium-teststukken. Mazak stuurt een digitale offerte met 3D-simulaties. Heller organiseert een rondleiding in hun referentiefabriek in Nürtingen.
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#e0e7ff; border-radius:5px; color:#3730a3; display:inline-block;">
+              👤 <strong>DMU:</strong> Users (machinisten) beoordelen demo · Buyer beheert het offerteproces · Tijdstip: week 8–11
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div style="position:relative; margin-bottom:1.4rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:#7c3aed; color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">6</div>
+          <div style="padding:0.9rem 1rem; background:#f8fafc; border-radius:8px; border-left:3px solid #7c3aed;">
+            <div style="font-weight:700; font-size:0.85rem; color:#7c3aed; margin-bottom:0.3rem;">Evaluate Proposals &amp; Select</div>
+            <div style="font-size:0.8rem; color:var(--text); line-height:1.6; margin-bottom:0.6rem;">
+              Het evaluatieteam scoort de offertes op 5 criteria met gewichten:
+            </div>
+            <div style="border-radius:7px; overflow:hidden; border:1px solid var(--border); font-size:0.75rem; margin-bottom:0.6rem;">
+              <div style="display:grid; grid-template-columns:2fr 0.6fr 1fr 1fr 1fr; background:#7c3aed; color:white; font-weight:700; padding:0.4rem 0.8rem; gap:0.4rem;">
+                <div>Criterium</div><div>Gewicht</div><div style="text-align:center;">DMG Mori</div><div style="text-align:center;">Mazak</div><div style="text-align:center;">Heller</div>
+              </div>
+              <div style="display:grid; grid-template-columns:2fr 0.6fr 1fr 1fr 1fr; padding:0.4rem 0.8rem; gap:0.4rem; border-bottom:1px solid var(--border);">
+                <div>Technische specs</div><div>30%</div><div style="text-align:center;">9</div><div style="text-align:center;">8</div><div style="text-align:center;">7</div>
+              </div>
+              <div style="display:grid; grid-template-columns:2fr 0.6fr 1fr 1fr 1fr; padding:0.4rem 0.8rem; gap:0.4rem; border-bottom:1px solid var(--border); background:#fafafa;">
+                <div>TCO (prijs + onderhoud 5jr)</div><div>25%</div><div style="text-align:center;">7</div><div style="text-align:center;">9</div><div style="text-align:center;">8</div>
+              </div>
+              <div style="display:grid; grid-template-columns:2fr 0.6fr 1fr 1fr 1fr; padding:0.4rem 0.8rem; gap:0.4rem; border-bottom:1px solid var(--border);">
+                <div>Levertijd</div><div>20%</div><div style="text-align:center;">8</div><div style="text-align:center;">6</div><div style="text-align:center;">9</div>
+              </div>
+              <div style="display:grid; grid-template-columns:2fr 0.6fr 1fr 1fr 1fr; padding:0.4rem 0.8rem; gap:0.4rem; border-bottom:1px solid var(--border); background:#fafafa;">
+                <div>Service &amp; nabijheid BE</div><div>15%</div><div style="text-align:center;">9</div><div style="text-align:center;">6</div><div style="text-align:center;">7</div>
+              </div>
+              <div style="display:grid; grid-template-columns:2fr 0.6fr 1fr 1fr 1fr; padding:0.4rem 0.8rem; gap:0.4rem; border-bottom:1px solid var(--border);">
+                <div>Gebruiksgemak (machinisten)</div><div>10%</div><div style="text-align:center;">8</div><div style="text-align:center;">8</div><div style="text-align:center;">6</div>
+              </div>
+              <div style="display:grid; grid-template-columns:2fr 0.6fr 1fr 1fr 1fr; padding:0.4rem 0.8rem; gap:0.4rem; background:var(--navy); color:white; font-weight:700;">
+                <div>Gewogen totaal</div><div></div><div style="text-align:center; color:#86efac;">8.20 ✓</div><div style="text-align:center;">7.45</div><div style="text-align:center;">7.55</div>
+              </div>
+            </div>
+            <div style="font-size:0.78rem; color:var(--muted); line-height:1.5; margin-bottom:0.5rem;">
+              ⚠️ <strong>Complicatie:</strong> De machinisten (Users) prefereren Mazak omwille van de interface, maar de DMU-beslissing maker (COO) kiest toch voor DMG Mori op basis van de gewogen score en de betere Belgische service-aanwezigheid. <strong>→ Bonoma bevestigd: de Users hebben geen beslissingsmacht, maar hadden wel invloed op het gewicht van "gebruiksgemak".</strong>
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#e0e7ff; border-radius:5px; color:#3730a3; display:inline-block;">
+              👤 <strong>DMU:</strong> Decision Maker = COO · Influencers = machinisten + externe adviseur · Tijdstip: week 12–13
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div style="position:relative; margin-bottom:1.4rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:var(--success); color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">7</div>
+          <div style="padding:0.9rem 1rem; background:#f0fdf4; border-radius:8px; border-left:3px solid var(--success);">
+            <div style="font-weight:700; font-size:0.85rem; color:#166534; margin-bottom:0.3rem;">Order</div>
+            <div style="font-size:0.8rem; color:#14532d; line-height:1.6;">
+              De aankoopafdeling plaatst een formele Purchase Order bij DMG Mori Belgium NV (Zaventem). Contractwaarde: €387.000 inclusief installatie, opleiding voor 4 machinisten en een 5-jarig onderhoudscontract. Betalingsstructuur: 30% voorschot, 60% bij levering, 10% na acceptatietest. Leveringsdatum bevestigd: 14 weken na PO.
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#bbf7d0; border-radius:5px; color:#166534; display:inline-block; margin-top:0.4rem;">
+              👤 <strong>DMU:</strong> Buyer tekent PO · CFO autoriseert betaling · Tijdstip: week 14
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div style="position:relative; margin-bottom:0.5rem;">
+          <div style="position:absolute; left:-2rem; top:0.1rem; width:1.4rem; height:1.4rem; border-radius:50%; background:#dc2626; color:white; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center;">8</div>
+          <div style="padding:0.9rem 1rem; background:#fff7f7; border-radius:8px; border-left:3px solid #dc2626;">
+            <div style="font-weight:700; font-size:0.85rem; color:#dc2626; margin-bottom:0.3rem;">Performance Feedback &amp; Evaluation</div>
+            <div style="font-size:0.8rem; color:var(--text); line-height:1.6; margin-bottom:0.5rem;">
+              Na 3 maanden gebruik evalueert Thomas formeel de machine: maatnauwkeurigheid ±0.01mm (conform spec), gemiddelde setup-tijd 40% lager dan verwacht, 1 technisch incident opgelost binnen 4u door DMG Mori servicetechnicus. Resultaat: <strong>Soudal voegt DMG Mori toe aan haar preferred supplier list</strong>. Bij de volgende machine-aankoop (vervangen van een draaibank) wordt stap 1–6 overgeslagen en gaat Soudal rechtstreeks naar stap 7: <strong>Modified Rebuy → richting Straight Rebuy</strong>.
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin-bottom:0.5rem;">
+              <div style="padding:0.5rem; background:white; border-radius:6px; border:1px solid var(--border); text-align:center; font-size:0.75rem;">
+                <div style="font-size:1.1rem; font-weight:800; color:var(--success);">✓</div>
+                <div style="color:var(--muted);">Maatnauwkeurigheid</div>
+              </div>
+              <div style="padding:0.5rem; background:white; border-radius:6px; border:1px solid var(--border); text-align:center; font-size:0.75rem;">
+                <div style="font-size:1.1rem; font-weight:800; color:var(--success);">–40%</div>
+                <div style="color:var(--muted);">Setup-tijd</div>
+              </div>
+              <div style="padding:0.5rem; background:white; border-radius:6px; border:1px solid var(--border); text-align:center; font-size:0.75rem;">
+                <div style="font-size:1.1rem; font-weight:800; color:var(--success);">&lt;4u</div>
+                <div style="color:var(--muted);">Service responstijd</div>
+              </div>
+            </div>
+            <div style="font-size:0.75rem; padding:0.4rem 0.7rem; background:#fee2e2; border-radius:5px; color:#991b1b; display:inline-block;">
+              👤 <strong>DMU:</strong> User (Thomas) schrijft evaluatierapport → Buyer werkt preferred supplier list bij · Tijdstip: week 28–30
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BUYGRID LINK -->
+      <div style="margin-top:1.2rem; padding:1rem; background:linear-gradient(135deg, var(--navy), var(--blue)); border-radius:8px; color:white; font-size:0.82rem; line-height:1.6;">
+        <strong style="color:var(--accent);">🔗 BuyGrid koppeling:</strong> Dit was een <strong>New Task</strong> → alle 8 stappen doorlopen, 14 weken proces, €387K investering, breed DMU. De <em>volgende</em> CNC-machine wordt een <strong>Modified Rebuy</strong> (stap 1–6 deels overgeslagen, DMG Mori als startpunt). Als Soudal ooit een identieke machine nabestelt: <strong>Straight Rebuy</strong> (alleen stap 7–8).
+      </div>
+    </div>
+
+    </div>
+
+    <!-- SUB-TAB: PROCUREMENT -->
+    <div class="s1-section" id="s1-procurement">
+    <!-- DIRECT VS INDIRECT PROCUREMENT -->    <div class="card">
+      <div class="card-title"><span class="icon">📦</span>Direct vs. Indirect Procurement — What's the Difference?</div>
+
+      <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1rem; line-height:1.6;">
+        When a company buys something, there are always two fundamental questions: <em>Does this go into what we sell?</em> If yes — it's <strong>direct</strong>. If no — it's <strong>indirect</strong>. Both matter, but they require completely different strategies.
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem;">
+        <div style="padding:1.1rem; background:#eff6ff; border-radius:10px; border-top:3px solid var(--accent2);">
+          <div style="font-weight:700; color:var(--blue); font-size:0.9rem; margin-bottom:0.5rem;">🔵 Direct Procurement</div>
+          <div style="font-size:0.8rem; color:#1e3a5f; line-height:1.55;">
+            Buying raw materials, components, or services that <strong>go directly into the final product</strong> you sell to customers.<br><br>
+            <strong>Examples:</strong><br>
+            • A car maker buying steel & tires<br>
+            • Tesla buying battery cells & seats<br>
+            • A food company buying ingredients<br><br>
+            <strong>Why it matters:</strong> If direct procurement stops, production stops — and revenue stops. It's mission-critical.
+          </div>
+        </div>
+        <div style="padding:1.1rem; background:#fff7ed; border-radius:10px; border-top:3px solid var(--accent);">
+          <div style="font-weight:700; color:#92400e; font-size:0.9rem; margin-bottom:0.5rem;">🟠 Indirect Procurement</div>
+          <div style="font-size:0.8rem; color:#78350f; line-height:1.55;">
+            Buying goods and services that <strong>keep the business running</strong> but never end up in the product you sell.<br><br>
+            <strong>Examples:</strong><br>
+            • Office supplies, IT software, laptops<br>
+            • Cleaning services, utilities, security<br>
+            • Marketing agencies, consultants, travel<br><br>
+            <strong>Why it matters:</strong> Doesn't drive revenue directly, but without it operations grind to a halt.
+          </div>
+        </div>
+      </div>
+
+      <div class="alert" style="background:#f0fdf4; border-color:#86efac; border-left-color:var(--success); color:#14532d; margin-bottom:1rem;">
+        💡 <strong>Simple test:</strong> Will this purchase ever reach the customer as part of what we sell? <strong>Yes → Direct. No → Indirect.</strong><br>
+        Tesla buying battery cells = Direct. Tesla buying office chairs = Indirect.
+      </div>
+
+      <table class="compare-table" style="margin-bottom:1rem;">
+        <thead>
+          <tr><th>Dimension</th><th>Direct</th><th>Indirect</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cat">Ends up in product?</td>
+            <td style="color:var(--success); font-weight:600;">✓ Yes</td>
+            <td style="color:var(--muted);">✗ No</td>
+          </tr>
+          <tr>
+            <td class="cat">Impact on financials</td>
+            <td>Cost of Goods Sold (COGS)</td>
+            <td>Operating Expenses (OpEx)</td>
+          </tr>
+          <tr>
+            <td class="cat">Who manages it?</td>
+            <td>Centralized procurement / supply chain team</td>
+            <td>Decentralized — spread across departments (HR, IT, marketing…)</td>
+          </tr>
+          <tr>
+            <td class="cat">Supplier relationships</td>
+            <td>Long-term, strategic, few key suppliers</td>
+            <td>Many vendors, more transactional</td>
+          </tr>
+          <tr>
+            <td class="cat">Forecasting</td>
+            <td>Tied to production planning — carefully forecasted</td>
+            <td>Demand-driven, more ad hoc</td>
+          </tr>
+          <tr>
+            <td class="cat">Inventory focus</td>
+            <td>Critical — stockouts halt production</td>
+            <td>Lower priority, ordered as needed</td>
+          </tr>
+          <tr>
+            <td class="cat">Risk if disrupted</td>
+            <td class="dim">Very high — production stops</td>
+            <td>Operational inefficiency, but production continues</td>
+          </tr>
+          <tr>
+            <td class="cat">% of total spend</td>
+            <td>Typically the larger share in manufacturing</td>
+            <td>Can still be ~40% of total company spend</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.83rem; margin-bottom:0.8rem;">
+        <strong style="color:var(--blue);">⚠️ The Seesaw Effect (why lowest price fails for direct procurement):</strong><br>
+        <span style="color:var(--muted);">Cutting the purchase price of a direct material often increases costs elsewhere — more defects, slower delivery, extra quality checks, or supplier reliability issues. TCO thinking exists specifically to avoid this trap.</span>
+      </div>
+
+      <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.83rem;">
+        <strong style="color:var(--blue);">🔗 Link to Kraljic Matrix:</strong><br>
+        <span style="color:var(--muted);">Direct procurement items tend to fall in the <strong>Strategic</strong> or <strong>Leverage</strong> quadrants (high profit impact). Indirect items often land in <strong>Non-critical</strong> or <strong>Bottleneck</strong> quadrants. The matrix helps prioritize how much attention and relationship investment each category deserves.</span>
+      </div>
+    </div>
+
+    <!-- PURCHASING ORIENTATIONS -->
+    <div class="card">
+      <div class="card-title"><span class="icon">💰</span>3 Purchasing Orientations</div>
+      <div style="display:grid; gap:0.8rem;">
+        <div style="padding:1rem; border-radius:8px; background:#fff7ed; border-left:4px solid var(--accent);">
+          <div style="font-weight:700; color:#92400e; font-size:0.88rem;">1. Lowest Price</div>
+          <div style="font-size:0.82rem; color:#78350f; margin-top:0.3rem;">Maximize power over suppliers; multi-sourcing; use electronic reverse auctions. Risk: seesaw effect — cost reductions in one area cause increases elsewhere.</div>
+        </div>
+        <div style="padding:1rem; border-radius:8px; background:#eff6ff; border-left:4px solid var(--accent2);">
+          <div style="font-weight:700; color:#1e3a5f; font-size:0.88rem;">2. Lowest Total Cost of Ownership (TCO)</div>
+          <div style="font-size:0.82rem; color:#1e40af; margin-top:0.3rem;">TCO = all costs of acquisition + use + disposal/recycling. Uses Activity-Based Costing. Multi-year costs stated as NPV. Avoids the seesaw effect.</div>
+        </div>
+        <div style="padding:1rem; border-radius:8px; background:#f0fdf4; border-left:4px solid var(--success);">
+          <div style="font-weight:700; color:#14532d; font-size:0.88rem;">3. Best Value</div>
+          <div style="font-size:0.82rem; color:#166534; margin-top:0.3rem;">Value = worth in monetary terms of economic, technical, service, and social benefits minus costs. "Price is what you pay, value is what you get." — Warren Buffett</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KRALJIC -->
+
+
+
+    </div>
+
+    <!-- SUB-TAB: KRALJIC -->
+    <div class="s1-section" id="s1-kraljic">
+    <!-- KRALJIC MATRIX EXPANDED -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🗂️</span>Kraljic Matrix — Uitgebreid met Voorbeelden</div>
+      <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1.2rem; line-height:1.6;">
+        De Kraljic Matrix beantwoordt één centrale vraag: <em>hoeveel aandacht en welke strategie verdient elke aankoop?</em> Je verdeelt alle inkopen op basis van twee assen: <strong>winst impact</strong> (hoe belangrijk is dit voor je resultaat?) en <strong>supply risico</strong> (hoe moeilijk is het om dit te krijgen?).
+      </div>
+
+      <!-- 2x2 MATRIX VISUAL -->
+      <div style="margin-bottom:1.2rem;">
+        <div style="display:grid; grid-template-columns:auto 1fr 1fr; grid-template-rows:auto 1fr 1fr; gap:4px;">
+
+          <!-- Top-left empty corner -->
+          <div></div>
+          <!-- Column headers -->
+          <div style="text-align:center; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; padding:0.3rem;">Laag Supply Risico</div>
+          <div style="text-align:center; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; padding:0.3rem;">Hoog Supply Risico</div>
+
+          <!-- Row 1: Hoge winst impact -->
+          <div style="writing-mode:vertical-rl; transform:rotate(180deg); text-align:center; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; padding:0.3rem;">Hoge Winst Impact</div>
+
+          <div style="background:linear-gradient(135deg,#eff6ff,#dbeafe); border-radius:10px; padding:1.1rem; border:2px solid #93c5fd;">
+            <div style="font-size:1.2rem; margin-bottom:0.3rem;">⚡</div>
+            <div style="font-weight:800; color:var(--blue); font-size:0.9rem;">LEVERAGE</div>
+            <div style="font-size:0.75rem; color:#1e3a5f; margin-top:0.4rem; line-height:1.5;">Hoge uitgave, veel leveranciers beschikbaar. Gebruik je inkoopkracht.</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Strategie</div>
+            <div style="font-size:0.75rem; color:#1e3a5f; margin-top:0.2rem;">Onderhandel hard, zet leveranciers tegen elkaar, competitive bidding</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Voorbeelden</div>
+            <div style="font-size:0.75rem; color:#1e3a5f; margin-top:0.2rem;">Staal voor autofabrikant · Standaard IT-hardware · Elektriciteit · Medische handschoenen (groot volume)</div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,#fdf4ff,#ede9fe); border-radius:10px; padding:1.1rem; border:2px solid #c4b5fd;">
+            <div style="font-size:1.2rem; margin-bottom:0.3rem;">🤝</div>
+            <div style="font-weight:800; color:#7e22ce; font-size:0.9rem;">STRATEGIC</div>
+            <div style="font-size:0.75rem; color:#581c87; margin-top:0.4rem; line-height:1.5;">Kritisch voor productie én moeilijk te vervangen. Bouw echte partnerships.</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Strategie</div>
+            <div style="font-size:0.75rem; color:#581c87; margin-top:0.2rem;">Investeer in relatie, deel informatie, co-innoveer, zorg dat leverancier ook baat heeft</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Voorbeelden</div>
+            <div style="font-size:0.75rem; color:#581c87; margin-top:0.2rem;">Tesla → batterijcellen (CATL) · Barry Callebaut → cacao van vaste boeren · MRI scanner (Siemens/Philips) · Gespecialiseerde geïntegreerde software</div>
+          </div>
+
+          <!-- Row 2: Lage winst impact -->
+          <div style="writing-mode:vertical-rl; transform:rotate(180deg); text-align:center; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; padding:0.3rem;">Lage Winst Impact</div>
+
+          <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7); border-radius:10px; padding:1.1rem; border:2px solid #86efac;">
+            <div style="font-size:1.2rem; margin-bottom:0.3rem;">🟢</div>
+            <div style="font-weight:800; color:#166534; font-size:0.9rem;">NON-CRITICAL</div>
+            <div style="font-size:0.75rem; color:#14532d; margin-top:0.4rem; line-height:1.5;">Goedkoop en makkelijk te krijgen. Besteed er zo min mogelijk tijd aan.</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Strategie</div>
+            <div style="font-size:0.75rem; color:#14532d; margin-top:0.2rem;">Automatiseer, gebruik raamcontracten, minimaliseer administratie</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Voorbeelden</div>
+            <div style="font-size:0.75rem; color:#14532d; margin-top:0.2rem;">Pennen, printpapier · Koffie op kantoor · Schoonmaakdoekjes · Ziekenhuisschoonmaakcontract</div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,#fff7ed,#fef3c7); border-radius:10px; padding:1.1rem; border:2px solid #fcd34d;">
+            <div style="font-size:1.2rem; margin-bottom:0.3rem;">⚠️</div>
+            <div style="font-weight:800; color:#92400e; font-size:0.9rem;">BOTTLENECK</div>
+            <div style="font-size:0.75rem; color:#78350f; margin-top:0.4rem; line-height:1.5;">Relatief goedkoop maar als je het niet hebt, loopt alles vast.</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Strategie</div>
+            <div style="font-size:0.75rem; color:#78350f; margin-top:0.2rem;">Bouw voorraad op, zoek alternatieve leveranciers, sluit langetermijncontracten</div>
+            <div style="margin-top:0.6rem; font-size:0.72rem; font-weight:700; color:var(--muted); text-transform:uppercase;">Voorbeelden</div>
+            <div style="font-size:0.75rem; color:#78350f; margin-top:0.2rem;">Specifieke microchip voor machine · Zeldzame grondstof kleine hoeveelheid · Specifiek koelingsmiddel MRI · Vergunning of certificaat</div>
+          </div>
+        </div>
+
+        <!-- Axis labels -->
+        <div style="display:flex; justify-content:center; margin-top:0.5rem;">
+          <div style="font-size:0.72rem; color:var(--muted); font-style:italic;">← Supply Risico →</div>
+        </div>
+      </div>
+
+      <!-- LINK TO OTHER CONCEPTS -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:0.8rem;">
+        <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.8rem; line-height:1.5;">
+          <strong style="color:var(--blue);">🔗 Link naar Direct/Indirect procurement</strong><br>
+          <span style="color:var(--muted);">Direct procurement items (gaan in product) → vaak <strong>Leverage</strong> of <strong>Strategic</strong>.<br>
+          Indirect items (kantoor, IT, facilities) → vaak <strong>Non-critical</strong> of <strong>Bottleneck</strong>.</span>
+        </div>
+        <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.8rem; line-height:1.5;">
+          <strong style="color:var(--blue);">🔗 Link naar Purchasing Orientations</strong><br>
+          <span style="color:var(--muted);"><strong>Non-critical/Leverage</strong> → Lowest Price werkt hier.<br>
+          <strong>Bottleneck</strong> → TCO denken.<br>
+          <strong>Strategic</strong> → Best Value + partnerschap.</span>
+        </div>
+      </div>
+
+      <div class="alert">
+        ⚠️ <strong>Examentip:</strong> De matrix helpt je beslissen hoeveel aandacht elke aankoop verdient. Je bouwt geen strategisch partnership voor printpapier, en je gaat niet alleen op prijs concurreren voor iets wat je hele productie kan stilleggen.
+      </div>
+    </div>
+
+
+    </div>
+
+    <!-- SUB-TAB: VALUE MODEL -->
+    <div class="s1-section" id="s1-value">
+    <!-- CUSTOMER VALUE MODEL -->
+    <div class="card">
+      <div class="card-title"><span class="icon">📊</span>Customer Value Model — 8 Steps</div>
+      <ul class="key-list">
+        <li><strong>Step 1:</strong> List all value and price elements for your offering</li>
+        <li><strong>Step 2:</strong> Determine the incumbent / next best alternative</li>
+        <li><strong>Step 3:</strong> Evaluate <em>points of parity</em> (same), <em>contention</em> (disputed), and <em>difference</em> (clearly better)</li>
+        <li><strong>Step 4:</strong> Identify which points of difference are <em>relevant</em> to customers</li>
+        <li><strong>Step 5:</strong> Write a word equation for each relevant value element to quantify monetary worth</li>
+        <li><strong>Step 6:</strong> List non-quantifiable elements as placeholders (+/–/?)</li>
+        <li><strong>Step 7:</strong> Create a value model spreadsheet (Total Value – Differential Price = Value-in-Use)</li>
+        <li><strong>Step 8:</strong> State your value proposition</li>
+      </ul>
+      <div style="margin-top:1rem; display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;">
+        <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.82rem;">
+          <strong style="color:var(--blue);">Value-in-Use (VIU)</strong><br>
+          <span style="color:var(--muted);">Superior benefits in excess of costs & price your customer gets by choosing you over the competitor.<br><code style="color:var(--accent);">VIU = (Vf – Va) – (Pf – Pa)</code></span>
+        </div>
+        <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.82rem;">
+          <strong style="color:var(--blue);">VIU Price</strong><br>
+          <span style="color:var(--muted);">Indifference price at which customer has no preference between you and competitor.<br><code style="color:var(--accent);">VIU Price = Pa + (Vf – Va)</code></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAR FLEET EXERCISE -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🚗</span>Oefening — Car Fleet Value Model (Solved)</div>
+      <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1.2rem; line-height:1.6;">
+        Een bedrijf koopt een vloot bedrijfswagens en vergelijkt twee leveranciers. De oefening illustreert dat de echte keuze <em>nooit alleen over prijs gaat</em> — het gaat over totale waarde. Dit is de Customer Value Model logica in de praktijk.
+      </div>
+
+      <!-- MAIN TABLE -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:0; border:2px solid var(--navy); border-radius:10px; overflow:hidden; margin-bottom:1.2rem;">
+
+        <!-- HEADER ROW -->
+        <div style="grid-column: 1 / 3; background:var(--navy); color:white; text-align:center; padding:0.7rem; font-weight:700; font-size:0.85rem; letter-spacing:0.05em; border-right:2px solid rgba(255,255,255,0.2);">
+          VALUE
+        </div>
+        <div style="background:var(--blue); color:white; text-align:center; padding:0.7rem; font-weight:700; font-size:0.85rem; letter-spacing:0.05em;">
+          PRICE
+        </div>
+
+        <!-- SUB HEADER ROW -->
+        <div style="background:#1a3a6b; color:rgba(255,255,255,0.85); padding:0.6rem 1rem; font-weight:600; font-size:0.78rem; border-right:1px solid var(--border); border-bottom:1px solid var(--border);">
+          ✅ Benefits
+        </div>
+        <div style="background:#1a3a6b; color:rgba(255,255,255,0.85); padding:0.6rem 1rem; font-weight:600; font-size:0.78rem; border-right:2px solid var(--navy); border-bottom:1px solid var(--border);">
+          ➖ Costs
+        </div>
+        <div style="background:#1a3a6b; color:rgba(255,255,255,0.85); padding:0.6rem 1rem; font-weight:600; font-size:0.78rem; border-bottom:1px solid var(--border);">
+          💶 Price Elements
+        </div>
+
+        <!-- CONTENT ROW -->
+        <div style="padding:1rem; font-size:0.8rem; line-height:1.7; border-right:1px solid var(--border); vertical-align:top;">
+          <div style="display:flex; flex-direction:column; gap:0.4rem;">
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">+</span><span><strong>Lager brandstofverbruik</strong> → lagere maandelijkse exploitatiekosten</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">+</span><span><strong>Hogere veiligheidsrating</strong> → minder ongelukken, lagere verzekeringspremie</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">+</span><span><strong>Hogere betrouwbaarheid</strong> → minder breakdowns, minder productiviteitsverlies</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">+</span><span><strong>Hogere restwaarde</strong> → meer opbrengst bij verkoop na leaseperiode</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">+</span><span><strong>Chauffeurstevredenheid</strong> → comfortabeler = minder verloop, aantrekkelijker werkgever</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">+</span><span><strong>Bedrijfsimago</strong> → premium wagens uitstralen kwaliteit naar klanten</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">+</span><span><strong>Snellere levering</strong> → chauffeurs sneller productief</span></div>
+          </div>
+        </div>
+
+        <div style="padding:1rem; font-size:0.8rem; line-height:1.7; border-right:2px solid var(--navy); vertical-align:top;">
+          <div style="display:flex; flex-direction:column; gap:0.4rem;">
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:#ef4444; font-weight:700; flex-shrink:0;">–</span><span><strong>Hogere onderhoudskosten</strong> bij premium merk</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:#ef4444; font-weight:700; flex-shrink:0;">–</span><span><strong>Omscholing chauffeurs</strong> bij ander merk of systeem</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:#ef4444; font-weight:700; flex-shrink:0;">–</span><span><strong>Hogere wegenbelasting</strong> bij zwaardere motor</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:#ef4444; font-weight:700; flex-shrink:0;">–</span><span><strong>Hogere CO₂-bijdrage</strong> bij niet-elektrisch voertuig</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:#f97316; font-weight:700; flex-shrink:0;">?</span><span><strong>Imago-risico</strong> (luxewagens kunnen negatief overkomen in bepaalde sectoren) <em style="color:var(--muted);">— placeholder</em></span></div>
+          </div>
+        </div>
+
+        <div style="padding:1rem; font-size:0.8rem; line-height:1.7; vertical-align:top;">
+          <div style="display:flex; flex-direction:column; gap:0.4rem;">
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--accent); font-weight:700; flex-shrink:0;">€</span><span><strong>Aankoopprijs / leasebedrag</strong> per wagen per maand</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--accent); font-weight:700; flex-shrink:0;">€</span><span><strong>Prijsverschil t.o.v. alternatief</strong> (referentievoertuig)</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--success); font-weight:700; flex-shrink:0;">–€</span><span><strong>Volumekorting</strong> bij grote vlootaankoop</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--accent); font-weight:700; flex-shrink:0;">€</span><span><strong>Onderhoudscontract</strong> (inbegrepen of niet?)</span></div>
+            <div style="display:flex; gap:6px; align-items:flex-start;"><span style="color:var(--accent); font-weight:700; flex-shrink:0;">€</span><span><strong>Financieringskosten</strong> (rente bij aankoop vs. lease)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIU FORMULA BOX -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+        <div style="padding:1rem; background:#f0fdf4; border-radius:8px; font-size:0.82rem; border:1px solid #86efac;">
+          <div style="font-weight:700; color:#166534; margin-bottom:0.4rem;">📐 Value-in-Use (VIU)</div>
+          <div style="color:#14532d; line-height:1.5;">Het voordeel dat je krijgt boven de concurrent, na aftrek van het prijsverschil.<br>
+          <code style="background:#dcfce7; padding:2px 6px; border-radius:4px; font-size:0.78rem;">VIU = (Vf – Va) – (Pf – Pa)</code></div>
+        </div>
+        <div style="padding:1rem; background:#eff6ff; border-radius:8px; font-size:0.82rem; border:1px solid #93c5fd;">
+          <div style="font-weight:700; color:var(--blue); margin-bottom:0.4rem;">💰 VIU Price</div>
+          <div style="color:#1e3a5f; line-height:1.5;">De prijs waarbij de klant onverschillig is tussen jou en de concurrent.<br>
+          <code style="background:#dbeafe; padding:2px 6px; border-radius:4px; font-size:0.78rem;">VIU Price = Pa + (Vf – Va)</code></div>
+        </div>
+      </div>
+
+      <!-- KEY LESSON -->
+      <div class="alert" style="background:#fff7ed; border-left-color:var(--accent);">
+        💡 <strong>De kernles van deze oefening:</strong> Een duurdere wagen met lager brandstofverbruik, hogere restwaarde en minder uitval kan over de volledige levensduur <em>goedkoper</em> zijn dan een goedkopere wagen. Prijs ≠ Waarde. Dit is exact het <strong>TCO-principe</strong> — en waarom "Lowest Price" als aankoopstrategie gevaarlijk is.
+      </div>
+
+      <!-- LINK TO VALUE PROPOSITION -->
+      <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; color:var(--muted); line-height:1.55; margin-top:0.8rem;">
+        <strong style="color:var(--blue);">🔗 Link naar Value Propositions:</strong> Als een BMW-leverancier hogere benefits levert dan de concurrent maar ook hogere prijs vraagt → <strong>"More for More"</strong>. Als ze gelijkwaardige kwaliteit leveren voor een lagere prijs → <strong>"Same for Less"</strong>. De oefening helpt je bepalen welke propositie van toepassing is.
+      </div>
+    </div>
+
+    <!-- ZEUS CASE: FULL CUSTOMER VALUE MODEL -->
+    <div class="card">
+      <div class="card-title"><span class="icon">⚡</span>Case — Zeus Laser Technologies: Full Customer Value Model</div>
+      <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1.2rem; line-height:1.6;">
+        Zeus wil de <strong>Precision 2000 Laser Drill</strong> lanceren als vervanging voor de conventionele <strong>GLM 7Z84</strong> mechanische boor van Grand Lakes Manufacturing. De vraag: wat is de Precision 2000 écht waard voor een job-shop klant, en wat mag Zeus er maximaal voor vragen?
+      </div>
+
+      <!-- STEP 1+2: CONTEXT -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1.2rem;">
+        <div style="padding:1rem; background:#fff7ed; border-radius:8px; border:1px solid #fcd34d; font-size:0.8rem;">
+          <div style="font-weight:700; color:#92400e; margin-bottom:0.5rem;">📦 Incumbent (Next Best Alternative)</div>
+          <div style="color:#78350f; line-height:1.6;">
+            <strong>GLM 7Z84</strong> — mechanische boor<br>
+            Prijs: <strong>$50,000</strong> · Levensduur: <strong>5 jaar</strong><br>
+            Annualized prijs: <strong>$10,000/jr</strong>
+          </div>
+        </div>
+        <div style="padding:1rem; background:#eff6ff; border-radius:8px; border:1px solid #93c5fd; font-size:0.8rem;">
+          <div style="font-weight:700; color:var(--blue); margin-bottom:0.5rem;">🆕 Nieuwe aanbieding</div>
+          <div style="color:#1e3a5f; line-height:1.6;">
+            <strong>Precision 2000</strong> — laser boor<br>
+            Levensduur: <strong>10 jaar</strong><br>
+            Cost-plus prijs: min. <strong>$125,000</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3+4: POINTS -->
+      <div style="margin-bottom:1.2rem;">
+        <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.7rem;">Stap 3 & 4 — Points of Parity, Contention & Difference</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.6rem;">
+          <div style="padding:0.8rem; background:#f0fdf4; border-radius:8px; border-top:3px solid var(--success); font-size:0.78rem;">
+            <div style="font-weight:700; color:#166534; margin-bottom:0.4rem;">✅ Point of Parity</div>
+            <div style="color:#14532d; line-height:1.5;">Energie- & overheadkosten zijn <strong>gelijk</strong> voor beide machines (volgens Zeus engineers)</div>
+          </div>
+          <div style="padding:0.8rem; background:#fff7ed; border-radius:8px; border-top:3px solid var(--accent); font-size:0.78rem;">
+            <div style="font-weight:700; color:#92400e; margin-bottom:0.4rem;">⚠️ Point of Contention</div>
+            <div style="color:#78350f; line-height:1.5;">GLM managers zullen de energiekostengelijkheid <strong>betwisten</strong> — onvoldoende bewijs om te bewijzen of weerleggen</div>
+          </div>
+          <div style="padding:0.8rem; background:#eff6ff; border-radius:8px; border-top:3px solid var(--accent2); font-size:0.78rem;">
+            <div style="font-weight:700; color:var(--blue); margin-bottom:0.4rem;">⭐ Points of Difference</div>
+            <div style="color:#1e3a5f; line-height:1.5;">Geen reworking, geen smeermiddelen, geen vloeistoffen, hogere winstbijdrage, langere levensduur</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 5+7: VALUE MODEL SPREADSHEET -->
+      <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.7rem;">Stap 5 & 7 — Value Model Spreadsheet (over 10 jaar, geen tijdswaarde)</div>
+
+      <div style="border:2px solid var(--navy); border-radius:10px; overflow:hidden; margin-bottom:1.2rem; font-size:0.8rem;">
+
+        <!-- HEADER -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; background:var(--navy); color:white; padding:0.6rem 1rem; font-weight:700; font-size:0.75rem; gap:1rem; text-align:center;">
+          <div style="text-align:left;">Element</div>
+          <div>GLM 7Z84<br><span style="font-weight:400; opacity:0.7;">(10 jaar)</span></div>
+          <div>Precision 2000<br><span style="font-weight:400; opacity:0.7;">(10 jaar)</span></div>
+          <div>Verschil<br><span style="font-weight:400; opacity:0.7;">(P2000 – GLM)</span></div>
+        </div>
+
+        <!-- PURCHASE -->
+        <div style="background:#f8fafc; padding:0.4rem 1rem; font-size:0.7rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid var(--border);">Aankoopprijs</div>
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:1px solid var(--border); gap:1rem; align-items:center;">
+          <div>Aankoopprijs machine</div>
+          <div style="text-align:center; color:#ef4444; font-weight:600;">$100,000<br><span style="font-size:0.7rem; color:var(--muted);">(2× $50,000)</span></div>
+          <div style="text-align:center; color:var(--accent); font-weight:600;">❓ P<sub>f</sub></div>
+          <div style="text-align:center; color:var(--muted); font-style:italic; font-size:0.75rem;">Prijs te bepalen</div>
+        </div>
+
+        <!-- RUNNING COSTS HEADER -->
+        <div style="background:#f8fafc; padding:0.4rem 1rem; font-size:0.7rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid var(--border);">Jaarlijkse kosten (× 10 jaar)</div>
+
+        <!-- MAINTENANCE -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:1px solid var(--border); gap:1rem; align-items:center;">
+          <div>Preventief onderhoud</div>
+          <div style="text-align:center;">$50,000<br><span style="font-size:0.7rem; color:var(--muted);">$5,000/jr × 10</span></div>
+          <div style="text-align:center;">$70,000<br><span style="font-size:0.7rem; color:var(--muted);">$7,000/jr × 10</span></div>
+          <div style="text-align:center; color:#ef4444; font-weight:600;">–$20,000</div>
+        </div>
+
+        <!-- REPAIR -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:1px solid var(--border); background:#fafafa; gap:1rem; align-items:center;">
+          <div>Reparatieonderdelen</div>
+          <div style="text-align:center;">$30,000<br><span style="font-size:0.7rem; color:var(--muted);">$3,000/jr × 10</span></div>
+          <div style="text-align:center;">$50,000<br><span style="font-size:0.7rem; color:var(--muted);">$5,000/jr × 10</span></div>
+          <div style="text-align:center; color:#ef4444; font-weight:600;">–$20,000</div>
+        </div>
+
+        <!-- LUBRICANTS -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:1px solid var(--border); gap:1rem; align-items:center;">
+          <div>Smeermiddelen</div>
+          <div style="text-align:center;">$25,000<br><span style="font-size:0.7rem; color:var(--muted);">$2,500/jr × 10</span></div>
+          <div style="text-align:center; color:var(--success);">$0</div>
+          <div style="text-align:center; color:var(--success); font-weight:600;">+$25,000</div>
+        </div>
+
+        <!-- FLUIDS -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:1px solid var(--border); background:#fafafa; gap:1rem; align-items:center;">
+          <div>Metaalbewerkingsvloeistoffen</div>
+          <div style="text-align:center;">$40,000<br><span style="font-size:0.7rem; color:var(--muted);">$4,000/jr × 10</span></div>
+          <div style="text-align:center; color:var(--success);">$0</div>
+          <div style="text-align:center; color:var(--success); font-weight:600;">+$40,000</div>
+        </div>
+
+        <!-- REWORKING -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:1px solid var(--border); gap:1rem; align-items:center;">
+          <div>Nabewerking (reworking)</div>
+          <div style="text-align:center;">$50,000<br><span style="font-size:0.7rem; color:var(--muted);">$5,000/jr × 10</span></div>
+          <div style="text-align:center; color:var(--success);">$0<br><span style="font-size:0.7rem; color:var(--muted);">laser = precisie</span></div>
+          <div style="text-align:center; color:var(--success); font-weight:600;">+$50,000</div>
+        </div>
+
+        <!-- PROFIT -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:2px solid var(--navy); background:#fafafa; gap:1rem; align-items:center;">
+          <div>Extra winstbijdrage<br><span style="font-size:0.72rem; color:var(--muted);">Boven de $500K/jr van GLM</span></div>
+          <div style="text-align:center; color:var(--muted);">$0</div>
+          <div style="text-align:center; color:var(--success);">$55,000<br><span style="font-size:0.7rem; color:var(--muted);">$5,500/jr × 10</span></div>
+          <div style="text-align:center; color:var(--success); font-weight:600;">+$55,000</div>
+        </div>
+
+        <!-- PLACEHOLDER -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.55rem 1rem; border-bottom:2px solid var(--navy); background:#fffbeb; gap:1rem; align-items:center;">
+          <div style="font-style:italic; color:var(--muted);">Energiekosten (point of contention)</div>
+          <div style="text-align:center; color:var(--muted);">≈ gelijk</div>
+          <div style="text-align:center; color:var(--muted);">≈ gelijk</div>
+          <div style="text-align:center; font-weight:700; color:var(--accent);">? placeholder</div>
+        </div>
+
+        <!-- NET VALUE ROW -->
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; padding:0.7rem 1rem; background:var(--navy); gap:1rem; align-items:center; color:white;">
+          <div style="font-weight:700;">Netto waardevoordeel (excl. aankoopprijs)</div>
+          <div></div>
+          <div></div>
+          <div style="text-align:center; font-weight:800; font-size:1rem; color:#86efac;">+$130,000</div>
+        </div>
+      </div>
+
+      <!-- VIU PRICE BOX -->
+      <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.7rem;">Stap 7 — VIU Price & Prijsstrategie</div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.8rem; margin-bottom:1.2rem;">
+        <div style="padding:1rem; background:#f0fdf4; border-radius:8px; border:1px solid #86efac; text-align:center;">
+          <div style="font-size:0.7rem; font-weight:700; color:var(--muted); text-transform:uppercase; margin-bottom:0.3rem;">VIU Price (max rationele prijs)</div>
+          <div style="font-family:'Playfair Display', serif; font-size:1.6rem; font-weight:900; color:var(--success);">$230,000</div>
+          <div style="font-size:0.72rem; color:#166534; margin-top:0.3rem; line-height:1.4;">= GLM 10jr aankopen ($100K)<br>+ netto waardevoordeel ($130K)</div>
+        </div>
+        <div style="padding:1rem; background:#eff6ff; border-radius:8px; border:1px solid #93c5fd; text-align:center;">
+          <div style="font-size:0.7rem; font-weight:700; color:var(--muted); text-transform:uppercase; margin-bottom:0.3rem;">Cost-plus minimum</div>
+          <div style="font-family:'Playfair Display', serif; font-size:1.6rem; font-weight:900; color:var(--accent2);">$125,000</div>
+          <div style="font-size:0.72rem; color:#1e3a5f; margin-top:0.3rem; line-height:1.4;">Minimum prijs voor 20%<br>winstmarge Zeus</div>
+        </div>
+        <div style="padding:1rem; background:#fff7ed; border-radius:8px; border:1px solid #fcd34d; text-align:center;">
+          <div style="font-size:0.7rem; font-weight:700; color:var(--muted); text-transform:uppercase; margin-bottom:0.3rem;">Historisch maximum</div>
+          <div style="font-family:'Playfair Display', serif; font-size:1.6rem; font-weight:900; color:var(--accent);">$150,000</div>
+          <div style="font-size:0.72rem; color:#92400e; margin-top:0.3rem; line-height:1.4;">Nooit meer betaald voor<br>machine tool in deze categorie</div>
+        </div>
+      </div>
+
+      <!-- PRICING ZONE -->
+      <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; margin-bottom:1rem; line-height:1.6;">
+        <strong style="color:var(--blue);">📐 Prijszone analyse:</strong><br>
+        <span style="color:var(--muted);">De VIU Price is <strong>$230,000</strong> — rationeel gezien kan Zeus dit vragen want de klant spaart meer dan genoeg. Maar de markt accepteert max <strong>$150,000</strong> (psychologische grens + onbekendheid met lasertechnologie). De optimale vraagprijs ligt dus ergens <strong>tussen $125,000 en $150,000</strong> — hoog genoeg voor winstmarge, laag genoeg om adoptie te stimuleren. Zeus moet investeren in educatie van klanten over de echte waarde.</span>
+      </div>
+
+      <!-- STEP 8: VALUE PROPOSITION -->
+      <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.6rem;">Stap 8 — Value Proposition</div>
+      <div style="padding:1rem; background:linear-gradient(135deg, var(--navy), var(--blue)); border-radius:8px; color:white; font-size:0.85rem; line-height:1.6;">
+        <strong style="color:var(--accent);">"More for More"</strong> — De Precision 2000 kost meer dan de GLM 7Z84, maar levert over 10 jaar <strong>$130,000 meer waarde</strong> door eliminatie van reworking, smeermiddelen, vloeistoffen én hogere winstbijdrage. De hogere prijs is rationeel gerechtvaardigd — Zeus moet dit aantonen met een concreet value model aan elke klant.
+      </div>
+
+      <div class="alert" style="margin-top:1rem;">
+        ⚠️ <strong>Kritieke uitdaging:</strong> De VIU Price ($230K) is ver boven de marktgrens ($150K) — niet omdat het product het niet waard is, maar omdat klanten <em>onbekend zijn met lasertechnologie</em>. Dit is een klassiek geval waarbij Zeus eerst moet investeren in klanteneducatie voordat de prijs zijn volledige waarde kan weerspiegelen.
+      </div>
+    </div>
+
+    <!-- SLACK REAL WORLD CVM -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🌍</span>Real-World Toepassing — Forrester TEI studie: Slack voor technische teams (2023)</div>
+
+      <!-- ACHTERGROND -->
+      <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.7rem;">Achtergrond &amp; Context</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1.2rem;">
+        <div style="padding:1rem; background:#eff6ff; border-radius:8px; border:1px solid #93c5fd; font-size:0.8rem; line-height:1.6;">
+          <div style="font-weight:700; color:var(--blue); margin-bottom:0.5rem;">🏢 Over Slack</div>
+          Slack is een zakelijk communicatieplatform opgericht in 2013, initieel als interne tool voor een gamingbedrijf (Tiny Speck). In 2021 overgenomen door Salesforce voor <strong>$27,7 miljard</strong> — een van de grootste software-overnames ooit. Slack positioneert zich als <em>"het hoofdkwartier voor hybride werken"</em>: één platform voor berichten, bestanden, workflows en app-integraties. De belangrijkste concurrenten zijn <strong>Microsoft Teams</strong> (gratis inbegrepen bij Microsoft 365, het grootste voordeel) en Google Chat.
+        </div>
+        <div style="padding:1rem; background:#f5f3ff; border-radius:8px; border:1px solid #c4b5fd; font-size:0.8rem; line-height:1.6;">
+          <div style="font-weight:700; color:#6d28d9; margin-bottom:0.5rem;">📊 Over de Forrester TEI-methode</div>
+          Forrester's <strong>Total Economic Impact (TEI)</strong> is een gestandaardiseerde methode om de ROI van IT-investeringen te berekenen. De studie werd <strong>in opdracht van Slack</strong> uitgevoerd — belangrijk kritisch punt. Forrester interviewde 5 bedrijven en bevroeg 264 respondenten. De resultaten werden samengevat in één <strong>composite organization</strong>: een fictief bedrijf van 2.000 medewerkers, 300 technische gebruikers en $500M omzet — representatief voor de steekproef, maar niet één specifiek bedrijf.
+        </div>
+      </div>
+
+      <!-- COMPOSITE ORG -->
+      <div style="padding:0.9rem 1rem; background:var(--light); border-radius:8px; font-size:0.8rem; line-height:1.6; margin-bottom:1.2rem; border-left:3px solid var(--accent2);">
+        <strong style="color:var(--blue);">Waarom een "composite organization"?</strong><br>
+        Omdat geen enkel individueel bedrijf al zijn cijfers publiek wil delen, middelt Forrester de ervaringen van alle respondenten samen tot één modelorganisatie. Dit maakt de studie generaliseerbaar maar ook abstracter — de cijfers zijn representatief voor een <em>gemiddeld</em> technologiebedrijf van dit formaat, niet voor elke specifieke situatie.
+      </div>
+
+      <!-- CVM LOGICA -->
+      <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.7rem;">Customer Value Model — Toegepast</div>
+      <div style="font-size:0.8rem; color:var(--muted); margin-bottom:0.8rem; line-height:1.5;">Forrester paste exact dezelfde logica toe als Anderson &amp; Narus. Next best alternative = gefragmenteerde combinatie van e-mail + aparte chat + meetingtools.</div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1.2rem;">
+        <div style="padding:1rem; background:#f0fdf4; border-radius:8px; border:1px solid #86efac; font-size:0.8rem;">
+          <div style="font-weight:700; color:#166534; margin-bottom:0.5rem;">✅ Kwantificeerbare voordelen (3 jaar)</div>
+          <div style="color:#14532d; line-height:1.8;">
+            Productiviteitswinst: <strong>$1,8M</strong><br>
+            <span style="font-size:0.72rem; color:#166534; opacity:0.8;">300 users × 1,5–2,5u/week × $60/u × 50% recapture</span><br>
+            Incident management: <strong>$139K</strong><br>
+            <span style="font-size:0.72rem; color:#166534; opacity:0.8;">18 incidenten/jr × 15% tijdsbesparing + helpdesk automatisatie</span><br>
+            Legacy tools afschaffen: <strong>$89K</strong><br>
+            <span style="font-size:0.72rem; color:#166634; opacity:0.8;">$55K/jr licentiekosten vervangen</span><br>
+            <strong>Totaal voordelen: $2,03M</strong>
+          </div>
+        </div>
+        <div style="padding:1rem; background:#fff7ed; border-radius:8px; border:1px solid #fcd34d; font-size:0.8rem;">
+          <div style="font-weight:700; color:#92400e; margin-bottom:0.5rem;">💸 Kosten (TCO)</div>
+          <div style="color:#78350f; line-height:1.8;">
+            Abonnement: <strong>$117,5K</strong><br>
+            <span style="font-size:0.72rem; opacity:0.8;">300 users × $150/jr × 3 jaar (+5% risico)</span><br>
+            Implementatie + onderhoud: <strong>$386,7K</strong><br>
+            <span style="font-size:0.72rem; opacity:0.8;">1 IT FTE/jr voor integraties &amp; channels (+15% risico)</span><br>
+            <strong>Totaal kosten: $504K</strong>
+          </div>
+          <div style="margin-top:0.7rem; padding:0.5rem; background:#fef3c7; border-radius:5px; font-size:0.75rem; color:#92400e;">
+            ⚠️ Kosten zijn 77% IT-arbeid, slechts 23% licenties — klassiek TCO-inzicht
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:0.6rem; margin-bottom:1.2rem;">
+        <div style="padding:0.8rem; background:var(--navy); border-radius:8px; text-align:center; color:white;">
+          <div style="font-size:1.4rem; font-weight:900; color:#86efac;">302%</div>
+          <div style="font-size:0.7rem; opacity:0.7; margin-top:0.2rem;">ROI</div>
+        </div>
+        <div style="padding:0.8rem; background:var(--navy); border-radius:8px; text-align:center; color:white;">
+          <div style="font-size:1.4rem; font-weight:900; color:#86efac;">$1,52M</div>
+          <div style="font-size:0.7rem; opacity:0.7; margin-top:0.2rem;">NPV</div>
+        </div>
+        <div style="padding:0.8rem; background:var(--navy); border-radius:8px; text-align:center; color:white;">
+          <div style="font-size:1.4rem; font-weight:900; color:#86efac;">&lt;6 mnd</div>
+          <div style="font-size:0.7rem; opacity:0.7; margin-top:0.2rem;">Terugverdientijd</div>
+        </div>
+        <div style="padding:0.8rem; background:var(--navy); border-radius:8px; text-align:center; color:white;">
+          <div style="font-size:1.4rem; font-weight:900; color:#fbbf24;">+/–/?</div>
+          <div style="font-size:0.7rem; opacity:0.7; margin-top:0.2rem;">Placeholders</div>
+        </div>
+      </div>
+
+      <!-- KRITISCHE ANALYSE -->
+      <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.7rem;">⚖️ Kritische Analyse — Beperkingen van deze studie</div>
+
+      <div style="display:grid; grid-template-columns:1fr; gap:0.6rem; margin-bottom:1.2rem;">
+
+        <div style="padding:0.85rem 1rem; background:#fef2f2; border-radius:8px; border-left:3px solid #ef4444; font-size:0.8rem; line-height:1.6;">
+          <strong style="color:#991b1b;">🔴 Opdrachtgeversbias</strong><br>
+          De studie is <em>commissioned by Slack</em> — Slack betaalt Forrester om de studie uit te voeren. Hoewel Forrester editoriale onafhankelijkheid claimt, is er een structureel belang om positieve resultaten te beklemtonen. Vergelijk: een farmabedrijf dat een studie betaalt over zijn eigen medicijn. Dit maakt de studie bruikbaar als <em>richtlijn</em>, maar niet als objectief bewijs.
+        </div>
+
+        <div style="padding:0.85rem 1rem; background:#fef2f2; border-radius:8px; border-left:3px solid #ef4444; font-size:0.8rem; line-height:1.6;">
+          <strong style="color:#991b1b;">🔴 Selectiebias in de steekproef</strong><br>
+          De 5 geïnterviewde bedrijven en 264 respondenten zijn allemaal <em>al Slack-gebruikers</em> die succesvol de adoptie hebben doorgemaakt. Bedrijven die Slack hebben geprobeerd en afgeschaft — of nooit de ROI hebben gehaald — zijn niet vertegenwoordigd. Dit is een klassiek geval van <strong>survivorship bias</strong>: je hoort alleen de succesverhalen.
+        </div>
+
+        <div style="padding:0.85rem 1rem; background:#fffbeb; border-radius:8px; border-left:3px solid var(--accent); font-size:0.8rem; line-height:1.6;">
+          <strong style="color:#92400e;">🟡 "Productivity recapture" assumptie is aanvechtbaar</strong><br>
+          Forrester rekent dat 50% van de bespaard tijd effectief productief wordt ingezet. Maar in de praktijk verdwijnt vrijgekomen tijd vaak in andere vergaderingen, koffiepauzes of nieuwe Slack-notificaties. Er is geen empirisch bewijs dat precies 50% van herwonnen tijd leidt tot extra economische output. Dit is de grootste onzekerheid in de $1,8M productiviteitsberekening.
+        </div>
+
+        <div style="padding:0.85rem 1rem; background:#fffbeb; border-radius:8px; border-left:3px solid var(--accent); font-size:0.8rem; line-height:1.6;">
+          <strong style="color:#92400e;">🟡 Microsoft Teams als echte incumbent ontbreekt</strong><br>
+          De studie definieert de next best alternative als "gefragmenteerde tools" (e-mail + chat + meetings apart). Maar voor de meeste bedrijven is de echte keuze <strong>Slack vs. Microsoft Teams</strong> — dat gratis meekomt met Microsoft 365 en voor veel bedrijven al beschikbaar is. De vergelijking met Teams zou de ROI aanzienlijk kleiner maken. De studie vermijdt deze vergelijking bewust.
+        </div>
+
+        <div style="padding:0.85rem 1rem; background:#f0fdf4; border-radius:8px; border-left:3px solid var(--success); font-size:0.8rem; line-height:1.6;">
+          <strong style="color:#166534;">🟢 Wat de studie wél goed doet</strong><br>
+          De TCO-aanpak is methodologisch correct: kosten omvatten niet alleen de licentie maar ook IT-arbeid en implementatie. De risicobijstellingen (–15% op productiviteit, –5% op incident management) tonen eerlijkheid over onzekerheid. De splitsing tussen kwantificeerbare voordelen en placeholders (+/–/?) volgt exact de Anderson &amp; Narus-logica. En de composite organization-aanpak is een legitieme methode om privacy van respondenten te beschermen.
+        </div>
+
+      </div>
+
+      <div class="alert" style="margin-top:0.5rem; background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f;">
+        💡 <strong>Examentip:</strong> Als prof vraagt naar beperkingen van een Customer Value Model in de praktijk — dit is het perfecte voorbeeld. De methodologie klopt, maar de inputs (wie voert de studie uit, wie worden bevraagd, welke assumptie voor recapture) bepalen het resultaat. <strong>Garbage in = garbage out.</strong>
+      </div>
+    </div>
+
+    <!-- VALUE PROPOSITIONS -->
+    <div class="card">
+      <div class="card-title"><span class="icon">💬</span>5 Value Propositions (Kotler)</div>
+      <ul class="key-list">
+        <li><strong>More for More</strong> — premium quality at premium price</li>
+        <li><strong>More for the Same</strong> — better quality, same price</li>
+        <li><strong>More for Less</strong> — best deal (hard to sustain)</li>
+        <li><strong>The Same for Less</strong> — equivalent quality, lower price</li>
+        <li><strong>Less for Much Less</strong> — fewer features, much cheaper (e.g., budget options)</li>
+      </ul>
+    </div>
+
+    <!-- RESPONSIBLE SOURCING -->
+    <div class="card">
+      <div class="card-title"><span class="icon">🌱</span>Responsible Sourcing</div>
+      <ul class="key-list">
+        <li>Ethical and sustainable procurement practices across the supply chain</li>
+        <li>Example: <strong>Barry Callebaut's "Forever Chocolate"</strong> programme — commits to 100% sustainable chocolate by addressing child labour, deforestation, farmer poverty, and health</li>
+        <li>Typically formalized through a supplier <strong>Code of Conduct</strong></li>
+      </ul>
+    </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="section" id="checklist">
+    <div class="section-label">Exam Prep Checklist — click to check off</div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📖</span>Course Intro — Concepts to Know</div>
+      <ul class="checklist" id="cl1">
+        <li onclick="toggle(this)"><div class="chk"></div><span>Drucker's two basic business functions (marketing + innovation)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Kotler's definition of marketing (explore, create, deliver value)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Webster's quote: B2B vs B2C differ in degree, not kind</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Why B2B markets are economically larger than B2C</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Key differences: B2B vs B2C (buyer, size, process, relationships)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Examples of pure B2B companies (Barco, Barry Callebaut, Bekaert, Beaulieu)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Why some top global brands (Microsoft, Amazon) have heavy B2B operations</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📗</span>Session 1 — Concepts to Know</div>
+      <ul class="checklist">
+        <li onclick="toggle(this)"><div class="chk"></div><span>Anderson & Narus definition of business market customers</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>6 customer types: B2B (OEM, User, Intermediary), B2B2C, B2B2B, B2G</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>5 DMU roles: Buyer, Gatekeeper, Influencer, User, Decision Maker</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Bonoma's insight: power ≠ organizational rank</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>8-step B2B buying process (Robinson et al., 1967)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>BuyGrid Model: New Task vs Modified Rebuy vs Straight Rebuy</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>3 purchasing orientations: Lowest Price / Lowest TCO / Best Value</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>TCO definition and why it avoids the seesaw effect</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Kraljic Matrix: 4 quadrants and strategies for each</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>8-step Customer Value Model building process</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Point of Parity vs Contention vs Difference</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Value-in-Use (VIU) formula and VIU Price formula</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Kotler's 5 value propositions (More for More … Less for Much Less)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Direct vs. indirect procurement — definition and simple test</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Direct = goes into final product (COGS); Indirect = keeps business running (OpEx)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Why direct procurement is centralized and strategic; indirect is decentralized</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Link between direct/indirect and the Kraljic Matrix quadrants</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Responsible sourcing — Barry Callebaut Forever Chocolate example</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">✅</span>Admin To-Do</div>
+      <ul class="checklist">
+        <li onclick="toggle(this)"><div class="chk"></div><span>Join a group on Ufora (max 5 members)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Submit case assignment before plenary discussion (Session 3)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Prepare for company visit (Sessions 4–5, Beaulieu International, March 6)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Review all slides + personal notes before exam</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Practice open-ended exam questions (closed book!)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Complete peer evaluation after group work</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+
+  function showS1(id) {
+    document.querySelectorAll('.s1-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.s1-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: document.getElementById('s1-subnav').offsetTop - 70, behavior: 'smooth' });
+  }
+
+  function toggle(li) {
+    li.classList.toggle('done');
+  }
+</script>
+</body>
+</html>
