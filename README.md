@@ -1,0 +1,2 @@
+# bm-summary
+Businessmarketing Samenvatting
