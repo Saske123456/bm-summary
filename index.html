@@ -116,11 +116,9 @@
     max-width: 860px;
     margin: 0 auto;
     display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
+    flex-wrap: wrap;
     padding: 0 1rem;
   }
-  .tabs-inner::-webkit-scrollbar { display: none; }
   .tab-btn {
     background: none;
     border: none;
@@ -129,7 +127,7 @@
     font-size: 0.82rem;
     font-weight: 500;
     color: var(--muted);
-    padding: 1rem 1.1rem;
+    padding: 0.75rem 0.9rem;
     white-space: nowrap;
     border-bottom: 2px solid transparent;
     margin-bottom: -2px;
@@ -510,6 +508,15 @@
   .s1-section { display: none; }
   .s1-section.active { display: block; }
 
+  .s2-section { display: none; }
+  .s2-section.active { display: block; }
+  .s3-section { display: none; }
+  .s3-section.active { display: block; }
+  .s4-section { display: none; }
+  .s4-section.active { display: block; }
+  .s5-section { display: none; }
+  .s5-section.active { display: block; }
+
   @media (max-width: 580px) {
     .stat-grid, .grade-split, .obj-grid { grid-template-columns: 1fr; }
     .s1-subnav { gap: 0.3rem; }
@@ -547,6 +554,10 @@
     <button class="tab-btn" onclick="showTab('concepts')">💡 Key Concepts</button>
     <button class="tab-btn" onclick="showTab('b2b')">🏭 B2B vs B2C</button>
     <button class="tab-btn" onclick="showTab('session1')">📗 Session 1</button>
+    <button class="tab-btn" onclick="showTab('session2')">📘 Session 2</button>
+    <button class="tab-btn" onclick="showTab('session3')">📙 Session 3</button>
+    <button class="tab-btn" onclick="showTab('session4')">🏭 Session 4/5</button>
+    <button class="tab-btn" onclick="showTab('casestudy')">📄 Case Study</button>
     <button class="tab-btn" onclick="showTab('exam')">📝 Exam Info</button>
     <button class="tab-btn" onclick="showTab('checklist')">✅ Checklist</button>
   </div>
@@ -1838,6 +1849,2059 @@
 
   </div>
 
+  <!-- SESSION 2 -->
+  <div class="section" id="session2">
+    <div class="section-label">Session 2 — B2B Marketing Mix: Products, Price, Communication &amp; Distribution</div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🎯</span>Session Objectives</div>
+      <div class="obj-grid">
+        <div class="obj-card"><div class="obj-num">01</div><div class="obj-text">Characterize products in B2B Markets</div></div>
+        <div class="obj-card"><div class="obj-num">02</div><div class="obj-text">Develop B2B communication strategies</div></div>
+        <div class="obj-card"><div class="obj-num">03</div><div class="obj-text">Design a distribution channel</div></div>
+        <div class="obj-card"><div class="obj-num">04</div><div class="obj-text">Evaluate pricing approaches in B2B markets</div></div>
+        <div class="obj-card"><div class="obj-num">05</div><div class="obj-text">Analyze Derived Demand and its Implications</div></div>
+        <div class="obj-card"><div class="obj-num">06</div><div class="obj-text">Engage Consumers in a B2B(2C) Marketing Mix</div></div>
+      </div>
+    </div>
+
+    <!-- SESSION 2 SUB-NAV -->
+    <div class="s1-subnav" id="s2-subnav">
+      <button class="s1-btn s2-btn active" onclick="showS2('s2-research')">🔍 Market Research</button>
+      <button class="s1-btn s2-btn" onclick="showS2('s2-stp')">🎯 STP &amp; Customers</button>
+      <button class="s1-btn s2-btn" onclick="showS2('s2-products')">📦 Products</button>
+      <button class="s1-btn s2-btn" onclick="showS2('s2-price')">💰 Price</button>
+      <button class="s1-btn s2-btn" onclick="showS2('s2-communication')">📣 Communication</button>
+      <button class="s1-btn s2-btn" onclick="showS2('s2-distribution')">🚚 Distribution</button>
+    </div>
+
+    <!-- SUB-TAB: MARKET RESEARCH -->
+    <div class="s2-section active" id="s2-research">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔍</span>Market Research in B2B — Purpose</div>
+        <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f;">
+          The purpose of market research is to better <strong>understand the customer's jobs to be done</strong> — the <strong>need</strong> for which they "hire" a company's market offerings. The Value Proposition Canvas provides a template to understand the positive (<em>gains</em>) and negative (<em>pains</em>) elements of how customers currently get the job done.
+        </div>
+        <ul class="key-list">
+          <li><strong>Much desk research using secondary data</strong> — industry reports, trade publications, financial filings</li>
+          <li><strong>Qualitative research</strong> — needed to capture complexity and understand motivations in organizational buying</li>
+          <li><strong>Hard to identify / reach the decision maker</strong> — gatekeepers filter access; the real decision maker may be hidden</li>
+          <li><strong>External market research companies</strong> offer (technical) expertise and confidentiality — useful when the seller cannot be seen doing research on competitors or customers</li>
+          <li><strong>Engage the sales organization?</strong> — Sales reps have direct customer contact and hear problems firsthand, but may introduce bias</li>
+        </ul>
+        <div style="margin-top:1rem; padding:1rem; background:var(--light); border-radius:8px; font-size:0.83rem;">
+          <strong style="color:var(--blue);">Value Proposition Canvas (Strategyzer):</strong><br>
+          <span style="color:var(--muted);">Left square = Value Proposition (Products &amp; Services, Gain Creators, Pain Relievers) matched to the Right circle = Customer Segment (Customer Jobs, Gains, Pains). Linked to the Business Model Canvas.</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">👁️</span>Observation as Market Research — Brady Example</div>
+        <p style="font-size:0.85rem; color:var(--muted); margin-bottom:0.8rem; line-height:1.6;">
+          Brady (identification solutions) launched a new high-performance cable identification printer (BMP™61). The product was positioned with specific professional benefits: portable, fast, handles identification challenges with wireless connectivity and durable labels. This is a B2B product sold to electricians, engineers, and maintenance professionals — typical of <strong>observation-based market research</strong> where watching users in the field reveals real pain points.
+        </p>
+        <div class="alert" style="background:#f0fdf4; border-color:#86efac; border-left-color:var(--success); color:#14532d;">
+          💡 <strong>Key insight:</strong> Professional users (B2B) care about reliability, speed, and durability in the field — not aesthetics. Observing a cable technician work reveals requirements you'd never find in a survey.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧲</span>Bosch: Blue Tools vs Green Tools — B2B vs B2C Product Strategy</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div style="padding:1rem; background:#eff6ff; border-radius:10px; border-top:3px solid #1a3a6b;">
+            <div style="font-weight:700; color:var(--blue); font-size:0.9rem; margin-bottom:0.5rem;">🔵 Blue Tools — Professional (B2B)</div>
+            <div style="font-size:0.8rem; color:#1e3a5f; line-height:1.6;">
+              Sold to <strong>construction professionals, tradespeople</strong>. Higher specs, more durable, more expensive. Example: GLM 50 C laser measure — precise, rugged, Bluetooth-enabled. Purchased for productivity on job sites. Decision is rational (ROI, spec compliance).
+            </div>
+          </div>
+          <div style="padding:1rem; background:#f0fdf4; border-radius:10px; border-top:3px solid #10b981;">
+            <div style="font-weight:700; color:#166534; font-size:0.9rem; margin-bottom:0.5rem;">🟢 Green Tools — Consumer (B2C)</div>
+            <div style="font-size:0.8rem; color:#14532d; line-height:1.6;">
+              Sold to <strong>DIY consumers</strong>. Simpler design, lower price, easier to use. Example: PLR 15 laser — basic functionality for hanging pictures at home. Purchased for occasional use. Decision is more emotional (ease, price, brand).
+            </div>
+          </div>
+        </div>
+        <div class="alert">
+          ⚠️ <strong>Same technology, different product.</strong> Bosch uses dual branding to serve both B2B and B2C without cannibalizing premium positioning. The professional buyer must never feel they're buying a "consumer" product.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧶</span>Derived Demand — Bekaert Brassiere Wire Case</div>
+        <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1rem; line-height:1.6;">
+          <strong>Derived demand</strong> = demand for a B2B product that is derived from (dependent on) demand for the end consumer product. Bekaert makes brassiere wire — a B2B product used deep in the supply chain. Yet consumer complaints about underwire bras directly impacted Bekaert's business.
+        </div>
+        <div style="margin-bottom:1.2rem;">
+          <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.6rem;">Supply Chain — Brassiere Wire</div>
+          <div style="display:flex; flex-direction:column; gap:0.4rem;">
+            <div style="padding:0.6rem 1rem; background:#f1f5f9; border-radius:6px; border-left:3px solid #94a3b8; font-size:0.8rem;">Production of rod wire, zinc, and PET</div>
+            <div style="text-align:center; color:var(--muted); font-size:0.8rem;">↓</div>
+            <div style="padding:0.6rem 1rem; background:#dbeafe; border-radius:6px; border-left:3px solid var(--accent2); font-size:0.8rem;"><strong style="color:var(--blue);">Bekaert</strong> — Production of core brassiere wire</div>
+            <div style="text-align:center; color:var(--muted); font-size:0.8rem;">↓</div>
+            <div style="padding:0.6rem 1rem; background:#f1f5f9; border-radius:6px; border-left:3px solid #94a3b8; font-size:0.8rem;">Production of bra underwire</div>
+            <div style="text-align:center; color:var(--muted); font-size:0.8rem;">↓</div>
+            <div style="padding:0.6rem 1rem; background:#f1f5f9; border-radius:6px; border-left:3px solid #94a3b8; font-size:0.8rem;">Design and production of bras</div>
+            <div style="text-align:center; color:var(--muted); font-size:0.8rem;">↓</div>
+            <div style="padding:0.6rem 1rem; background:#fef9c3; border-radius:6px; border-left:3px solid #f59e0b; font-size:0.8rem;">Retailer — Sell bras to the end consumer</div>
+          </div>
+        </div>
+        <div style="padding:1rem; background:#fef2f2; border-radius:8px; border-left:3px solid #ef4444; font-size:0.82rem; margin-bottom:1rem; line-height:1.6;">
+          <strong style="color:#991b1b;">Consumer reaction (Twitter):</strong> Consumers complained loudly about underwire bras that <em>stab, squeak, and break out</em>. Though Bekaert never sells to consumers, these reactions threatened demand for bras — and therefore demand for Bekaert's wire. <strong>Derived demand means consumer problems become your B2B problem.</strong>
+        </div>
+        <div style="padding:1rem; background:#f0fdf4; border-radius:8px; border-left:3px solid var(--success); font-size:0.82rem; line-height:1.6;">
+          <strong style="color:#166534;">What did Bekaert do?</strong> Developed a new brassiere wire galvanized and extruded with PET. The two coatings create a barrier against water, moisture, breaking or flaking — <strong>eliminating squeaking</strong>. This addressed the end consumer pain and strengthened Bekaert's value proposition to its B2B customers (bra manufacturers).
+        </div>
+        <div class="alert" style="margin-top:1rem;">
+          ⚠️ <strong>B2B(2C) implication:</strong> Even if you never see the consumer, you must track consumer sentiment. Their reactions flow back up the supply chain and affect your demand. Bekaert's solution: monitor consumer pain points → innovate the B2B component → market this to bra manufacturers as a competitive advantage.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: STP & CUSTOMERS -->
+    <div class="s2-section" id="s2-stp">
+
+      <div class="quote-block">
+        <p>"I will know when our businesses are doing a good job when they can articulate who we should <strong>not</strong> sell to."</p>
+        <div class="quote-attr">— Chuck Lillis</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🎯</span>Segmenting – Targeting – Positioning</div>
+        <div style="text-align:center; padding:1.2rem; background:var(--light); border-radius:10px; margin-bottom:1rem; font-size:0.95rem; line-height:1.9; color:var(--text);">
+          <strong>Positioning</strong> = The act of designing the company's and product's image<br>
+          so that it occupies a <strong style="color:var(--accent2);">distinct and valued</strong> place<br>
+          in the target customers' minds.
+        </div>
+        <ul class="key-list">
+          <li><strong>Segment</strong> — divide the market into groups with similar needs/characteristics</li>
+          <li><strong>Target</strong> — select which segments to pursue (not all are equally profitable)</li>
+          <li><strong>Position</strong> — design the offering and messaging so the target segment sees you as the best fit</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📋</span>B2B Segmentation Variables</div>
+        <table class="compare-table">
+          <thead>
+            <tr><th>Category</th><th>Variables</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="dim">Geographic</td>
+              <td>Region · Market · HQ vs. branch</td>
+              <td>Where is the customer located? Important for logistics and local sales coverage</td>
+            </tr>
+            <tr>
+              <td class="dim">Demographic</td>
+              <td>Industry (SIC code) · Sales figure · # of employees (size)</td>
+              <td>What type/size of organization? Larger firms often require different service levels</td>
+            </tr>
+            <tr>
+              <td class="dim">Psychographic*</td>
+              <td>Corporate culture · Power structure (DMU) · Buyer-seller similarity</td>
+              <td>*Often input from sales team — hard to measure but powerful for relationship fit</td>
+            </tr>
+            <tr>
+              <td class="dim">Behavioral*</td>
+              <td>Applications / usage moment · Urgency · Volume of order · Loyalty &amp; existing relationships · <strong>Buying situation</strong> · <strong>Purchasing orientation</strong></td>
+              <td>*Often input from sales team — buying situation (New Task vs Rebuy) and purchasing orientation (price vs TCO vs value) heavily influence approach</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top:0.7rem; font-size:0.78rem; color:var(--muted);">* = Often input from sales team</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📈</span>Profitability of Customer Portfolio</div>
+        <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1rem; line-height:1.6;">
+          Not all customers are equally profitable — in fact some <strong>destroy value</strong>. Targeting means choosing <em>which</em> customers to serve (and which not to).
+        </div>
+        <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; margin-bottom:1rem;">
+          <strong style="color:var(--blue);">Customer Profitability Curve — Key Insight:</strong>
+          <ul style="margin-top:0.5rem; padding-left:1.2rem; line-height:1.9; color:var(--text);">
+            <li>Top ~15% of customers generate ~200% of total profits</li>
+            <li>Middle 40–90% of customers roughly break even</li>
+            <li>Bottom ~10% <strong style="color:#ef4444;">destroy value</strong> — serving them costs more than they generate</li>
+            <li>Total realized profit = ~100% (the losses cancel some gains)</li>
+          </ul>
+        </div>
+        <div class="alert">
+          ⚠️ <strong>Implication:</strong> Companies must be willing to <em>fire</em> unprofitable customers — or at minimum re-price them. Chuck Lillis's quote becomes operational: knowing who <em>not</em> to sell to is as important as knowing who to target.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏢</span>Business Customers — Definition &amp; Classification</div>
+        <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f; margin-bottom:1rem;">
+          <strong>Definition (Anderson &amp; Narus, 2009):</strong> Business customers are <strong>firms, institutions, or governments</strong> that acquire products and services either to <strong>incorporate</strong> into the products or services that they produce, for <strong>their own use</strong>, or for <strong>resale</strong> along with other products and services.
+        </div>
+        <table class="compare-table">
+          <thead>
+            <tr><th>Customer Type</th><th>Description</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="dim">B2B — OEM / Manufacturer</td><td>Incorporates purchased product into own product</td><td>ArcelorMittal steel → car body panels</td></tr>
+            <tr><td class="dim">B2B — User</td><td>Uses product in own operations (not resold)</td><td>Hospital buying MRI scanner</td></tr>
+            <tr><td class="dim">Intermediary B2B2C</td><td>Buys to resell to end consumers (via retail)</td><td>Etilux buys Zebra labels → resells to businesses → product reaches end users</td></tr>
+            <tr><td class="dim">Intermediary B2B2B</td><td>Buys to resell to other businesses</td><td>Distributor of industrial equipment</td></tr>
+            <tr><td class="dim">B2G</td><td>Sells to government institutions</td><td>Infrastructure, IT, defense contracts</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: PRODUCTS -->
+    <div class="s2-section" id="s2-products">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📦</span>Business Products &amp; Services — Classification Framework</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.8rem; margin-bottom:1.2rem;">
+          <div style="padding:1rem; background:#fee2e2; border-radius:10px; text-align:center;">
+            <div style="font-weight:700; color:#dc2626; font-size:0.9rem; margin-bottom:0.3rem;">Incorporate</div>
+            <div style="font-size:0.75rem; color:#7f1d1d;">↓</div>
+            <div style="padding:0.5rem; background:#dbeafe; border-radius:6px; font-size:0.8rem; font-weight:600; color:var(--blue); margin-top:0.4rem;">Entering Goods</div>
+          </div>
+          <div style="padding:1rem; background:#fee2e2; border-radius:10px; text-align:center;">
+            <div style="font-weight:700; color:#dc2626; font-size:0.9rem; margin-bottom:0.3rem;">For Their Own Use</div>
+            <div style="font-size:0.75rem; color:#7f1d1d;">↓</div>
+            <div style="display:flex; flex-direction:column; gap:0.3rem; margin-top:0.4rem;">
+              <div style="padding:0.4rem; background:#dbeafe; border-radius:6px; font-size:0.78rem; font-weight:600; color:var(--blue);">Foundation Goods</div>
+              <div style="padding:0.4rem; background:#dbeafe; border-radius:6px; font-size:0.78rem; font-weight:600; color:var(--blue);">Facilitating Goods</div>
+            </div>
+          </div>
+          <div style="padding:1rem; background:#fee2e2; border-radius:10px; text-align:center;">
+            <div style="font-weight:700; color:#dc2626; font-size:0.9rem; margin-bottom:0.3rem;">For Resale</div>
+            <div style="font-size:0.75rem; color:#7f1d1d;">↓</div>
+            <div style="padding:0.5rem; background:#dbeafe; border-radius:6px; font-size:0.8rem; font-weight:600; color:var(--blue); margin-top:0.4rem;">Finished Goods</div>
+          </div>
+        </div>
+
+        <table class="compare-table">
+          <thead>
+            <tr><th>Type</th><th>Definition</th><th>Sub-types</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="dim">Entering Goods</td>
+              <td>Subsumed/incorporated into the finished product</td>
+              <td>Raw materials · Processed materials / Semi-manufactured goods · Components / Parts</td>
+              <td>Sand → silicon wafer → Intel chip (raw → processed → component) · ArcelorMittal steel coils · Beaulieu polymers</td>
+            </tr>
+            <tr>
+              <td class="dim">Foundation Goods</td>
+              <td>Necessary to process entering goods (for own use)</td>
+              <td>Machinery · Accessories · Systems</td>
+              <td>Bekaert diamond wire used in slabbing machines (cuts natural stone) · CNC machines</td>
+            </tr>
+            <tr>
+              <td class="dim">Facilitating Goods</td>
+              <td>Support the organisation; consumed in the process (for own use)</td>
+              <td>MRO-Supplies (Maintenance, Repair, Operations) · Services</td>
+              <td>Office cleaning services · Lubricants · Safety equipment · Consulting</td>
+            </tr>
+            <tr>
+              <td class="dim">Finished Goods</td>
+              <td>Bought for resale to other businesses or consumers</td>
+              <td>Tangible · Intangible</td>
+              <td>Tangible: Etilux (labelling, adhesives, traceability solutions — resells Toshiba, Zebra, 3M…) · Intangible: Capgemini Salesforce Partnership</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔗</span>Value System — Natural Stone (Bekaert Diamond Wire)</div>
+        <div style="font-size:0.83rem; color:var(--muted); margin-bottom:0.8rem;">Bekaert supplies diamond wire to slabbing machine manufacturers — a <strong>foundation good</strong> (enabling the process). This illustrates how a B2B product sits inside a multi-tier value system.</div>
+        <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem;">
+          <div style="padding:0.6rem 1rem; background:#f1f5f9; border-radius:6px;">Quarries (extract natural stone)</div>
+          <div style="display:flex; align-items:center; gap:0.8rem;">
+            <div style="padding:0.6rem 1rem; background:#dbeafe; border-radius:6px; border-left:3px solid var(--accent2); flex:1;"><strong>Slabbing Companies</strong> — cut stone into slabs</div>
+            <div style="font-size:0.75rem; color:var(--muted);">← Slabbing machine manufacturers<br>← <strong style="color:var(--accent2);">Bekaert</strong> (diamond wire)</div>
+          </div>
+          <div style="padding:0.6rem 1rem; background:#f1f5f9; border-radius:6px;">Wholesalers for tiles, kitchen boards</div>
+          <div style="padding:0.6rem 1rem; background:#f1f5f9; border-radius:6px;">Retailers</div>
+          <div style="padding:0.6rem 1rem; background:#fef9c3; border-radius:6px;">Consumers / Construction companies</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚙️</span>B2B Marketing Mix: Products — Key Characteristics</div>
+        <ul class="key-list">
+          <li><strong>Technically complex products</strong> — require engineering expertise to specify, sell, and support</li>
+          <li><strong>(Extreme) importance of after-sales service</strong> — downtime is costly; service contracts are often more valuable than the product itself</li>
+          <li><strong>Purchase based on specifications</strong> — detailed technical requirements (RFQ/tender) drive the decision, not emotion or packaging</li>
+          <li><strong>Variable / customized design</strong> — products are often adapted per customer (custom components, bespoke software, tailored formulations)</li>
+        </ul>
+        <div class="alert" style="margin-top:1rem; background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f;">
+          💡 <strong>Contrast with B2C:</strong> A consumer buys a product off the shelf. A B2B buyer negotiates specs, delivery, service levels, and often co-develops the product with the supplier.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏭</span>Beaulieu International Group — Entering Goods Example</div>
+        <ul class="key-list">
+          <li><strong>Polymers:</strong> Homopolymers (44.9%), Impact polymers (34.9%), Random polymers (18.4%), Technical sheets (2.2%) — semi-manufactured goods used by other manufacturers</li>
+          <li><strong>Engineered Solutions:</strong> Fibres (58%), Yarns (32%), Technical Textiles (10%) — entering goods for textile manufacturers</li>
+          <li><strong>Flooring Solutions:</strong> LVT &amp; Planks · Carpet · Sheet Vinyl (43%) · Laminate &amp; Parquet (17%) · Needle Felt · Artificial Grass — <em>some are finished goods sold to distributors/retailers</em></li>
+        </ul>
+        <div style="margin-top:0.7rem; padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem; color:var(--muted);">
+          Beaulieu operates across multiple product categories — some are entering goods (polymers, fibres) bought by manufacturers; others are finished goods (flooring) sold through B2B channels to builders and retailers.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: PRICE -->
+    <div class="s2-section" id="s2-price">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">💰</span>B2B Marketing Mix: Price — Characteristics</div>
+        <ul class="key-list">
+          <li><strong>Based on quotations</strong> — no list price on the shelf; each deal starts from a formal quote (RFQ process)</li>
+          <li><strong>Different payment conditions</strong> — payment terms vary (e.g., 30/60/90 days net, partial advance payments, milestones)</li>
+          <li><strong>Non-transparent and negotiable</strong> — competitors rarely know each other's actual prices; everything is negotiated bilaterally</li>
+          <li><strong>Price not often used as a promotion instrument</strong> — unlike B2C (sales, discounts), B2B promotion is about relationships, demos, trade fairs, and value articulation — not price cuts</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚠️</span>Traditional Pricing Approaches — Limitations</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div style="padding:1rem; background:#fef2f2; border-radius:10px; border-top:3px solid #ef4444;">
+            <div style="font-weight:700; color:#991b1b; font-size:0.88rem; margin-bottom:0.5rem;">Cost-Plus Pricing</div>
+            <div style="font-size:0.8rem; color:#7f1d1d; line-height:1.6;">
+              Price = Cost + Markup<br><br>
+              <strong>Problems:</strong><br>
+              • Assumes cost structure is fully known (it rarely is)<br>
+              • Does not allow for dynamic pricing<br>
+              • Why should my internal costs affect what the customer pays?<br>
+              • Ignores customer willingness to pay<br><br>
+              <strong>Example:</strong> CostPlus Drug Company (Mark Cuban) — shows costs explicitly ($31.20 manufacturing + 15% markup + $3 pharmacy labor + $5 shipping = $39) while retail competitors charge $9,657.
+            </div>
+          </div>
+          <div style="padding:1rem; background:#fef2f2; border-radius:10px; border-top:3px solid #ef4444;">
+            <div style="font-weight:700; color:#991b1b; font-size:0.88rem; margin-bottom:0.5rem;">Competition-Based Pricing</div>
+            <div style="font-size:0.8rem; color:#7f1d1d; line-height:1.6;">
+              Price = match or undercut competitor's price<br><br>
+              <strong>Problems:</strong><br>
+              • Cedes control of a critical aspect of strategy<br>
+              • Forces you to follow a "price leader" — your fate is in their hands<br>
+              • What is the competitor's actual price? (B2B prices are non-transparent)<br>
+              • Starts a race to the bottom; destroys value<br><br>
+              <strong>Result:</strong> Neither approach is optimal — both ignore what the customer actually values.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">✅</span>Value-Based Pricing — The Better Approach</div>
+        <div class="alert" style="background:#f0fdf4; border-color:#86efac; border-left-color:var(--success); color:#14532d; margin-bottom:1rem;">
+          <strong>Value-based pricing</strong> = set the price based on the <strong>application</strong> in which the customer uses your product — i.e., what it's worth to <em>them</em> in <em>their</em> specific context.
+        </div>
+        <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; margin-bottom:1rem;">
+          <strong style="color:var(--blue);">Coca-Cola Price by Context (same product, different value):</strong>
+          <div style="display:grid; grid-template-columns:repeat(7, 1fr); gap:0.3rem; margin-top:0.7rem; text-align:center; font-size:0.72rem;">
+            <div style="padding:0.4rem; background:white; border-radius:5px; border:1px solid var(--border);"><div style="font-weight:700; color:var(--blue);">0,4€</div><div style="color:var(--muted);">Supermarket</div></div>
+            <div style="padding:0.4rem; background:white; border-radius:5px; border:1px solid var(--border);"><div style="font-weight:700; color:var(--blue);">1,2€</div><div style="color:var(--muted);">Grocery</div></div>
+            <div style="padding:0.4rem; background:white; border-radius:5px; border:1px solid var(--border);"><div style="font-weight:700; color:var(--blue);">1,45€</div><div style="color:var(--muted);">Gas (highway)</div></div>
+            <div style="padding:0.4rem; background:white; border-radius:5px; border:1px solid var(--border);"><div style="font-weight:700; color:var(--blue);">1,1€</div><div style="color:var(--muted);">Gas (local)</div></div>
+            <div style="padding:0.4rem; background:white; border-radius:5px; border:1px solid var(--border);"><div style="font-weight:700; color:var(--accent);">3€</div><div style="color:var(--muted);">Bar</div></div>
+            <div style="padding:0.4rem; background:white; border-radius:5px; border:1px solid var(--border);"><div style="font-weight:700; color:var(--accent);">4€</div><div style="color:var(--muted);">Hotel</div></div>
+            <div style="padding:0.4rem; background:white; border-radius:5px; border:1px solid var(--border);"><div style="font-weight:700; color:var(--accent);">4€</div><div style="color:var(--muted);">Beach</div></div>
+          </div>
+        </div>
+        <ul class="key-list">
+          <li>Value-based pricing is <strong>linked to the Value-in-Use (VIU) model</strong> from Session 1 — price reflects economic value delivered, not cost incurred</li>
+          <li>In B2B: a component that saves €500K in downtime per year has much higher value in a steel mill than in a small workshop — <strong>same product, radically different price potential</strong></li>
+          <li>Requires <strong>deep customer knowledge</strong> to implement — you must understand the customer's application, their next-best alternative, and what your differential is worth</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: COMMUNICATION -->
+    <div class="s2-section" id="s2-communication">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📡</span>B2B Communication Funnel</div>
+        <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1rem; line-height:1.6;">
+          Communication media evolve as a prospect moves from unaware to loyal customer. The choice of medium must match the stage — going from impersonal/cheap (mass) to personal/expensive (specialized sales) as the relationship deepens.
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div>
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.6rem;">Buyer Journey Stages</div>
+            <div style="display:flex; flex-direction:column; gap:0.3rem; font-size:0.82rem;">
+              <div style="padding:0.5rem 0.8rem; background:#dbeafe; border-radius:5px; text-align:center; font-weight:600; color:var(--blue);">Awareness</div>
+              <div style="padding:0.5rem 0.8rem; background:#bfdbfe; border-radius:5px; text-align:center;">Interest</div>
+              <div style="padding:0.5rem 0.8rem; background:#93c5fd; border-radius:5px; text-align:center;">Evaluation</div>
+              <div style="padding:0.5rem 0.8rem; background:#60a5fa; border-radius:5px; text-align:center; color:white; font-weight:600;">Trial</div>
+              <div style="padding:0.5rem 0.8rem; background:#3b82f6; border-radius:5px; text-align:center; color:white; font-weight:700;">Adoption → Loyal Customer</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.6rem;">Media Characteristics (increase as you go down)</div>
+            <ul class="key-list">
+              <li><strong>Personal nature</strong> — from mass anonymous → one-on-one sales</li>
+              <li><strong>Sensory cues</strong> — from text/image → live demo / physical experience</li>
+              <li><strong>Impact per contact</strong> — increases significantly</li>
+              <li><strong>Cost per contact</strong> — also increases significantly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📊</span>Cost vs. Impact — Communication Channels</div>
+        <table class="compare-table">
+          <thead>
+            <tr><th>Channel</th><th>Cost per Exposure</th><th>Sales Impact</th><th>Best Used For</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="dim">Mass Advertising</td><td>Low</td><td>Low</td><td>Awareness / brand building at scale</td></tr>
+            <tr><td class="dim">Direct Mail</td><td>Low–Medium</td><td>Low–Medium</td><td>Targeted awareness campaigns</td></tr>
+            <tr><td class="dim">Internet / Digital</td><td>Medium</td><td>Medium</td><td>Lead generation, content marketing, retargeting</td></tr>
+            <tr><td class="dim">Telesales</td><td>Medium–High</td><td>Medium</td><td>Prospect qualification, follow-up</td></tr>
+            <tr><td class="dim">Personal Selling</td><td>High</td><td>High</td><td>Negotiation, relationship building, complex deals</td></tr>
+            <tr><td class="dim">Specialised Sales Force</td><td>Very High</td><td>Very High</td><td>Strategic accounts, technical selling, key customers</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:0.7rem; font-size:0.78rem; color:var(--muted);">Source: Based on Zoltners et al. (2004: 103)</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔁</span>Conversion Funnel — From Lead to Customer</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div>
+            <ul class="key-list">
+              <li><strong>Lead</strong> = potential contact (name in a database)</li>
+              <li><strong>Prospect</strong> = qualified potential customer (fits your ICP)</li>
+              <li><strong>MQL (Marketing Qualified Lead)</strong> = Fit + Engagement (opened emails, visited key pages)</li>
+              <li><strong>SQL (Sales Qualified Lead)</strong> = Confirmed need + stakeholder access (BANT: Budget, Authority, Need, Timeline)</li>
+              <li><strong>Opportunity</strong> = expected value + close date confirmed</li>
+              <li><strong>Customer</strong> = deal closed, onboarding begins</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.6rem;">Lead Scoring Model</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem; font-size:0.75rem;">
+              <div style="padding:0.5rem; background:#f0fdf4; border-radius:5px; text-align:center; border:1px solid #86efac;"><span style="color:var(--success); font-weight:700;">+30</span><br><span style="color:var(--muted);">Matches buyer persona demographics</span></div>
+              <div style="padding:0.5rem; background:#f0fdf4; border-radius:5px; text-align:center; border:1px solid #86efac;"><span style="color:var(--success); font-weight:700;">+15</span><br><span style="color:var(--muted);">Registers for webinar</span></div>
+              <div style="padding:0.5rem; background:#f0fdf4; border-radius:5px; text-align:center; border:1px solid #86efac;"><span style="color:var(--success); font-weight:700;">+5</span><br><span style="color:var(--muted);">Opens email / visits website</span></div>
+              <div style="padding:0.5rem; background:#fef2f2; border-radius:5px; text-align:center; border:1px solid #fca5a5;"><span style="color:#ef4444; font-weight:700;">−15</span><br><span style="color:var(--muted);">Revenue below target profile</span></div>
+              <div style="padding:0.5rem; background:#fef2f2; border-radius:5px; text-align:center; border:1px solid #fca5a5;"><span style="color:#ef4444; font-weight:700;">−10</span><br><span style="color:var(--muted);">Unsubscribes from email</span></div>
+              <div style="padding:0.5rem; background:#fef2f2; border-radius:5px; text-align:center; border:1px solid #fca5a5;"><span style="color:#ef4444; font-weight:700;">−5</span><br><span style="color:var(--muted);">Email bounces</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📝</span>Content Marketing</div>
+        <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f; margin-bottom:1rem;">
+          <strong>Content Marketing</strong> = develop and curate content that is <strong>valuable</strong>, <strong>relevant</strong> and <strong>consistent</strong> and distribute it to a clearly defined audience — with the objective of supporting profitable customer action.
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.82rem;">
+            <strong style="color:var(--blue);">Goals:</strong>
+            <ul style="margin-top:0.4rem; padding-left:1rem; line-height:1.9; color:var(--text);">
+              <li>Show authority / expertise ("thought leadership")</li>
+              <li>Engagement with (potential) customers on their terms</li>
+              <li>Lead generation and nurturing</li>
+            </ul>
+          </div>
+          <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.82rem;">
+            <strong style="color:var(--blue);">John Deere — "The Furrow" (1895):</strong><br>
+            <span style="color:var(--muted); line-height:1.6;">One of the oldest content marketing examples. John Deere publishes a farming magazine with practical tips for American farmers — building trust and authority without directly selling. Still published today (130+ years). This is <strong>B2B content marketing at its purest</strong>: educate your buyer, and when they need a tractor, John Deere is top of mind.</span>
+          </div>
+        </div>
+        <div style="padding:0.8rem; background:#f5f3ff; border-radius:8px; font-size:0.82rem; border-left:3px solid #a855f7;">
+          <strong style="color:#6d28d9;">Salesforce × Slack — Million Dollar Puzzle:</strong> A modern B2B content marketing campaign. Salesforce partnered with Slack to create an interactive puzzle challenge to engage prospects, generate leads, and demonstrate Slack's capabilities in a fun, shareable format — targeting enterprise IT and sales teams.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏛️</span>Trade Fairs — B2B Communication Tool</div>
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.6rem; margin-bottom:1rem; font-size:0.78rem; text-align:center;">
+          <div style="padding:0.6rem; background:#dbeafe; border-radius:7px;"><strong style="color:var(--blue);">Sell Products</strong></div>
+          <div style="padding:0.6rem; background:#dbeafe; border-radius:7px;"><strong style="color:var(--blue);">Generate Sales Leads</strong></div>
+          <div style="padding:0.6rem; background:#dbeafe; border-radius:7px;"><strong style="color:var(--blue);">Relationship Building</strong></div>
+          <div style="padding:0.6rem; background:#dbeafe; border-radius:7px;"><strong style="color:var(--blue);">Monitor Competition</strong></div>
+          <div style="padding:0.6rem; background:#dbeafe; border-radius:7px;"><strong style="color:var(--blue);">Launch &amp; Test New Products</strong></div>
+          <div style="padding:0.6rem; background:#dbeafe; border-radius:7px;"><strong style="color:var(--blue);">Reinforce Corporate Image</strong></div>
+          <div style="padding:0.6rem; background:#dbeafe; border-radius:7px; grid-column:2;"><strong style="color:var(--blue);">Employee Motivation</strong></div>
+        </div>
+        <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem;">
+          <strong style="color:var(--blue);">Barco at trade fairs:</strong> Demonstrates laser projectors and visualization solutions live. Trade fairs are critical for B2B companies because the product is technically complex and often needs to be seen and experienced to be bought.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">✈️</span>Product Trial — Cisco TelePresence</div>
+        <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1rem; line-height:1.6;">
+          The <strong>Trial</strong> stage of the communication funnel is critical for B2B products that need to be experienced to be believed. Cisco's TelePresence (high-end video conferencing) is an example.
+        </div>
+        <ul class="key-list">
+          <li>Cisco created a <strong>boarding pass</strong> for trade fair attendees — mocking airline inconveniences ("pains" of flying) in the "Please be aware" box</li>
+          <li>Benefits of a TelePresence meeting (collaborate on product launch, connect with global staff, save travel expenses, build customer relationships) were listed as "Reason for TelePresence meeting"</li>
+          <li>Handing in the boarding pass gave access to an <strong>actual live TelePresence meeting</strong> at the fair — the product was "seen to be believed"</li>
+          <li>This is a perfect communication-stage match: <strong>Trial requires personal, sensory, high-impact channels</strong> — exactly what a live demo provides</li>
+        </ul>
+        <div class="alert" style="background:#f0fdf4; border-color:#86efac; border-left-color:var(--success); color:#14532d; margin-top:1rem;">
+          💡 <strong>Link to STP:</strong> The boarding pass targeted business travelers at tech conferences — a perfectly segmented audience for a product that reduces the need for travel.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: DISTRIBUTION -->
+    <div class="s2-section" id="s2-distribution">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🚚</span>B2B Marketing Mix: Distribution — Overview</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div style="padding:1rem; background:#eff6ff; border-radius:10px; border-top:3px solid var(--accent2);">
+            <div style="font-weight:700; color:var(--blue); font-size:0.88rem; margin-bottom:0.4rem;">Direct Channels</div>
+            <div style="font-size:0.8rem; color:#1e3a5f; line-height:1.6;">
+              Supplier firm reaches customer firm <strong>directly</strong>, through the supplier's own sales forces and logistics systems.<br><br>
+              Many connections needed (N×M relationships), but full control and direct relationship management.
+            </div>
+          </div>
+          <div style="padding:1rem; background:#fff7ed; border-radius:10px; border-top:3px solid var(--accent);">
+            <div style="font-weight:700; color:#92400e; font-size:0.88rem; margin-bottom:0.4rem;">Indirect Channels</div>
+            <div style="font-size:0.8rem; color:#78350f; line-height:1.6;">
+              <strong>Resellers and third-party providers</strong> are involved in serving the customer firm.<br><br>
+              Intermediary centralizes relationships — reduces connections but reduces control. Often involves multiple tiers (distributors + resellers, or wholesale + retail).
+            </div>
+          </div>
+        </div>
+        <div class="alert">
+          ⚠️ <strong>Mixed distribution</strong> is most common in B2B: direct for large/strategic accounts, indirect (resellers/distributors) for smaller/geographic segments. This creates push-pull tensions.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📋</span>Channel Activities (Coughlan et al., 2001)</div>
+        <table class="compare-table">
+          <thead><tr><th>Activity</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td class="dim">Storage</td><td>Storage, delivery and stock maintenance costs</td></tr>
+            <tr><td class="dim">Information</td><td>Research, data collection, data analysis costs</td></tr>
+            <tr><td class="dim">Promotion</td><td>Advertising, promotional activities</td></tr>
+            <tr><td class="dim">Services</td><td>Installation and delivery costs</td></tr>
+            <tr><td class="dim">Negotiation</td><td>Time and legal costs of deal-making</td></tr>
+            <tr><td class="dim">Financing</td><td>Credit conditions, payment terms and sales conditions</td></tr>
+            <tr><td class="dim">After-sales</td><td>Insurance, after-sales service and support</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:0.7rem; font-size:0.82rem; color:var(--muted); padding:0.8rem; background:var(--light); border-radius:8px; line-height:1.6;">
+          <strong style="color:var(--blue);">Why this matters:</strong> Every channel activity creates cost. The question is who performs it — the supplier, the intermediary, or the customer? This allocation determines margins, efficiency, and who has power in the channel.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">💸</span>Compensation Methods for Channel Partners</div>
+        <ul class="key-list">
+          <li><strong>Suggested resale price</strong> — supplier recommends end price; reseller earns the margin</li>
+          <li><strong>Trade discounts (margin)</strong> — standard discount off list price for taking on channel activities</li>
+          <li><strong>Volume discounts</strong> — e.g., per box load, truckload, rail carload, shipload — incentivize bulk ordering</li>
+          <li><strong>Payment discounts</strong> — e.g., 2/10/net 30 (pay within 10 days, get 2% off; full amount due within 30 days)</li>
+          <li><strong>Allowances</strong> — for cooperative advertising, transportation, etc.</li>
+          <li><strong>Bonuses</strong> — for hitting volume targets or exclusive agreements</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📐</span>Distribution Intensity</div>
+        <table class="compare-table">
+          <thead><tr><th>Type</th><th>Description</th><th>Example</th><th>Implications</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="dim">Maximal Intensity</td>
+              <td>Sell through as many outlets as possible</td>
+              <td>Coca-Cola — available everywhere</td>
+              <td>Maximum reach; low control over presentation</td>
+            </tr>
+            <tr>
+              <td class="dim">Selective</td>
+              <td>Sell through criteria-based selection of outlets</td>
+              <td>Premium electronics via approved retailers</td>
+              <td>Balanced reach and brand control</td>
+            </tr>
+            <tr>
+              <td class="dim">Exclusive</td>
+              <td>Only one type of retailer per territory (geography or e-commerce)</td>
+              <td>Swatch stores; Google Pixel via Proximus + MediaMarkt only in Belgium</td>
+              <td>Maximum brand control; risk of conflict if exclusivity is violated</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-top:1rem;">
+          <div style="padding:0.8rem; background:#fff7ed; border-radius:8px; border-left:3px solid var(--accent); font-size:0.82rem;">
+            <strong style="color:#92400e;">⇒ Control:</strong> More exclusive = more control over pricing, positioning, and customer experience. Maximal intensity means you lose control of how the product is presented and priced.
+          </div>
+          <div style="padding:0.8rem; background:#fef2f2; border-radius:8px; border-left:3px solid #ef4444; font-size:0.82rem;">
+            <strong style="color:#991b1b;">⇒ Conflict:</strong> E-commerce challenges geographic exclusivity. A reseller in Brussels can now sell online into territory assigned to Antwerp — creating channel conflict that undermines the exclusive model.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚖️</span>Marketplace Equity — Build Long-Term Channel Value</div>
+        <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; margin-bottom:1rem; line-height:1.7;">
+          <strong style="color:var(--blue);">Marketplace Equity</strong> = the value a customer firm receives from buying a particular supplier's product or service through a particular reseller. It is the product of three equities:
+          <ul style="margin-top:0.5rem; padding-left:1.2rem; line-height:2;">
+            <li><strong style="color:var(--accent2);">Channel Equity</strong> — value a reseller receives from the channel offering a supplier provides (training, co-marketing, support, tools)</li>
+            <li><strong style="color:var(--accent2);">Reseller Equity</strong> — value of buying from <em>this</em> reseller vs. other authorized resellers in the local trade area (service, expertise, trust)</li>
+            <li><strong style="color:var(--accent2);">Brand Equity</strong> — value of buying <em>this</em> supplier's product vs. competing suppliers (brand strength, reputation, innovation)</li>
+          </ul>
+        </div>
+        <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f;">
+          💡 <strong>Strategic insight:</strong> Barco invests heavily in Channel Equity (partner programs, technical training, co-marketing funds) so that its resellers are better equipped, more motivated, and more loyal than competitors' resellers. This creates a sustainable marketplace advantage beyond just product specs.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🎯</span>Distribution Channel Goals</div>
+        <ul class="key-list">
+          <li><strong>Maximize market access</strong> — provide coverage and exposure to as many profitable customers as possible</li>
+          <li><strong>Optimize value-added</strong> — meet customer requirements and satisfy preferences to create the greatest possible value for each market segment</li>
+          <li><strong>Minimize cost-to-serve</strong> — minimize the total expenditures required to deliver the intended offerings to targeted segments and customers</li>
+        </ul>
+        <div style="margin-top:1rem; padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.6;">
+          <strong style="color:var(--blue);">Barco Clickshare — Push &amp; Pull Strategy:</strong><br>
+          AV channel (resellers, integrators) = <strong>80% of business</strong>. IT channel (VAR, SMB, DMRs) = <strong>20%</strong>. Barco uses a mixed distribution design with different intermediary types for different customer segments. Simultaneously, Barco invests in <strong>Pull marketing</strong> (direct to end customers via market influencers, web lead generation, business development managers at F1000 companies) to create demand that flows down through channel partners.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CASE STUDY: B2B CONSUMER ENGAGEMENT -->
+  <div class="section" id="casestudy">
+    <div class="section-label">Accenture Digital / Vlerick — Consumer Engagement Framework</div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📄</span>Paper at a Glance</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+        <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.8rem;">
+          <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.3rem;">Title</div>
+          How Can B2B Organizations Engage Consumers through the Use of Digital Technology?
+        </div>
+        <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.8rem;">
+          <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.3rem;">Authors</div>
+          Steve Muylle, Amit Basu, <strong>Willem Standaert</strong>, Wim Decraene, Frederik Debrabander, Sarah Praet
+        </div>
+        <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.8rem;">
+          <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.3rem;">Publisher</div>
+          Accenture Digital / Vlerick Business School / SMU Cox (Accenture Belux–Vlerick Digital 20/20 Chair)
+        </div>
+      </div>
+      <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f;">
+        <strong>Central question:</strong> B2B firms traditionally focus digital efforts on business customers only. But digital technology now enables them to reach <em>end consumers</em> directly — generating new revenue streams, richer market intelligence, and stronger competitive moats. How should they do it?
+      </div>
+    </div>
+
+    <!-- SUB-NAV -->
+    <div class="s1-subnav" id="s3-subnav">
+      <button class="s1-btn s3-btn active" onclick="showS3('s3-intro')">🌐 Introduction</button>
+      <button class="s1-btn s3-btn" onclick="showS3('s3-framework')">🗺️ The Framework</button>
+      <button class="s1-btn s3-btn" onclick="showS3('s3-coffee')">☕ Coffee Example</button>
+      <button class="s1-btn s3-btn" onclick="showS3('s3-cases')">🏭 Case Studies</button>
+      <button class="s1-btn s3-btn" onclick="showS3('s3-exam')">🎓 Exam Angles</button>
+    </div>
+
+    <!-- INTRO -->
+    <div class="s3-section active" id="s3-intro">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔄</span>Traditional vs. New B2B Approach</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div style="padding:1rem; background:#fef2f2; border-radius:10px; border-top:3px solid #ef4444;">
+            <div style="font-weight:700; color:#991b1b; font-size:0.88rem; margin-bottom:0.6rem;">Traditional B2B Approach</div>
+            <div style="font-size:0.78rem; color:#7f1d1d; line-height:1.7;">
+              B → B¹ → C<br>
+              (product/service only, one-directional)<br><br>
+              ✗ <strong>No interaction</strong> between B2B firm and end-consumer<br>
+              ✗ <strong>No/indirect insight</strong> on consumer markets and preferences<br><br>
+              The B2B firm is completely blind to the end consumer — it relies entirely on its business customers to relay what consumers want.
+            </div>
+          </div>
+          <div style="padding:1rem; background:#f0fdf4; border-radius:10px; border-top:3px solid var(--success);">
+            <div style="font-weight:700; color:#166534; font-size:0.88rem; margin-bottom:0.6rem;">New B2B Approach (Digital)</div>
+            <div style="font-size:0.78rem; color:#14532d; line-height:1.7;">
+              B ⇄ B¹ → C (+ B → C dotted line)<br>
+              (product/service + information/intelligence)<br><br>
+              ✓ <strong>Engage</strong> end-consumers to improve processes<br>
+              ✓ <strong>Sell</strong> to consumer segments (direct or indirect)<br>
+              ✓ <strong>Digitally-enhance</strong> business/consumer products<br>
+              ✓ <strong>Offer or sell digital</strong> business/consumer products/services
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">💡</span>Why Engage Consumers? — Benefits for B2B Firms</div>
+        <ul class="key-list">
+          <li><strong>More revenues through increased sales volume</strong> — stimulating primary (derived) demand for the end product means more business customers need your B2B component</li>
+          <li><strong>Price premiums driven by preference insights</strong> — knowing what consumers prefer allows B2B firms to create differentiated products that command higher prices along the chain</li>
+          <li><strong>Higher customer switching costs</strong> — when a B2B firm is embedded in the consumer experience (via app, data, branding), business customers are reluctant to switch suppliers</li>
+          <li><strong>Cost efficiencies in internal operations</strong> — better understanding of end-consumer markets improves inventory management, production planning, and logistics (demand forecasting)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- FRAMEWORK -->
+    <div class="s3-section" id="s3-framework">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🗺️</span>The Consumer Engagement Framework — 2 Dimensions × 3 Levels = 6 Types</div>
+        <div style="font-size:0.83rem; color:var(--muted); margin-bottom:1rem; line-height:1.6;">
+          The framework has two dimensions: <strong>(1) market scope</strong> (B2B or B2C segment) and <strong>(2) level of product digitization</strong> (existing → digitally-enhanced → fully digital product line).
+        </div>
+
+        <!-- FRAMEWORK GRID -->
+        <div style="border-radius:10px; overflow:hidden; border:2px solid var(--border); margin-bottom:1.2rem;">
+          <!-- Header row -->
+          <div style="display:grid; grid-template-columns:80px 1fr 1fr 1fr; background:var(--navy); color:white; font-size:0.75rem; font-weight:700;">
+            <div style="padding:0.7rem 0.8rem; border-right:1px solid rgba(255,255,255,0.15);"></div>
+            <div style="padding:0.7rem 0.8rem; text-align:center; border-right:1px solid rgba(255,255,255,0.15);">Existing Product Line</div>
+            <div style="padding:0.7rem 0.8rem; text-align:center; border-right:1px solid rgba(255,255,255,0.15);">Digitally-Enhanced Product Line</div>
+            <div style="padding:0.7rem 0.8rem; text-align:center;">Digital Product Line</div>
+          </div>
+          <!-- B2B row -->
+          <div style="display:grid; grid-template-columns:80px 1fr 1fr 1fr; background:#eff6ff; border-top:1px solid var(--border);">
+            <div style="padding:0.8rem; font-weight:700; font-size:0.8rem; color:var(--blue); display:flex; align-items:center; border-right:1px solid var(--border);">B2B</div>
+            <div style="padding:0.9rem; border-right:1px solid var(--border);">
+              <div style="font-weight:700; color:var(--blue); font-size:0.82rem; margin-bottom:0.3rem;">① Process Improvement</div>
+              <div style="font-size:0.75rem; color:#1e3a5f; line-height:1.5;">Use consumer data to optimize internal B2B operations, generate derived demand, qualify leads, optimize pricing</div>
+            </div>
+            <div style="padding:0.9rem; border-right:1px solid var(--border);">
+              <div style="font-weight:700; color:var(--blue); font-size:0.82rem; margin-bottom:0.3rem;">② Digitally-Enhanced Business Product</div>
+              <div style="font-size:0.75rem; color:#1e3a5f; line-height:1.5;">Add digital/information features to make existing B2B product more appealing to business customers</div>
+            </div>
+            <div style="padding:0.9rem;">
+              <div style="font-weight:700; color:var(--blue); font-size:0.82rem; margin-bottom:0.3rem;">③ Digital Business Product</div>
+              <div style="font-size:0.75rem; color:#1e3a5f; line-height:1.5;">Sell consumer data insights as a new information/software product to business customers</div>
+            </div>
+          </div>
+          <!-- B2C row -->
+          <div style="display:grid; grid-template-columns:80px 1fr 1fr 1fr; border-top:1px solid var(--border);">
+            <div style="padding:0.8rem; font-weight:700; font-size:0.8rem; color:var(--accent); display:flex; align-items:center; border-right:1px solid var(--border);">B2C</div>
+            <div style="padding:0.9rem; border-right:1px solid var(--border); background:#fff7ed;">
+              <div style="font-weight:700; color:#92400e; font-size:0.82rem; margin-bottom:0.3rem;">④ Consumer Sales</div>
+              <div style="font-size:0.75rem; color:#78350f; line-height:1.5;">Leverage digital to sell existing product directly or indirectly to end consumers</div>
+            </div>
+            <div style="padding:0.9rem; border-right:1px solid var(--border); background:#fff7ed;">
+              <div style="font-weight:700; color:#92400e; font-size:0.82rem; margin-bottom:0.3rem;">⑤ Digitally-Enhanced Consumer Product</div>
+              <div style="font-size:0.75rem; color:#78350f; line-height:1.5;">Add digital features (app, personalization, sensors) to enhance the consumer product</div>
+            </div>
+            <div style="padding:0.9rem; background:#fff7ed;">
+              <div style="font-weight:700; color:#92400e; font-size:0.82rem; margin-bottom:0.3rem;">⑥ Digital Consumer Product</div>
+              <div style="font-size:0.75rem; color:#78350f; line-height:1.5;">Sell consumer data insights as new software/information product directly to consumers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔢</span>The 6 Types — Detailed Definitions</div>
+        <div style="display:grid; gap:0.7rem;">
+
+          <div style="padding:1rem; border-radius:8px; background:#eff6ff; border-left:4px solid var(--accent2);">
+            <div style="font-weight:700; color:var(--blue); font-size:0.88rem; margin-bottom:0.3rem;">① Process Improvement (B2B, Existing product line)</div>
+            <ul style="font-size:0.8rem; color:#1e3a5f; line-height:1.8; padding-left:1.2rem;">
+              <li>Develop internal <strong>business intelligence</strong> from consumer data to optimize internal operations</li>
+              <li>Analyze consumer product preferences for <strong>product configuration</strong> and discovery of new applications</li>
+              <li><strong>Generate derived demand</strong> — by educating consumers, you pull demand toward your business customers' products</li>
+              <li><strong>Generate and qualify leads</strong> — consumer interactions reveal which businesses don't yet use your product</li>
+              <li><strong>Optimize pricing</strong> — consumer data reveals what different segments value and how much they pay</li>
+            </ul>
+          </div>
+
+          <div style="padding:1rem; border-radius:8px; background:#eff6ff; border-left:4px solid #60a5fa;">
+            <div style="font-weight:700; color:var(--blue); font-size:0.88rem; margin-bottom:0.3rem;">② Digitally-Enhanced Business Product (B2B, Digitally-enhanced line)</div>
+            <div style="font-size:0.8rem; color:#1e3a5f; line-height:1.6;">Make existing B2B products more appealing to business customers by introducing <strong>information features, information processing, personalization or digital functionality</strong> based on consumer data. The product remains B2B — it's sold to business customers — but consumer engagement makes it better.</div>
+          </div>
+
+          <div style="padding:1rem; border-radius:8px; background:#eff6ff; border-left:4px solid #1e3a6b;">
+            <div style="font-weight:700; color:var(--blue); font-size:0.88rem; margin-bottom:0.3rem;">③ Digital Business Product (B2B, Digital line)</div>
+            <div style="font-size:0.8rem; color:#1e3a5f; line-height:1.6;">Develop and sell <strong>entirely new information or software applications</strong> based on consumer data to business customers. This is a new product category — not a physical product, but a data/insight product sold B2B.</div>
+          </div>
+
+          <div style="padding:1rem; border-radius:8px; background:#fff7ed; border-left:4px solid #f97316;">
+            <div style="font-weight:700; color:#92400e; font-size:0.88rem; margin-bottom:0.3rem;">④ Consumer Sales (B2C, Existing product line)</div>
+            <div style="font-size:0.8rem; color:#78350f; line-height:1.6;">Leverage digital technology to <strong>sell the existing (or adapted) product online to consumers</strong> directly (own e-commerce site) or indirectly (via Amazon, marketplace). The B2B firm becomes a B2C seller.</div>
+          </div>
+
+          <div style="padding:1rem; border-radius:8px; background:#fff7ed; border-left:4px solid #fb923c;">
+            <div style="font-weight:700; color:#92400e; font-size:0.88rem; margin-bottom:0.3rem;">⑤ Digitally-Enhanced Consumer Product (B2C, Digitally-enhanced line)</div>
+            <div style="font-size:0.8rem; color:#78350f; line-height:1.6;">Enhance the consumer product by adding <strong>information features, processing, personalization, or digital functionality</strong> — typically via a mobile app. Consumer gets a richer product experience; the B2B firm gains consumer data.</div>
+          </div>
+
+          <div style="padding:1rem; border-radius:8px; background:#fff7ed; border-left:4px solid #ea580c;">
+            <div style="font-weight:700; color:#92400e; font-size:0.88rem; margin-bottom:0.3rem;">⑥ Digital Consumer Product (B2C, Digital line)</div>
+            <div style="font-size:0.8rem; color:#78350f; line-height:1.6;">Develop and sell <strong>entirely new information or software applications based on consumer data directly to consumers</strong>. A brand-new product line for the B2B firm — pure digital, B2C.</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COFFEE EXAMPLE -->
+    <div class="s3-section" id="s3-coffee">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">☕</span>Applied Example — Industrial Coffee Machine Manufacturer</div>
+        <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f; margin-bottom:1rem;">
+          <strong>Context:</strong> A B2B organization sells coffee machines and coffee beans to <strong>offices, bars, hotels, and restaurants</strong> (business customers), but <em>not</em> directly to consumers. How can digital technology let them engage consumers across all 6 framework types?
+        </div>
+
+        <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.8rem;">B2B Quadrant — Engaging consumers for business benefit</div>
+        <div style="display:grid; gap:0.7rem; margin-bottom:1.4rem;">
+
+          <div style="display:flex; gap:1rem; padding:1rem; background:#eff6ff; border-radius:8px; border-left:4px solid var(--accent2); font-size:0.8rem;">
+            <div style="flex-shrink:0; width:32px; height:32px; background:var(--blue); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">①</div>
+            <div>
+              <div style="font-weight:700; color:var(--blue); margin-bottom:0.3rem;">Process Improvement</div>
+              <ul style="padding-left:1rem; line-height:1.8; color:#1e3a5f;">
+                <li><strong>Inform consumers</strong> where to find their coffee machines (website/app) → <strong>generates derived demand</strong>: consumers ask coffee shops for "that machine" → shop buys more from the B2B firm</li>
+                <li><strong>Monitor social media</strong> about coffee consumption → identifies shops without the machine as <strong>new customer leads</strong></li>
+                <li><strong>Interact with consumers</strong> on coffee brands/flavors → adapts product offering to consumer preferences → <strong>indirectly increases sales</strong> at coffee shops (business customers)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1rem; padding:1rem; background:#eff6ff; border-radius:8px; border-left:4px solid #60a5fa; font-size:0.8rem;">
+            <div style="flex-shrink:0; width:32px; height:32px; background:#1d4ed8; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">②</div>
+            <div>
+              <div style="font-weight:700; color:var(--blue); margin-bottom:0.3rem;">Digitally-Enhanced Business Product</div>
+              <div style="color:#1e3a5f; line-height:1.6;">Mobile app for <em>consumers</em> to customize and save their coffee composition, track and monitor consumption. Coffee shops equipped with app-connected machines become <strong>more appealing to consumers</strong> (same coffee every time, consumption tracking). Shops without the app are at a disadvantage → incentivizes business customers to upgrade/buy the machine.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1rem; padding:1rem; background:#eff6ff; border-radius:8px; border-left:4px solid #1e3a6b; font-size:0.8rem;">
+            <div style="flex-shrink:0; width:32px; height:32px; background:var(--navy); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">③</div>
+            <div>
+              <div style="font-weight:700; color:var(--blue); margin-bottom:0.3rem;">Digital Business Product</div>
+              <div style="color:#1e3a5f; line-height:1.6;">Aggregated consumer data from the app (consumption insights, consumer profiles, time of consumption) is packaged as a <strong>data product sold to business customers</strong> (bars, hotels, corporate clients). Enables them to better tailor their coffee offerings and optimize stock. A new B2B revenue stream from consumer intelligence.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.8rem;">B2C Quadrant — Directly serving consumers</div>
+        <div style="display:grid; gap:0.7rem;">
+
+          <div style="display:flex; gap:1rem; padding:1rem; background:#fff7ed; border-radius:8px; border-left:4px solid #f97316; font-size:0.8rem;">
+            <div style="flex-shrink:0; width:32px; height:32px; background:var(--accent); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">④</div>
+            <div>
+              <div style="font-weight:700; color:#92400e; margin-bottom:0.3rem;">Consumer Sales</div>
+              <div style="color:#78350f; line-height:1.6;">Adapt the industrial coffee machine for the home consumer market and sell it <strong>direct</strong> (own e-commerce website) or <strong>indirect</strong> (via Amazon). This is a full channel shift — the B2B firm becomes a B2C retailer for this product line.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1rem; padding:1rem; background:#fff7ed; border-radius:8px; border-left:4px solid #fb923c; font-size:0.8rem;">
+            <div style="flex-shrink:0; width:32px; height:32px; background:#ea580c; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">⑤</div>
+            <div>
+              <div style="font-weight:700; color:#92400e; margin-bottom:0.3rem;">Digitally-Enhanced Consumer Product</div>
+              <div style="color:#78350f; line-height:1.6;">Mobile app for home consumers: customize coffee composition, track consumption, receive <strong>maintenance/repair alerts</strong>, re-order capsules when out of stock. Enhances the physical machine with a digital layer — increasing stickiness and repeat purchases.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1rem; padding:1rem; background:#fff7ed; border-radius:8px; border-left:4px solid #c2410c; font-size:0.8rem;">
+            <div style="flex-shrink:0; width:32px; height:32px; background:#c2410c; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">⑥</div>
+            <div>
+              <div style="font-weight:700; color:#92400e; margin-bottom:0.3rem;">Digital Consumer Product</div>
+              <div style="color:#78350f; line-height:1.6;">Based on energy-level tracking after coffee consumption, the app <strong>recommends when to drink which type of coffee</strong> for optimal energy and health impact. Based on preferences of consumers with similar tastes, it proposes other coffee blends. A fully new digital product sold to consumers — generating new revenue from data.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CASE STUDIES -->
+    <div class="s3-section" id="s3-cases">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧪</span>Case Study 1 — Solvay Group (Chemicals)</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem; font-size:0.8rem;">
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; line-height:1.6;">
+            <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.4rem;">Organization</div>
+            <strong>Solvay Group</strong> — Industry: <strong>Chemicals</strong>
+          </div>
+          <div style="padding:0.8rem; background:#fef9c3; border-radius:8px; line-height:1.6; border-left:3px solid #d97706;">
+            <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.4rem;">Consumer Engagement Type</div>
+            <strong style="color:#92400e;">① Process Improvement — Generate Derived Demand</strong>
+          </div>
+        </div>
+
+        <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; margin-bottom:1rem; line-height:1.6;">
+          <strong style="color:var(--blue);">Product Line — Emana® Fiber:</strong><br>
+          A specialty fiber that <strong>absorbs body heat and emanates infrared rays back to the skin</strong>, offering higher skin blood micro-circulation, improved skin smoothness and elasticity. Sold to <strong>shapewear, hosiery, lingerie, jeans and sportswear manufacturers</strong>, who then sell apparel through wholesale and retail to end consumers. Classic B2B2C chain.
+        </div>
+
+        <div style="padding:1rem; background:#f0fdf4; border-radius:8px; font-size:0.82rem; margin-bottom:1rem; border-left:3px solid var(--success); line-height:1.6;">
+          <strong style="color:#166534;">What Solvay did — Digital Consumer Engagement:</strong>
+          <ul style="padding-left:1.2rem; margin-top:0.5rem; line-height:1.9;">
+            <li>Used <strong>Facebook</strong> to educate consumers about Emana® fiber in customers' products and provided links to the online stores of business customers</li>
+            <li>Created a <strong>Facebook tab</strong> listing different customer products that feature Emana® fiber</li>
+            <li>Encouraged consumers to <strong>share their experiences</strong> wearing Emana® fiber-based apparel on <strong>Instagram using hashtags</strong> that refer to the fiber</li>
+            <li>Potential Solvay Emana® <strong>business customers can monitor this social proof</strong>, which motivates them to contact Solvay for information about Emana®</li>
+          </ul>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="padding:0.9rem; background:#eff6ff; border-radius:8px; font-size:0.8rem;">
+            <strong style="color:var(--blue);">Why this is Process Improvement (not Consumer Sales):</strong><br>
+            <span style="color:#1e3a5f; line-height:1.6;">Solvay is NOT selling to consumers directly. It is using consumer engagement to <em>generate derived demand</em> — consumers want products with Emana® → clothing brands want to source Emana® fiber from Solvay. The B2C channel stays unchanged; the B2B pipeline benefits.</span>
+          </div>
+          <div style="padding:0.9rem; background:#fef9c3; border-radius:8px; font-size:0.8rem;">
+            <strong style="color:#92400e;">Strategic logic:</strong><br>
+            <span style="color:#78350f; line-height:1.6;">By making consumers aware of and enthusiastic about the ingredient (Emana®), Solvay creates <strong>pull demand</strong> through the supply chain. This is the ingredient branding strategy — similar to how "Intel Inside" made consumers ask for Intel-equipped PCs.</span>
+          </div>
+        </div>
+
+        <div class="quote-block" style="background:linear-gradient(135deg, #1a3a1a 0%, #2d5a2d 100%);">
+          <p>"For Solvay, as a traditional B2B organization, the connection with the end consumer is typically not top of mind. Yet, digital trends and technologies also push B2B companies such as ours to consider its impact on our business model."</p>
+          <div class="quote-attr">— Renato Boaventure, President of Fibras Global Business Unit at Solvay</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧶</span>Case Study 2 — Bekaert (Steel Wire Transformation &amp; Coatings)</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem; font-size:0.8rem;">
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; line-height:1.6;">
+            <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.4rem;">Organization</div>
+            <strong>Bekaert</strong> — Industry: <strong>Steel Wire Transformation and Coatings</strong>
+          </div>
+          <div style="padding:0.8rem; background:#fef9c3; border-radius:8px; line-height:1.6; border-left:3px solid #d97706;">
+            <div style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:0.4rem;">Consumer Engagement Type</div>
+            <strong style="color:#92400e;">① Process Improvement — Analyze Consumer Preferences</strong>
+          </div>
+        </div>
+
+        <div style="padding:1rem; background:var(--light); border-radius:8px; font-size:0.82rem; margin-bottom:1rem; line-height:1.6;">
+          <strong style="color:var(--blue);">Product Line — Bekaert Brassiere Wire:</strong><br>
+          A range of high-quality, corrosion resistant, pre-coated specialty steel wire providing excellent formability, elasticity and strength. Sold to <strong>bra wire manufacturers</strong> → who shape the wire and sell to <strong>wholesale and retail lingerie manufacturers</strong> → who sell bras to <strong>end consumers</strong>. Two B2B tiers before the consumer.
+        </div>
+
+        <div style="padding:1rem; background:#f0fdf4; border-radius:8px; font-size:0.82rem; margin-bottom:1rem; border-left:3px solid var(--success); line-height:1.6;">
+          <strong style="color:#166534;">What Bekaert did — Digital Consumer Engagement:</strong>
+          <ul style="padding-left:1.2rem; margin-top:0.5rem; line-height:1.9;">
+            <li><strong>Monitored consumer discussions about bra underwire on social media</strong> (Twitter, etc.)</li>
+            <li>Discovered that end consumers had issues with underwire that was <strong>breaking, tearing the fabric, or making disturbing squeaking noises</strong></li>
+            <li>These consumer insights <strong>helped Bekaert strengthen its position and product range</strong> in the brassiere wire market</li>
+            <li>Bekaert <strong>implemented a non-squeaking solution</strong> in its product portfolio — using PET coating technology to eliminate the pain point consumers were expressing</li>
+            <li>According to Francis De Bie (VP Specialty Steel Wire) and Lieven Somers (Global Market Manager Brassiere Wire): Bekaert now explores how it can <strong>learn from and potentially connect with end consumers through digital technologies</strong> for the benefit of its business customers</li>
+          </ul>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;">
+          <div style="padding:0.9rem; background:#eff6ff; border-radius:8px; font-size:0.8rem;">
+            <strong style="color:var(--blue);">Why this is Process Improvement:</strong><br>
+            <span style="color:#1e3a5f; line-height:1.6;">Bekaert is not selling anything to consumers. It is <em>listening to consumers digitally</em> to extract intelligence about product failures — then using that intelligence to <strong>improve its B2B product</strong> and its market positioning with bra manufacturers.</span>
+          </div>
+          <div style="padding:0.9rem; background:#fef9c3; border-radius:8px; font-size:0.8rem;">
+            <strong style="color:#92400e;">Link to Derived Demand:</strong><br>
+            <span style="color:#78350f; line-height:1.6;">Consumer demand for non-squeaking, durable bras flows back up the supply chain. Bekaert, by solving the consumer pain, creates stronger demand for <em>its specific type of wire</em> — bra manufacturers now have a reason to switch to Bekaert's premium product.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚖️</span>Comparing the Two Cases</div>
+        <table class="compare-table">
+          <thead>
+            <tr><th>Dimension</th><th>Solvay (Emana®)</th><th>Bekaert (Brassiere Wire)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cat">Industry</td><td>Chemicals / specialty fiber</td><td>Steel wire / coatings</td></tr>
+            <tr><td class="cat">Supply chain</td><td>Solvay → apparel manufacturer → retailer → consumer</td><td>Bekaert → bra wire maker → lingerie manufacturer → retailer → consumer</td></tr>
+            <tr><td class="cat">Engagement type</td><td class="dim">Process Improvement — Generate derived demand</td><td class="dim">Process Improvement — Analyze consumer preferences</td></tr>
+            <tr><td class="cat">Digital tool</td><td>Facebook page, Instagram hashtag campaign</td><td>Social media listening / monitoring</td></tr>
+            <tr><td class="cat">Direction of engagement</td><td><strong>Active:</strong> Solvay pushes content to consumers to educate them</td><td><strong>Passive:</strong> Bekaert monitors consumer discussions without engaging directly</td></tr>
+            <tr><td class="cat">Outcome</td><td>Consumers create demand pull for Emana® → business customers contact Solvay</td><td>Consumer pain points inform R&amp;D → non-squeaking wire → stronger B2B positioning</td></tr>
+            <tr><td class="cat">Ingredient branding?</td><td class="dim">Yes — "Emana® inside" strategy</td><td>Not yet — exploring the concept</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- EXAM ANGLES -->
+    <div class="s3-section" id="s3-exam">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🎓</span>Key Exam Angles &amp; Likely Questions</div>
+
+        <div style="display:grid; gap:0.8rem;">
+
+          <div style="padding:1rem; background:#fef2f2; border-radius:8px; border-left:4px solid #ef4444; font-size:0.82rem;">
+            <strong style="color:#991b1b; display:block; margin-bottom:0.4rem;">Q: Explain the two dimensions of the Consumer Engagement Framework.</strong>
+            <span style="color:#7f1d1d; line-height:1.6;"><strong>(1) Market scope:</strong> B2B (engaging consumers to benefit business customers) vs B2C (directly selling to or serving consumers). <strong>(2) Level of product digitization:</strong> Existing product line → Digitally-enhanced product line (adding digital features) → Digital product line (new data/software products). The 2×3 matrix creates 6 distinct types of engagement.</span>
+          </div>
+
+          <div style="padding:1rem; background:#fef2f2; border-radius:8px; border-left:4px solid #ef4444; font-size:0.82rem;">
+            <strong style="color:#991b1b; display:block; margin-bottom:0.4rem;">Q: What is the difference between Process Improvement and Consumer Sales in the framework?</strong>
+            <span style="color:#7f1d1d; line-height:1.6;"><strong>Process Improvement (B2B, type ①):</strong> The B2B firm uses consumer data/engagement to improve its own processes or generate demand — but never sells directly to consumers. The business model stays B2B. <strong>Consumer Sales (B2C, type ④):</strong> The B2B firm actively enters the B2C market and sells its product (adapted or unchanged) directly to consumers via digital channels. A fundamental business model expansion.</span>
+          </div>
+
+          <div style="padding:1rem; background:#fef2f2; border-radius:8px; border-left:4px solid #ef4444; font-size:0.82rem;">
+            <strong style="color:#991b1b; display:block; margin-bottom:0.4rem;">Q: Why do B2B organizations engage consumers? Name and explain three benefits.</strong>
+            <span style="color:#7f1d1d; line-height:1.6;">
+              <strong>1. Generate derived demand:</strong> by educating consumers about their ingredient/component, the B2B firm creates consumer pull → downstream business customers must use their product to stay competitive.<br>
+              <strong>2. Consumer insights for R&amp;D and pricing:</strong> real consumer feedback reveals unmet needs, product failures, and willingness-to-pay data — allowing more targeted product development and value-based pricing.<br>
+              <strong>3. Higher switching costs:</strong> when consumer experiences are tied to a B2B firm's digital layer (app, data service), business customers lose competitive advantage if they switch suppliers.
+            </span>
+          </div>
+
+          <div style="padding:1rem; background:#fef2f2; border-radius:8px; border-left:4px solid #ef4444; font-size:0.82rem;">
+            <strong style="color:#991b1b; display:block; margin-bottom:0.4rem;">Q: Apply the Consumer Engagement Framework to Bekaert and Solvay.</strong>
+            <span style="color:#7f1d1d; line-height:1.6;">
+              <strong>Both are Type ①: Process Improvement on an Existing B2B Product Line.</strong><br>
+              <strong>Bekaert:</strong> Passively monitors social media consumer complaints (squeaking underwire) → uses insights to develop non-squeaking wire → improves B2B product, strengthens position with bra manufacturers. Engagement type: analyze consumer preferences.<br>
+              <strong>Solvay:</strong> Actively educates consumers via Facebook/Instagram about Emana® fiber in customers' products → creates consumer pull demand → business customers (apparel brands) motivated to use Emana®. Engagement type: generate derived demand.
+            </span>
+          </div>
+
+          <div style="padding:1rem; background:#fffbeb; border-radius:8px; border-left:4px solid #f59e0b; font-size:0.82rem;">
+            <strong style="color:#92400e; display:block; margin-bottom:0.4rem;">Q: What is "ingredient branding" and how does Solvay use it?</strong>
+            <span style="color:#78350f; line-height:1.6;">Ingredient branding is when a B2B supplier markets its component/ingredient directly to end consumers, creating consumer preference for products containing that ingredient — thereby creating pull demand through the supply chain (similar to "Intel Inside"). Solvay uses Facebook to educate consumers about Emana® fiber, linking to customer product pages — consumers who want Emana®-based apparel create demand that flows back to Solvay's business customers, who in turn source Emana® from Solvay.</span>
+          </div>
+
+          <div style="padding:1rem; background:#fffbeb; border-radius:8px; border-left:4px solid #f59e0b; font-size:0.82rem;">
+            <strong style="color:#92400e; display:block; margin-bottom:0.4rem;">Q: Link this paper to derived demand from Session 2.</strong>
+            <span style="color:#78350f; line-height:1.6;">Derived demand = B2B demand is derived from consumer demand. The paper shows digital technology enables B2B firms to actively <em>manage</em> derived demand — rather than passively waiting for consumer demand to trickle down. Bekaert monitors consumer pain points and fixes them → increasing consumer demand for quality bras → increasing demand for Bekaert wire. Solvay stimulates consumer awareness of Emana® → increasing consumer demand for fiber-containing garments → increasing demand for Emana® fiber from Solvay. Digital technology turns derived demand from a passive variable into an active strategic lever.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📋</span>Concepts Checklist — Case Study</div>
+        <ul class="checklist">
+          <li onclick="toggle(this)"><div class="chk"></div><span>2 dimensions of the Consumer Engagement Framework (market scope + product digitization level)</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>6 types: Process Improvement, Digitally-enhanced business product, Digital business product, Consumer sales, Digitally-enhanced consumer product, Digital consumer product</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>Traditional B2B (no consumer interaction) vs New B2B (consumer engagement via digital)</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>4 benefits of consumer engagement for B2B firms (derived demand, price premiums, switching costs, operational efficiency)</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>Solvay Emana®: active consumer engagement via Facebook/Instagram → generates derived demand → ingredient branding</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>Bekaert brassiere wire: passive social media listening → consumer pain insights → non-squeaking wire → stronger B2B positioning</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>Difference between Process Improvement (stays B2B) vs Consumer Sales (enters B2C)</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>Coffee machine example: all 6 types applied to one B2B firm</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>Link between this paper and derived demand (digital technology turns passive derived demand into active strategic lever)</span></li>
+          <li onclick="toggle(this)"><div class="chk"></div><span>Ingredient branding concept: "Intel Inside" logic applied to B2B components</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SESSION 3 -->
+  <div class="section" id="session3">
+    <div class="section-label">Session 3 — Platform Markets</div>
+
+    <!-- SESSION 3 SUB-NAV -->
+    <div class="s1-subnav" id="s4-subnav">
+      <button class="s1-btn s4-btn active" onclick="showS4('s4-intro')">🌐 Platform Intro</button>
+      <button class="s1-btn s4-btn" onclick="showS4('s4-network')">🔗 Network Effects</button>
+      <button class="s1-btn s4-btn" onclick="showS4('s4-revenue')">💰 Revenue Models</button>
+      <button class="s1-btn s4-btn" onclick="showS4('s4-challenges')">⚠️ Challenges</button>
+      <button class="s1-btn s4-btn" onclick="showS4('s4-examples')">🏪 Examples</button>
+      <button class="s1-btn s4-btn" onclick="showS4('s4-trendy')">🍕 Trendy Foods</button>
+    </div>
+
+    <!-- SUB-TAB: PLATFORM INTRO -->
+    <div class="s4-section active" id="s4-intro">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🌐</span>What is a Digital Platform?</div>
+        <div class="quote-block" style="margin-bottom:1rem;"><p>"A digital platform is an <em>intermediary</em> that facilitates interactions <u>between and among <em>stakeholders</em></u> such as consumers, application providers and partners." <span style="float:right;opacity:0.7;font-size:0.8rem;">Basu &amp; Muylle, 2023</span></p></div>
+        <ul class="key-list">
+          <li>Serves one or more sets of participants: <strong>one-sided</strong> or <strong>multi-sided</strong> (customers and producers)</li>
+          <li>Involves <strong>multiple types of producers</strong>: advertisers, developers, merchants</li>
+          <li>Provides <strong>value</strong> through the resources and products of its participants</li>
+          <li>Offers <strong>mechanisms</strong> that enable participants to find, interact, collaborate and/or transact <strong>more effectively</strong> on the platform than without it</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🗂️</span>3 Types of Digital Platforms <span style="font-size:0.78rem;font-weight:400;color:var(--muted);">(Basu &amp; Muylle, 2023)</span></div>
+        <div class="obj-grid" style="grid-template-columns:1fr 1fr 1fr;gap:0.8rem;">
+          <div style="background:#eff6ff;border-radius:10px;padding:1rem;border:2px solid #93c5fd;">
+            <div style="font-weight:700;color:#1e40af;margin-bottom:0.4rem;">💡 Innovation Platform</div>
+            <p style="font-size:0.84rem;margin:0;line-height:1.5;">Leverages <strong>wisdom of crowds</strong>. Facilitates intellectual input on problems from many participants; enables collaboration and valuable synergies.</p>
+            <p style="font-size:0.8rem;color:var(--muted);margin-top:0.5rem;">Example: online forum for a special interest group</p>
+          </div>
+          <div style="background:#fdf4ff;border-radius:10px;padding:1rem;border:2px solid #c4b5fd;">
+            <div style="font-weight:700;color:#7c3aed;margin-bottom:0.4rem;">🤝 Engagement Platform</div>
+            <p style="font-size:0.84rem;margin:0;line-height:1.5;">Enables large numbers of participants to <strong>mutually interact</strong> and share common interests.</p>
+            <p style="font-size:0.8rem;color:var(--muted);margin-top:0.5rem;">Examples: X (Twitter), Roblox, social networking sites, gaming platforms</p>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:1rem;border:2px solid #86efac;">
+            <div style="font-weight:700;color:#15803d;margin-bottom:0.4rem;">🛒 Transaction Platform</div>
+            <p style="font-size:0.84rem;margin:0;line-height:1.5;">Brings together <strong>producers/sellers and consumers</strong>. Digital equivalent of a marketplace or mall.</p>
+            <p style="font-size:0.8rem;color:var(--muted);margin-top:0.5rem;">Example: Amazon Marketplaces</p>
+          </div>
+        </div>
+        <div class="alert" style="margin-top:0.8rem;">Combinations exist: Facebook is simultaneously an Engagement + Transaction + Innovation platform</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏗️</span>3 Organizational Forms: Hierarchy → Platform → Market <span style="font-size:0.78rem;font-weight:400;color:var(--muted);">(Schilling)</span></div>
+        <table class="compare-table">
+          <thead><tr><th>Form</th><th>Structure</th><th>Coordination</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Hierarchy</strong></td><td>Top-down tree structure</td><td>Authority &amp; control</td><td>Traditional corporation</td></tr>
+            <tr><td><strong>Platform Ecosystem</strong></td><td>Central hub + connected nodes</td><td>Shared rules &amp; APIs</td><td>Apple App Store</td></tr>
+            <tr><td><strong>Market</strong></td><td>Decentralized buy/sell</td><td>Price signals</td><td>Commodity markets</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.84rem;color:var(--muted);margin-top:0.5rem;">Platforms sit between hierarchies (too rigid) and pure markets (too anonymous) — they combine the scale of markets with the coordination of hierarchies.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🤔</span>The "Asset-Light" Paradox</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:0.8rem;">
+          <div style="background:#1a1a2e;color:white;border-radius:8px;padding:0.7rem 1rem;font-size:0.85rem;"><strong style="color:#4fc3f7;">Amazon</strong> has almost no <em>stores</em></div>
+          <div style="background:#1a1a2e;color:white;border-radius:8px;padding:0.7rem 1rem;font-size:0.85rem;"><strong style="color:#4fc3f7;">Uber</strong> owns almost no <em>cars</em></div>
+          <div style="background:#1a1a2e;color:white;border-radius:8px;padding:0.7rem 1rem;font-size:0.85rem;"><strong style="color:#4fc3f7;">Facebook</strong> creates no <em>content</em></div>
+          <div style="background:#1a1a2e;color:white;border-radius:8px;padding:0.7rem 1rem;font-size:0.85rem;"><strong style="color:#4fc3f7;">Alibaba</strong> has no <em>inventory</em></div>
+          <div style="background:#1a1a2e;color:white;border-radius:8px;padding:0.7rem 1rem;font-size:0.85rem;"><strong style="color:#4fc3f7;">Airbnb</strong> owns no <em>real estate</em></div>
+          <div style="background:#1a1a2e;color:white;border-radius:8px;padding:0.7rem 1rem;font-size:0.85rem;"><strong style="color:#4fc3f7;">Netflix</strong> is not a <em>TV channel</em></div>
+        </div>
+        <div class="alert" style="background:#fff7ed;border-color:#fdba74;color:#92400e;">⚠️ But nuance matters: Amazon DOES own 100+ US fulfillment centers and is physically expanding in Belgium/Europe. "Asset-light" describes the <strong>business model logic</strong>, not always the full reality. Platforms increasingly invest in physical infrastructure as they scale.</div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: NETWORK EFFECTS -->
+    <div class="s4-section" id="s4-network">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔗</span>Network Effects (= Network Externalities)</div>
+        <p style="font-size:0.9rem;line-height:1.6;margin-bottom:0.8rem;">The value of a platform <strong>increases as more participants join</strong>. Each new user creates value for all existing users — this is the core growth engine of platforms.</p>
+        <table class="compare-table">
+          <thead><tr><th>Type</th><th>Definition</th><th>Direction</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Same-side positive</strong></td>
+              <td>More users on one side → more value for that same side</td>
+              <td>Side A → Side A</td>
+              <td>More buyers on Amazon → more competition, better prices for buyers</td>
+            </tr>
+            <tr>
+              <td><strong>Same-side negative</strong></td>
+              <td>More users on one side → less value for that side</td>
+              <td>Side A → Side A ↓</td>
+              <td>More sellers → more competition among sellers (bad for sellers)</td>
+            </tr>
+            <tr>
+              <td><strong>Cross-side positive</strong></td>
+              <td>More users on one side → more value for the other side</td>
+              <td>Side A → Side B ↑</td>
+              <td>More buyers → attracts more sellers; more sellers → attracts more buyers</td>
+            </tr>
+            <tr>
+              <td><strong>Cross-side negative</strong></td>
+              <td>More users on one side → less value for the other side</td>
+              <td>Side A → Side B ↓</td>
+              <td>More advertisers → more ads → worse experience for users</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔒</span>Lock-in Effects &amp; Multi-homing</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="background:#fef2f2;border-radius:10px;padding:1rem;border-left:4px solid #ef4444;">
+            <div style="font-weight:700;color:#dc2626;margin-bottom:0.5rem;">Lock-in Effect</div>
+            <p style="font-size:0.84rem;margin:0;line-height:1.5;">Strong network effects create <strong>switching costs</strong>. The more entrenched a platform becomes, the harder it is for users to leave — even if a better alternative exists.</p>
+            <p style="font-size:0.8rem;color:var(--muted);margin-top:0.5rem;">Example: Your social graph on Facebook/LinkedIn — leaving means losing connections</p>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:1rem;border-left:4px solid #22c55e;">
+            <div style="font-weight:700;color:#15803d;margin-bottom:0.5rem;">Multi-homing</div>
+            <p style="font-size:0.84rem;margin:0;line-height:1.5;">Participating in <strong>multiple platforms simultaneously</strong>. Reduces lock-in. Platform challenge: keep users from multi-homing by offering exclusive value.</p>
+            <p style="font-size:0.8rem;color:var(--muted);margin-top:0.5rem;">Example: Sellers listing on both Amazon and Bol.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🐔</span>The Chicken-and-Egg Problem</div>
+        <p style="font-size:0.9rem;line-height:1.6;margin-bottom:0.6rem;">A core challenge for <strong>cross-side network effects</strong>: to attract buyers you need sellers, but to attract sellers you need buyers. Which comes first?</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Strategy 1 — Subsidize one side:</strong> Make one side free or pay them to join first. Amazon subsidized buyers with low prices and free shipping. Credit card companies charge merchants, not cardholders.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Strategy 2 — Build a single-user tool first:</strong> Launch something valuable even with zero network. OpenTable was a restaurant management tool before becoming a reservation platform.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Strategy 3 — Simulate one side:</strong> Platform acts as the supply side until enough real suppliers join. PayPal seeded eBay listings by pretending to be buyers.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Critical mass:</strong> Once enough users are on both sides, the platform becomes self-sustaining and growth accelerates (flywheel effect).</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: REVENUE MODELS -->
+    <div class="s4-section" id="s4-revenue">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">💰</span>Platform Revenue Models <span style="font-size:0.78rem;font-weight:400;color:var(--muted);">(Basu &amp; Muylle, 2023)</span></div>
+        <table class="compare-table">
+          <thead><tr><th>Model</th><th>Who pays?</th><th>Example</th><th>Logic</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Provider-funded</strong></td>
+              <td>Supply side (producers)</td>
+              <td>Facebook (advertisers pay)</td>
+              <td>Users are the product; suppliers pay for access to the audience</td>
+            </tr>
+            <tr>
+              <td><strong>Customer-funded</strong></td>
+              <td>Demand side (users)</td>
+              <td>Microsoft Windows (developers subsidized)</td>
+              <td>Users pay; producers/developers get access for free or cheap</td>
+            </tr>
+            <tr>
+              <td><strong>Both sides</strong></td>
+              <td>Buyers + sellers</td>
+              <td>Airbnb, Amazon</td>
+              <td>Both parties benefit and both contribute; commission or listing fee</td>
+            </tr>
+            <tr>
+              <td><strong>Pay content creators</strong></td>
+              <td>Platform pays supply side</td>
+              <td>YouTube</td>
+              <td>Platform shares ad revenue to attract high-quality content creators</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="alert" style="margin-top:0.8rem;background:#fff7ed;border-color:#fdba74;color:#92400e;">Revenue models can shift: Facebook launched a <strong>paid ad-free subscription</strong> in Europe (2023) in response to EU regulatory pressure — showing that even mature platforms must adapt their monetization.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🎯</span>Assessing a Marketplace Opportunity <span style="font-size:0.78rem;font-weight:400;color:var(--muted);">(Basu &amp; Muylle, 2023)</span></div>
+        <p style="font-size:0.87rem;margin-bottom:0.8rem;">Why would an established company launch a marketplace? Opportunity is <strong>large</strong> when:</p>
+        <ul class="key-list">
+          <li>Number of current and potential participants on each side is <strong>large</strong> (high market fragmentation)</li>
+          <li>Resources of individual participants are <strong>limited</strong> — they need the platform's infrastructure</li>
+          <li>There is clear <strong>value in interactions</strong> on each side of the platform</li>
+          <li>The firm can offer a <strong>set of core capabilities</strong> to each side, based on a common technological core</li>
+        </ul>
+        <div style="margin-top:0.8rem;padding:0.8rem 1rem;background:var(--light);border-radius:8px;font-size:0.85rem;line-height:1.6;">
+          <strong>Strategic logic for incumbents:</strong> A marketplace allows a company to expand its <strong>product/service catalogue without bearing inventory risk</strong>, monetize existing traffic and trust, and collect valuable data on buyer behaviour across a wider range of categories.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: CHALLENGES -->
+    <div class="s4-section" id="s4-challenges">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚠️</span>Platform Challenges <span style="font-size:0.78rem;font-weight:400;color:var(--muted);">(Muylle et al., 2023)</span></div>
+        <div class="obj-grid" style="grid-template-columns:1fr 1fr;gap:0.8rem;">
+          <div style="background:#fef2f2;border-radius:10px;padding:1rem;border-left:4px solid #ef4444;">
+            <div style="font-weight:700;color:#dc2626;margin-bottom:0.4rem;">1. Community Growth</div>
+            <ul style="font-size:0.84rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Achieving <strong>critical mass</strong> on each side</li>
+              <li>Chicken-and-egg problem at launch</li>
+              <li>Must evolve without <strong>alienating incumbent participants</strong></li>
+              <li>LinkedIn adding gaming to boost engagement — risk of platform identity dilution</li>
+            </ul>
+          </div>
+          <div style="background:#fff7ed;border-radius:10px;padding:1rem;border-left:4px solid #f97316;">
+            <div style="font-weight:700;color:#c2410c;margin-bottom:0.4rem;">2. Monetization Timing</div>
+            <ul style="font-size:0.84rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li><strong>Postponement</strong> of monetization until critical mass is reached</li>
+              <li>Premature monetization kills growth</li>
+              <li>Long-term strategies needed</li>
+              <li>Ongoing <strong>adaptation</strong> as user base and regulation evolve</li>
+            </ul>
+          </div>
+          <div style="background:#fdf4ff;border-radius:10px;padding:1rem;border-left:4px solid #c4b5fd;">
+            <div style="font-weight:700;color:#7c3aed;margin-bottom:0.4rem;">3. Content &amp; Product Control</div>
+            <ul style="font-size:0.84rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Growth of <strong>fake news</strong> and harmful content</li>
+              <li><strong>Counterfeit products</strong> on marketplaces</li>
+              <li>Managing <strong>responsibilities and liabilities</strong></li>
+              <li>Reputational risk: Substack Nazi newsletters → top journalist left with 170,000+ subscribers</li>
+            </ul>
+          </div>
+          <div style="background:#eff6ff;border-radius:10px;padding:1rem;border-left:4px solid #93c5fd;">
+            <div style="font-weight:700;color:#1e40af;margin-bottom:0.4rem;">4. Regulation</div>
+            <ul style="font-size:0.84rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Antitrust scrutiny: FTC sued Amazon for <strong>monopoly abuse</strong> (2023)</li>
+              <li>EU Digital Markets Act (DMA) targeting gatekeepers</li>
+              <li>Privacy regulations impact on ad-based revenue models</li>
+              <li>Platforms forced to open up APIs and allow competing services</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏆</span>"Winner-Takes-All" Dynamics</div>
+        <p style="font-size:0.87rem;line-height:1.6;margin-bottom:0.8rem;">Strong network effects create <strong>winner-takes-all</strong> or winner-takes-most dynamics. Once a platform achieves dominance, it is extremely hard to displace. This leads to extraordinary profitability.</p>
+        <div class="stat-grid" style="grid-template-columns:repeat(4,1fr);">
+          <div class="stat-item"><div class="stat-num">$0.27B</div><div class="stat-label">Facebook revenue 2008</div></div>
+          <div class="stat-item"><div class="stat-num">$117.9B</div><div class="stat-label">Facebook revenue 2021</div></div>
+          <div class="stat-item"><div class="stat-num">$39.4B</div><div class="stat-label">Facebook net profit 2021</div></div>
+          <div class="stat-item"><div class="stat-num">~33%</div><div class="stat-label">Net profit margin</div></div>
+        </div>
+        <p style="font-size:0.84rem;color:var(--muted);margin-top:0.5rem;">Facebook grew revenue ~435× in 13 years — driven almost entirely by network effects and data-driven advertising, not physical asset investment.</p>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: EXAMPLES -->
+    <div class="s4-section" id="s4-examples">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📦</span>Amazon: From Retailer to Platform Ecosystem</div>
+        <table class="compare-table">
+          <thead><tr><th></th><th>Amazon.com (B2C)</th><th>Amazon Business (B2B)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Target</strong></td><td>Individual consumers</td><td>Organizations of all sizes</td></tr>
+            <tr><td><strong>Pricing</strong></td><td>Standard retail prices</td><td>Business-only prices + quantity discounts</td></tr>
+            <tr><td><strong>Accounts</strong></td><td>Individual accounts</td><td>Multi-user accounts with approval workflows + purchasing analytics</td></tr>
+            <tr><td><strong>Payment</strong></td><td>Personal cards</td><td>Corporate purchasing cards, Amazon Corporate Credit, tax-exempt purchasing</td></tr>
+            <tr><td><strong>Shipping</strong></td><td>Standard + Prime</td><td>Free 2-day shipping, Prime compatible, world-class fulfillment</td></tr>
+            <tr><td><strong>Discovery</strong></td><td>General search</td><td>Business-only products + purchasing-system integration</td></tr>
+          </tbody>
+        </table>
+        <div class="alert" style="margin-top:0.8rem;">Amazon Business is a classic B2B platform: it connects business buyers (procurement teams) with sellers (manufacturers, distributors) and provides procurement infrastructure. Amazon charges sellers a referral fee; buyers get purchasing analytics.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🛍️</span>Established Companies Launching Marketplaces</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="border:1px solid var(--border);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">🔵 Walmart Marketplace</div>
+            <ul style="font-size:0.84rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Join Walmart Marketplace → offer products on Walmart.com</li>
+              <li>Walmart Connect → sponsored search ads for sellers</li>
+              <li>Walmart Fulfillment Services → store inventory, ship orders, manage returns</li>
+              <li><strong>Logic:</strong> Monetize existing customer traffic; expand catalogue without inventory risk</li>
+            </ul>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">🟡 Decathlon Marketplace (Belgium)</div>
+            <ul style="font-size:0.84rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Opened e-boutique to other brands (Adidas to local startups)</li>
+              <li>Goal: <strong>élargir et approfondir l'offre</strong> (widen and deepen the offer)</li>
+              <li>Aligns with motto: eat better, move better, feel better, live better</li>
+              <li><strong>Logic:</strong> Stay relevant beyond own product range; serve the full sports lifestyle</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:0.8rem;border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <div style="font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;">🏨 Booking.com — Growing via Complementary Services</div>
+          <p style="font-size:0.84rem;line-height:1.6;margin:0;">After confirming a hotel booking, Booking.com immediately surfaces: <em>Rent a car</em>, <em>Book an airport taxi</em>. This illustrates <strong>platform expansion via complementary services</strong> — using an existing transaction as a trigger for adjacent ones. Each addition increases time-on-platform, data collected, and revenue per user.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏭</span>B2B Brands on Platforms: P&amp;G on Amazon</div>
+        <p style="font-size:0.87rem;line-height:1.6;">P&amp;G (Procter &amp; Gamble) — a classic <strong>B2B2C company</strong> — uses Amazon as a <strong>direct-to-consumer channel</strong>. This illustrates how platforms blur the B2B/B2C boundary:</p>
+        <ul class="key-list">
+          <li>P&amp;G sells Tide, Downy, Bounce etc. directly to consumers via Amazon — bypassing traditional retail intermediaries</li>
+          <li>P&amp;G pays Amazon for placement (advertising + referral fees) — P&amp;G is the <strong>producer/seller side</strong> of the platform</li>
+          <li>Amazon's platform provides P&amp;G with <strong>demand-side data</strong> (what consumers buy, when, in what quantities) — valuable B2B market intelligence</li>
+          <li>Link to Session 2: P&amp;G's presence on Amazon is partly driven by <strong>derived demand</strong> — by engaging consumers directly, P&amp;G strengthens its B2B position with retailers who see consumer pull</li>
+        </ul>
+        <div style="margin-top:0.8rem;padding:0.8rem 1rem;background:linear-gradient(135deg, var(--navy), var(--blue));border-radius:8px;color:white;font-size:0.85rem;line-height:1.6;">
+          <strong>Brands of Belgium on Amazon.com.be:</strong> Amazon actively recruits Belgian SMEs as sellers. This is the cross-side network effect in action — more local sellers → better assortment for Belgian consumers → more Belgian shoppers → more incentive for Belgian brands to list.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: TRENDY FOODS CASE -->
+    <div class="s4-section" id="s4-trendy">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📋</span>Case Overview — Trendy Foods: Launching a B2B Marketplace</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.5rem;color:var(--blue);">The Company</div>
+            <ul style="font-size:0.83rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li>Founded 2003, HQ in <strong>Milmort</strong> (near Liège, Belgium)</li>
+              <li>B2B food &amp; non-food distributor: <strong>17,000 products</strong> from ~600 suppliers</li>
+              <li>Serves <strong>~10,000 B2B customers</strong> in Belgium &amp; Luxembourg (hotels, bakeries, night shops, horeca, gas stations, government, etc.)</li>
+              <li>Revenue: <strong>€960M (2022)</strong>, expected €1.4B by end of 2023</li>
+              <li>550 employees · 110 trucks · 3 warehouses (Milmort, Bornem, Dudelange)</li>
+              <li>Next-day delivery on 100,000 packages/day to 1,100 customers</li>
+            </ul>
+          </div>
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.5rem;color:var(--blue);">The Challenge</div>
+            <ul style="font-size:0.83rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li>TF could only address <strong>10–80% of each customer's product needs</strong> — leaving a large assortment gap</li>
+              <li>Warehouse capacity constraints prevented stocking all products</li>
+              <li>Goal: become a <strong>"one-stop shop"</strong> — sole supplier for all customer needs</li>
+              <li>Solution: launch a marketplace in <strong>April 2022</strong> (built on <strong>Mirakl</strong> platform)</li>
+              <li>First B2B marketplace of its kind in Belgium; exclusively for TF customers</li>
+              <li>Only direct B2B marketplace competitor: <strong>Amazon.com.be</strong> (launched Sept 2022)</li>
+            </ul>
+          </div>
+        </div>
+        <div style="background:var(--light);border-radius:10px;padding:1rem;">
+          <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.5rem;color:var(--blue);">How It Works</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;font-size:0.83rem;line-height:1.6;">
+            <div><strong>At launch (Apr 2022):</strong> 65 sellers · 20,000+ products<br><strong>After 18 months (Oct 2023):</strong> 65 sellers · 37,000 items · 20 categories</div>
+            <div><strong>Seller revenue model:</strong> €40/month subscription (only charged when orders received) + 8–15% commission per sale by category</div>
+            <div><strong>Key difference vs. core business:</strong> Marketplace sellers handle their own delivery (separate fee); TF handles delivery for its own portfolio (included in price)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q1 -->
+      <div class="card">
+        <div class="card-title"><span class="icon">💡</span>Q1 — Value to Both Sides &amp; Revenue Model</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="border:2px solid #93c5fd;border-radius:10px;padding:1rem;background:#eff6ff;">
+            <div style="font-weight:700;color:#1e40af;margin-bottom:0.5rem;">Value to CUSTOMERS (B2B buyers)</div>
+            <ul style="font-size:0.83rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>One-stop shop:</strong> 37,000+ items across 20 categories beyond TF's core portfolio</li>
+              <li><strong>Familiar experience:</strong> same webshop interface, same product categories — no learning curve</li>
+              <li><strong>Better discovery:</strong> detailed descriptions, ability to contact sellers before ordering, related/complementary product suggestions</li>
+              <li><strong>Personalized:</strong> webshop tailored to each of the 14 customer categories</li>
+              <li><strong>Support:</strong> 65 trained sales reps available to guide through marketplace</li>
+              <li><strong>30-day payment terms</strong> directly to sellers</li>
+              <li>Customer reviews (planned) → informed purchasing</li>
+            </ul>
+          </div>
+          <div style="border:2px solid #86efac;border-radius:10px;padding:1rem;background:#f0fdf4;">
+            <div style="font-weight:700;color:#15803d;margin-bottom:0.5rem;">Value to SELLERS (producers/brands)</div>
+            <ul style="font-size:0.83rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>Instant reach:</strong> direct access to 10,000 established B2B customers across Belgium &amp; Luxembourg</li>
+              <li><strong>Launch visibility:</strong> welcome package — newsletter promotion, online banner, inclusion in monthly paper catalogue</li>
+              <li><strong>Trusted context:</strong> TF's brand reputation reduces buyer hesitation toward new sellers</li>
+              <li><strong>Tools:</strong> Mirakl dashboard for orders, billing, catalogue management</li>
+              <li><strong>Coaching:</strong> TF coaches sellers on pricing, product data, and performance metrics</li>
+              <li><strong>Low risk:</strong> €40/month subscription only charged in active months</li>
+              <li>Sales force of 65 reps (access to tablets planned) as an additional sales channel</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="background:#1a2340;color:white;border-radius:10px;padding:1rem;">
+          <div style="font-weight:700;margin-bottom:0.6rem;color:#f59e0b;">Revenue Model (How TF Captures Value)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;font-size:0.83rem;line-height:1.6;">
+            <div><strong style="color:#93c5fd;">Subscription fee:</strong> €40/month per seller — only charged in months where the seller received orders. Low risk for sellers; ensures only active sellers pay.</div>
+            <div><strong style="color:#93c5fd;">Commission on sales:</strong> 8–15% depending on category (e.g., 8% fruits/vegetables → 15% fashion/furniture/sport). Benchmarked against other marketplaces.</div>
+          </div>
+          <div style="margin-top:0.6rem;font-size:0.83rem;color:rgba(255,255,255,0.75);">Note: TF earns NO revenue from delivery (sellers handle that independently). TF's model is purely intermediation — it connects buyers and sellers and takes a cut of the transaction.</div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="card">
+        <div class="card-title"><span class="icon">🔗</span>Q2 — Network Effects of the TF Marketplace</div>
+        <p style="font-size:0.85rem;line-height:1.5;margin-bottom:1rem;">The TF marketplace is a <strong>two-sided platform</strong> with sellers and customers as the two sides. Network effects arise in four quadrants:</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1rem;">
+          <div style="border-radius:10px;padding:1rem;background:#f0fdf4;border:2px solid #86efac;">
+            <div style="font-weight:700;color:#15803d;font-size:0.88rem;margin-bottom:0.5rem;">✅ SAME-SIDE POSITIVE</div>
+            <ul style="font-size:0.82rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li><strong>Customers → Customers:</strong> More customers using the marketplace → TF gains richer purchasing data → better personalization and product recommendations for all customers</li>
+              <li><strong>Sellers → Sellers:</strong> More reputable sellers on TF → raises the overall quality standard → motivates other sellers to improve performance to stay listed</li>
+            </ul>
+          </div>
+          <div style="border-radius:10px;padding:1rem;background:#fef2f2;border:2px solid #fca5a5;">
+            <div style="font-weight:700;color:#dc2626;font-size:0.88rem;margin-bottom:0.5rem;">❌ SAME-SIDE NEGATIVE</div>
+            <ul style="font-size:0.82rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li><strong>Sellers → Sellers:</strong> More sellers in the same category → more price competition → lower margins per seller. A night shop supplier competes with new entrants in snacks/candy.</li>
+              <li><strong>Customers → Customers:</strong> Two competing convenience stores in the same area both use the marketplace → same competitive products available to rivals → reduced differentiation</li>
+            </ul>
+          </div>
+          <div style="border-radius:10px;padding:1rem;background:#eff6ff;border:2px solid #93c5fd;">
+            <div style="font-weight:700;color:#1e40af;font-size:0.88rem;margin-bottom:0.5rem;">↔️ CROSS-SIDE POSITIVE</div>
+            <ul style="font-size:0.82rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li><strong>More sellers → Customers:</strong> Wider assortment → TF becomes a true one-stop shop → more value for customers → customers order more → platform grows</li>
+              <li><strong>More customers → Sellers:</strong> Larger customer base → more sales opportunities → more attractive for sellers to join → more revenue per seller</li>
+              <li>This cross-side flywheel is TF's core growth engine</li>
+            </ul>
+          </div>
+          <div style="border-radius:10px;padding:1rem;background:#fdf4ff;border:2px solid #c4b5fd;">
+            <div style="font-weight:700;color:#7c3aed;font-size:0.88rem;margin-bottom:0.5rem;">↔️ CROSS-SIDE NEGATIVE</div>
+            <ul style="font-size:0.82rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li><strong>Poor sellers → Customers:</strong> Sellers with late delivery, high refund rates, or wrong products damage customer trust in the whole marketplace — reputation spills over to TF brand</li>
+              <li><strong>Late-paying customers → Sellers:</strong> Customers who miss the 30-day payment deadline harm sellers' cash flow → sellers become reluctant to join or fulfill small orders</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alert">Key insight: The suspension criteria (order acceptance &gt;80%, refund rate &lt;20%, incident rate &lt;12%, etc.) are TF's mechanism to <strong>contain cross-side negative effects</strong> — protecting customers from bad sellers before harm spreads.</div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="card">
+        <div class="card-title"><span class="icon">⚖️</span>Q3 — SWOT Analysis of the TF Marketplace</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+          <div style="border-radius:10px;padding:1rem;background:#f0fdf4;border-left:4px solid #22c55e;">
+            <div style="font-weight:700;color:#15803d;margin-bottom:0.5rem;">💪 STRENGTHS</div>
+            <ul style="font-size:0.82rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>First-mover advantage</strong> in B2B marketplace in Belgium (ahead of Amazon.com.be by 5 months)</li>
+              <li>Existing <strong>10,000 loyal B2B customers</strong> — no cold start problem on buyer side</li>
+              <li>Deep customer knowledge: 65 reps specialized by geography and customer category</li>
+              <li><strong>Trusted brand</strong> built over 20+ years → low buyer hesitation</li>
+              <li>Same familiar webshop interface → zero adoption friction</li>
+              <li>Proven logistics infrastructure (110 trucks, 3 warehouses, next-day delivery)</li>
+              <li>Scalable Mirakl technology platform</li>
+              <li>Rich transaction data → unique market insights</li>
+              <li>Ability to promote the marketplace via newsletter, folder, and sales reps</li>
+            </ul>
+          </div>
+          <div style="border-radius:10px;padding:1rem;background:#fef2f2;border-left:4px solid #ef4444;">
+            <div style="font-weight:700;color:#dc2626;margin-bottom:0.5rem;">⚠️ WEAKNESSES</div>
+            <ul style="font-size:0.82rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>Tiny team:</strong> only 3 people managing the marketplace (underpowered for scale)</li>
+              <li>Sellers handle own delivery → <strong>inconsistent delivery experience</strong> vs. TF's next-day standard</li>
+              <li>Customers pay sellers directly (not TF) → confusing vs. traditional business</li>
+              <li><strong>Sales reps can't see marketplace products on their tablets</strong> → lost in-person upsell opportunity</li>
+              <li>Sellers not insured against non-payment → barrier for seller recruitment</li>
+              <li>Seller onboarding challenges: product data integration is complex and time-consuming</li>
+              <li>Marketplace products shipped separately from TF routes → multiple deliveries for customers</li>
+              <li>Geographic constraint: currently only Belgium &amp; Luxembourg</li>
+            </ul>
+          </div>
+          <div style="border-radius:10px;padding:1rem;background:#eff6ff;border-left:4px solid #3b82f6;">
+            <div style="font-weight:700;color:#1e40af;margin-bottom:0.5rem;">🚀 OPPORTUNITIES</div>
+            <ul style="font-size:0.82rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>Geographic expansion</strong> to Luxembourg (logical first step) and eventually France</li>
+              <li>Integrate marketplace into sales rep tablets → massive in-person promotion boost</li>
+              <li><strong>Customer review system</strong> → trust signal, reduces negative cross-side effects</li>
+              <li>Advanced back-end: product comparisons, personalized recommendations, better search</li>
+              <li><strong>Cross-docking</strong> to unify marketplace deliveries with TF routes → fewer deliveries per customer</li>
+              <li>Promotional events (Black Friday, Cyber Monday) → drive volume for sellers and customers</li>
+              <li>Use data to identify <strong>best-performing marketplace categories</strong> → transition to core portfolio</li>
+              <li>Aggregator feeds to automate seller product data → reduces onboarding friction</li>
+              <li>Payment insurance/guarantee for sellers → easier recruitment</li>
+            </ul>
+          </div>
+          <div style="border-radius:10px;padding:1rem;background:#fefce8;border-left:4px solid #eab308;">
+            <div style="font-weight:700;color:#a16207;margin-bottom:0.5rem;">🌩️ THREATS</div>
+            <ul style="font-size:0.82rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>Amazon.com.be:</strong> 353M products across 20+ categories — massively larger assortment and brand recognition</li>
+              <li>Established traditional competitors: Colruyt Professional, Conway, Lyfra, Ameel Candy World</li>
+              <li><strong>Seller multi-homing:</strong> sellers simultaneously list on Zentrada, Amazon, CDiscount — TF has no exclusivity</li>
+              <li>Poor seller performance → <strong>reputation damage</strong> to TF brand (TF is seen as responsible even if seller causes the issue)</li>
+              <li>Counterfeit or non-compliant products (e.g., missing bilingual labelling) → legal and trust risk</li>
+              <li>Economic pressure: inflation erodes seller price competitiveness</li>
+              <li>Labour shortage for drivers → limits TF's ability to integrate marketplace logistics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="card">
+        <div class="card-title"><span class="icon">💡</span>Q4 — Suggestions for Improving Seller &amp; Customer Experience</div>
+
+        <div style="margin-bottom:0.8rem;padding:0.7rem 1rem;background:var(--light);border-radius:8px;font-size:0.84rem;line-height:1.5;color:var(--muted);">The following ideas address the specific friction points identified in the case — prioritized by impact and feasibility given TF's limited marketplace team.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem;">
+          <div style="border:1px solid var(--border);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.5rem;color:var(--navy);">For Customers</div>
+            <ul style="font-size:0.83rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>Marketplace access on sales rep tablets:</strong> Reps can then demonstrate, recommend, and place marketplace orders during customer visits — removing the biggest promotion gap</li>
+              <li><strong>Unified delivery via cross-docking:</strong> Merge marketplace shipments into TF's own delivery routes where geographically feasible → customers receive one combined order instead of multiple separate deliveries</li>
+              <li><strong>Customer review &amp; rating system:</strong> Allows buyers to see seller reliability before ordering → reduces risk, builds trust, incentivizes sellers to perform</li>
+              <li><strong>Unified payment flow:</strong> Customer pays TF (as usual), TF pays seller → eliminates the confusion of paying an unknown seller directly</li>
+              <li><strong>AI-powered recommendations:</strong> "Customers like you also ordered X from the marketplace" — leverages TF's data advantage for cross-sell</li>
+            </ul>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.5rem;color:var(--navy);">For Sellers</div>
+            <ul style="font-size:0.83rem;line-height:1.7;padding-left:1rem;margin:0;">
+              <li><strong>Payment guarantee / insurance scheme:</strong> TF guarantees payment to sellers (and collects from the customer) — removes the biggest barrier to onboarding and eliminates non-payment risk</li>
+              <li><strong>Automated product data onboarding:</strong> Expand aggregator feed connections and provide better API templates → reduce the #1 operational friction sellers face</li>
+              <li><strong>Tiered seller programme:</strong> "Gold" sellers (meeting all KPIs) get extra visibility in search, newsletter features, and lower commission → incentivizes quality and loyalty</li>
+              <li><strong>Seller dashboard with customer insights:</strong> Share anonymized data on which customer categories buy which products → helps sellers optimize their catalogue and pricing for TF's audience</li>
+              <li><strong>Proactive coaching:</strong> KPI-triggered coaching sessions (when a seller approaches suspension thresholds) rather than waiting for failure → prevents account suspensions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="padding:0.8rem 1rem;background:linear-gradient(135deg, var(--navy), var(--blue));border-radius:8px;color:white;font-size:0.84rem;line-height:1.6;">
+          <strong>Priority recommendation:</strong> The single highest-impact improvement is giving sales reps marketplace access on their tablets. With 65 reps visiting customers daily, this turns every customer visit into a marketplace promotion opportunity — at near-zero additional cost. It directly addresses both the customer discovery gap and the seller visibility problem simultaneously.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SESSION 4/5: BEAULIEU COMPANY VISIT -->
+  <div class="section" id="session4">
+    <div class="section-label">Sessions 4 &amp; 5 — Beaulieu International Group (Company Visit)</div>
+
+    <div class="s1-subnav" id="s5-subnav">
+      <button class="s1-btn s5-btn active" onclick="showS5('s5-overview')">🏢 Company Overview</button>
+      <button class="s1-btn s5-btn" onclick="showS5('s5-divisions')">🏭 5 Divisions</button>
+      <button class="s1-btn s5-btn" onclick="showS5('s5-marketing')">📣 Marketing Flywheel</button>
+      <button class="s1-btn s5-btn" onclick="showS5('s5-b2b')">🎯 B2B Marketing in Practice</button>
+      <button class="s1-btn s5-btn" onclick="showS5('s5-cases')">💼 Business Cases</button>
+    </div>
+
+    <!-- SUB-TAB: COMPANY OVERVIEW -->
+    <div class="s5-section active" id="s5-overview">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏢</span>Beaulieu International Group — At a Glance</div>
+        <div class="stat-grid" style="grid-template-columns:repeat(4,1fr);">
+          <div class="stat-item"><div class="stat-num">€2B</div><div class="stat-label">Annual revenue</div></div>
+          <div class="stat-item"><div class="stat-num">4,000+</div><div class="stat-label">Employees worldwide</div></div>
+          <div class="stat-item"><div class="stat-num">20</div><div class="stat-label">Production sites globally</div></div>
+          <div class="stat-item"><div class="stat-num">40+</div><div class="stat-label">Brands in the group</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;">
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.5rem;">Identity</div>
+            <ul class="key-list">
+              <li><strong>100% family-owned</strong> — enables long-term ambitions vs. short-term public company pressure</li>
+              <li>Headquartered in <strong>Waregem, Belgium</strong></li>
+              <li>Self-description: <em>"Family-owned, diversified industrial investment holder"</em></li>
+              <li>Motto: <em>"Beaulieu is always by your side"</em> — products present from morning (flooring) to night (diapers, hygiene)</li>
+              <li>Active in <strong>5 sectors</strong>: Flooring, Chemicals/PP, Industrial (fibers &amp; yarns), Distribution, Real Estate</li>
+            </ul>
+          </div>
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.5rem;">History &amp; Origin</div>
+            <ul class="key-list">
+              <li>Founded by a <strong>farming family</strong> in Wielsbeke — the farmer wanted less weather dependency</li>
+              <li>Started with <strong>carpet and furniture upholstery</strong>, then vertically integrated</li>
+              <li>The "golden formula": if I make carpet → make the yarn → make the polypropylene to make the yarn</li>
+              <li>Growth via <strong>strategic acquisitions</strong>: Congoleum (US vinyl), Asota (Austrian fibers — bought a competitor)</li>
+              <li>Recent: joint venture with Middle Eastern PP suppliers; plants in Dunkirk (Polyship) &amp; Louisiana (Pinnacle Polymers)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔄</span>Vertical Integration — The Golden Formula (and Its Limits)</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Step 1 — Carpet manufacturing:</strong> the original business. Make carpet from raw materials → sell to customers.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Step 2 — Yarn production:</strong> instead of buying yarn, produce it ourselves. Better control, lower cost.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Step 3 — Polypropylene (PP):</strong> instead of buying PP for yarn, produce the chemical raw material ourselves. Maximum vertical integration.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Today's reality:</strong> <em>"That golden formula doesn't work anymore."</em> It's not enough to produce and ship. You must also do <strong>business development and market innovation</strong>. Manufacturing is in the DNA, but the transition to value-added services and new markets is essential.</div>
+          </div>
+        </div>
+        <div class="alert" style="background:#fff7ed;border-color:#fdba74;color:#92400e;">Key insight for exam: Beaulieu is shifting from <strong>product-out thinking</strong> (we make it, it sells itself) to <strong>market-in thinking</strong> (business development, segmentation, value propositions, demand generation). This is the core tension discussed during the visit.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚖️</span>Strategic Challenges</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+          <div style="background:#fef2f2;border-radius:10px;padding:1rem;border-left:4px solid #ef4444;">
+            <div style="font-weight:700;color:#dc2626;margin-bottom:0.4rem;">Sustainability vs. Competitiveness</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Beaulieu has <strong>2030 sustainability ambitions</strong></li>
+              <li>But <strong>95% of LVT</strong> (fastest-growing flooring segment) comes from Asia, where sustainability standards differ</li>
+              <li>Cannot compete on cost when operating under stricter European rules</li>
+              <li>Polypropylene is <strong>energy-intensive</strong>; raw material prices are highly volatile (oil-linked)</li>
+            </ul>
+          </div>
+          <div style="background:#eff6ff;border-radius:10px;padding:1rem;border-left:4px solid #3b82f6;">
+            <div style="font-weight:700;color:#1e40af;margin-bottom:0.4rem;">Make vs. Buy Dilemma</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Manufacturing DNA = <em>"what we do ourselves, we do better"</em></li>
+              <li>But reality: sometimes it is better to <strong>outsource</strong> — buy from a specialist</li>
+              <li>Example: potential <strong>joint venture with Middle East PP supplier</strong></li>
+              <li>Also: <strong>acquired Asota</strong> (Austrian fiber competitor) rather than building capacity organically</li>
+            </ul>
+          </div>
+          <div style="background:#fdf4ff;border-radius:10px;padding:1rem;border-left:4px solid #c4b5fd;">
+            <div style="font-weight:700;color:#7c3aed;margin-bottom:0.4rem;">Brand Proliferation</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li><strong>40+ brands</strong> in the group — many acquired, many niche, many unknown</li>
+              <li>Question: how many brands do you need? How many can you afford to "feed" (invest in)?</li>
+              <li><strong>Beaulieu</strong> is the most recognized name — all others are largely invisible outside their niche</li>
+              <li>Ongoing rationalization exercise — relevant to B2B branding strategy</li>
+            </ul>
+          </div>
+          <div style="background:#f0fdf4;border-radius:10px;padding:1rem;border-left:4px solid #22c55e;">
+            <div style="font-weight:700;color:#15803d;margin-bottom:0.4rem;">50/50 Business Split</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Experience Center shows lots of flooring (needs space) — but <strong>misleading</strong></li>
+              <li><strong>~50% of revenue = flooring</strong></li>
+              <li><strong>~50% = chemicals (PP) + industrial applications (fibers)</strong></li>
+              <li>The invisible half is equally important — and very B2B-focused</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: 5 DIVISIONS -->
+    <div class="s5-section" id="s5-divisions">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏭</span>Division 1 — Flooring</div>
+        <table class="compare-table">
+          <thead><tr><th>Product Type</th><th>Description</th><th>Key Brands / Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Cushion Vinyl</strong></td><td>Vinyl flooring (and walls); soft, comfortable underfoot</td><td>Holfloor (Belgium + US); plant in Wielsbeke</td></tr>
+            <tr><td><strong>Hard Flooring</strong></td><td>Laminate, parquet, LVT (Luxury Vinyl Tile)</td><td>LVT is fastest-growing segment — but 95% made in Asia, hard to compete</td></tr>
+            <tr><td><strong>Digital Print Vinyl</strong></td><td>Custom imagery printed directly on floors — unique USP</td><td>Plant in Slovenia; used in offices, amusement parks, retail</td></tr>
+            <tr><td><strong>Carpet / Needle Felt</strong></td><td>Contract carpet, event carpet, residential carpet</td><td>Rewind event carpet = #1 in Europe; designed for circularity</td></tr>
+          </tbody>
+        </table>
+        <div class="alert" style="margin-top:0.8rem;">Proximity to customers is a key USP for flooring distribution — Beaulieu operates many warehouses/distribution centres close to customers (active in Spain and elsewhere via Signature Floors).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚗️</span>Division 2 — Polypropylene (Chemicals)</div>
+        <ul class="key-list">
+          <li><strong>What it is:</strong> raw thermoplastic polymer — the base material for an enormous range of plastic products</li>
+          <li><strong>Applications:</strong> rigid packaging, corrugated PP sheets (signage, displays), coffee cup caps/closures, microwaveable food containers</li>
+          <li><strong>Key USP:</strong> <em>lowest carbon footprint PP on the market</em> — verified by external LCA (Life Cycle Assessment); used as main B2B differentiator</li>
+          <li><strong>Production plants:</strong> Polyship (Dunkirk, France) + Pinnacle Polymers (Louisiana, USA)</li>
+          <li><strong>Challenge:</strong> very volatile business — heavily dependent on oil prices and global market rates; energy-intensive production</li>
+          <li><strong>Corrugated PP:</strong> used for signage (for-sale/for-rent signs), packaging displays — made from own PP</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧵</span>Division 3 — Fibers &amp; Yarns (Industrial Applications)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.7rem;">
+          <div style="background:#eff6ff;border-radius:8px;padding:0.8rem;border-top:3px solid #3b82f6;">
+            <div style="font-weight:700;font-size:0.85rem;margin-bottom:0.3rem;">🏗️ Building &amp; Construction</div>
+            <p style="font-size:0.82rem;line-height:1.5;margin:0;">Fibers mixed with concrete → bio-resistant, crack-resistant material. Key use: <strong>tunnel construction</strong>. Also used under asphalt (geotextiles) for road building.</p>
+          </div>
+          <div style="background:#fdf4ff;border-radius:8px;padding:0.8rem;border-top:3px solid #c4b5fd;">
+            <div style="font-weight:700;font-size:0.85rem;margin-bottom:0.3rem;">🧷 Hygiene</div>
+            <p style="font-size:0.82rem;line-height:1.5;margin:0;">Fibers used in <strong>diapers, cleaning wipes</strong>, and other hygiene products. Different fiber spec vs. construction fibers — same production capability, different application.</p>
+          </div>
+          <div style="background:#f0fdf4;border-radius:8px;padding:0.8rem;border-top:3px solid #22c55e;">
+            <div style="font-weight:700;font-size:0.85rem;margin-bottom:0.3rem;">🚗 Automotive</div>
+            <p style="font-size:0.82rem;line-height:1.5;margin:0;">Low-weight composites for <strong>car door panels, dashboards</strong>. Sold to composite manufacturers → who sell to OEMs (BMW, Mercedes, Tesla). <em>"Cleaner cars"</em> campaign.</p>
+          </div>
+          <div style="background:#fff7ed;border-radius:8px;padding:0.8rem;border-top:3px solid #f97316;">
+            <div style="font-weight:700;font-size:0.85rem;margin-bottom:0.3rem;">🎪 Event Carpet (Yarns)</div>
+            <p style="font-size:0.82rem;line-height:1.5;margin:0;"><strong>#1 supplier in Europe</strong> for event carpet. Rewind brand: designed for circularity — recycled into granules → new applications (injection moulding for car engine parts).</p>
+          </div>
+          <div style="background:#fef2f2;border-radius:8px;padding:0.8rem;border-top:3px solid #ef4444;">
+            <div style="font-weight:700;font-size:0.85rem;margin-bottom:0.3rem;">🌱 Geotextiles</div>
+            <p style="font-size:0.82rem;line-height:1.5;margin:0;">Fabrics used in civil engineering: road foundations, drainage, erosion control. Placed under asphalt in road construction.</p>
+          </div>
+          <div style="background:#f0fdf4;border-radius:8px;padding:0.8rem;border-top:3px solid #10b981;">
+            <div style="font-weight:700;font-size:0.85rem;margin-bottom:0.3rem;">🪡 Carpet Yarns</div>
+            <p style="font-size:0.82rem;line-height:1.5;margin:0;">Yarns supplied to carpet manufacturers (vertically integrated into own carpet production). Classic example of B2B industrial yarn supply.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚽</span>Division 4 — Artificial Grass</div>
+        <ul class="key-list">
+          <li><strong>Sports:</strong> padel fields, football pitches, hockey fields — key B2B market (sports facility operators)</li>
+          <li><strong>Innovation:</strong> hybrid fields combining real grass with synthetic grass — used by major football clubs</li>
+          <li><strong>Residential:</strong> garden artificial grass — more B2C oriented</li>
+          <li><strong>B2B angle:</strong> sports facility managers, club operators, local governments are the B2B buyers</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🚚</span>Division 5 — Distribution &amp; Real Estate</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div>
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">Distribution</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li><strong>Proximity to customers</strong> is a key USP — network of warehouses and distribution centres</li>
+              <li>Signature Floors: distribution active in Spain and other markets</li>
+              <li>Ensures next-day or rapid delivery for flooring solutions</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">Real Estate</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Smaller division — manages non-operational real estate within the group</li>
+              <li>Properties accumulated over decades of industrial operations across Belgium and beyond</li>
+              <li>Commercially managed as a portfolio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: MARKETING FLYWHEEL -->
+    <div class="s5-section" id="s5-marketing">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔄</span>Beaulieu's Strategic Marketing Flywheel</div>
+        <p style="font-size:0.87rem;line-height:1.6;margin-bottom:1rem;">Marketing, business development and sales are organized as a continuous flywheel. Each element feeds the next — it never stops spinning. Key enablers sit at the foundation.</p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>1. Market Intelligence &amp; Business Development</strong> — "Where are the pockets of value?"<br>
+              <span style="font-size:0.83rem;color:var(--muted);">Identify new markets, new segments, new opportunities. Example: Rewind event carpet is in a declining market → BD finds alternative segments (hospitality, education, sport…). Owned by BD teams within each Business Unit.</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>2. Portfolio, Product &amp; Innovation Management</strong> — "What value do we create and for whom?"<br>
+              <span style="font-size:0.83rem;color:var(--muted);">Value proposition development, differentiation from competition, product innovation (long-term) vs. business development (short-term, same product new segment). Both BD and marketing collaborate here.</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>3. Commercial Strategy</strong> — "How do we go to market?"<br>
+              <span style="font-size:0.83rem;color:var(--muted);">Segmentation, targeting, channel decisions. Who is the B2B buyer? Through which channels do we reach them? How do we adapt the message per segment?</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>4. Branding, Activation &amp; Sales Enablement</strong> — "Downstream marketing"<br>
+              <span style="font-size:0.83rem;color:var(--muted);">Social media, websites, email campaigns, events, Experience Center. Key metrics: brand awareness (hard to measure) and demand generation / lead gen (more important, more measurable). Sales enablement = content and tools that help sales close.</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <strong>5. Customer Experience</strong> — "How do customers see us?"<br>
+              <span style="font-size:0.83rem;color:var(--muted);">NPS (Net Promoter Score) studies and market intelligence to understand where Beaulieu drops the ball vs. where it differentiates. Feeds back into step 1 → flywheel continues.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;padding:0.8rem 1rem;background:var(--light);border-radius:8px;">
+          <div style="font-weight:700;margin-bottom:0.4rem;font-size:0.88rem;">Flywheel Enablers (Foundation)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;font-size:0.83rem;line-height:1.5;">
+            <div><strong>🖥️ Marketing &amp; Sales Technology:</strong> Salesforce CRM, marketing automation tools</div>
+            <div><strong>📊 Performance Management:</strong> KPI dashboards across all marketing activities</div>
+            <div><strong>📈 Data &amp; Analytics:</strong> Audience segmentation, persona definition, campaign targeting — data must be right before any activation</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">💡</span>Innovation vs. Business Development — The Key Distinction</div>
+        <table class="compare-table">
+          <thead><tr><th></th><th>Innovation</th><th>Business Development</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Time horizon</strong></td><td>Long-term</td><td>Short-to-medium term</td></tr>
+            <tr><td><strong>What changes</strong></td><td>The product itself — new characteristics, new materials</td><td>The market — same product, new segments, new geographies</td></tr>
+            <tr><td><strong>Risk level</strong></td><td>Higher — uncertain whether new product will work</td><td>Lower — proven product, tested market logic</td></tr>
+            <tr><td><strong>Beaulieu example</strong></td><td>Developing new fiber composites for EV battery casing</td><td>Taking Rewind event carpet into sports facilities or hospitality</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: B2B MARKETING IN PRACTICE -->
+    <div class="s5-section" id="s5-b2b">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚗️</span>Case 1 — Beaulieu Polymers: Lowest Carbon Footprint PP</div>
+        <p style="font-size:0.87rem;line-height:1.6;margin-bottom:0.8rem;">This is Beaulieu's clearest example of <strong>value-based B2B marketing</strong> — differentiating not on price but on a measurable, externally verified sustainability claim.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">The USP</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Beaulieu's PP has the <strong>lowest carbon footprint</strong> compared to competitors and alternative materials</li>
+              <li>Verified by an <strong>external LCA</strong> (Life Cycle Assessment) association — not a self-claim</li>
+              <li>Relevant for packaging converters who face their own sustainability KPIs</li>
+            </ul>
+          </div>
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">Why It Matters for B2B Buyers</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Packaging converters must justify materials to <strong>their own customers</strong> (food brands, retailers)</li>
+              <li>Plastics reduce food waste — a sustainability positive often overlooked</li>
+              <li>PP is microwaveable, transparent, flexible, hard-wearing → functional + sustainable</li>
+              <li>Famous application: <strong>Tupperware-style containers</strong> made from Beaulieu PP</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alert" style="margin-top:0.8rem;">Exam link: This is a textbook <strong>B2B value proposition</strong> — quantified, externally validated, and formulated around the customer's job-to-be-done (reduce their own carbon footprint). It also illustrates the <strong>B2B2C chain</strong>: Beaulieu → converter → food brand → consumer.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🚗</span>Case 2 — Beaulieu Fibers: Going to the Customer of the Customer</div>
+        <div class="quote-block"><p>"We won't directly go to the Teslas of this world to show what we can do. So there is a pull in the market that is very important."</p></div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Beaulieu</strong> makes low-weight fiber composites</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>Composite manufacturers (direct B2B customer)</strong> use fibers to make door panels, dashboards, engine compartment parts</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content"><strong>OEMs (customer of customer)</strong>: BMW, Mercedes, Tesla specify which materials go into their cars → they generate demand <em>pull</em></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-top:0.8rem;">
+          <div style="background:#f0fdf4;border-radius:10px;padding:1rem;border-left:3px solid #22c55e;">
+            <div style="font-weight:700;color:#15803d;margin-bottom:0.3rem;">The Strategy</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Create <strong>demand pull</strong> at OEM level — convince BMW/Tesla to specify Beaulieu fibers</li>
+              <li>Campaign message: <em>"The cleaner car"</em> — lighter composites = less fuel/energy = lower emissions</li>
+              <li>Work with <strong>industry associations</strong> to avoid going "over the head" of the direct customer</li>
+              <li>Especially relevant for <strong>EVs</strong> where weight reduction is critical for range</li>
+            </ul>
+          </div>
+          <div style="background:#eff6ff;border-radius:10px;padding:1rem;border-left:3px solid #3b82f6;">
+            <div style="font-weight:700;color:#1e40af;margin-bottom:0.3rem;">The Challenge</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Who exactly is the <strong>B2B buyer at OEM level</strong>? (R&amp;D? Procurement? Sustainability officer?)</li>
+              <li>How to reach OEM engineers without alienating the composite manufacturer?</li>
+              <li>What is the right <strong>channel strategy</strong>? (trade press, industry events, direct digital?)</li>
+              <li>What messaging resonates — cost savings? Sustainability? Weight? Safety?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alert" style="margin-top:0.8rem;">Exam link: This is <strong>derived demand</strong> in action — Beaulieu creates demand at the consumer/OEM level to pull through its B2B supply chain. Connects directly to Session 2 (derived demand) and the Case Study paper (consumer engagement framework).</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏛️</span>The Experience Center as a B2B Marketing Tool</div>
+        <ul class="key-list">
+          <li>Beaulieu built a full <strong>Experience Center</strong> at its Wielsbeke HQ — every surface (floor, wall, ceiling) made from own products</li>
+          <li>Digital applications throughout — not "digital for digital's sake" but to add genuine customer value through visualization</li>
+          <li>Customers visit and literally <strong>walk on, touch, and experience</strong> the products → trial is a key step in the B2B buying process (link to Session 2: Cisco TelePresence "see it to believe it")</li>
+          <li>Relates to <strong>brand awareness + customer engagement</strong> — keeping customers close, showing innovation pipeline</li>
+          <li>Also used for events, group visits (like your own!), and partner meetings</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SUB-TAB: BUSINESS CASES -->
+    <div class="s5-section" id="s5-cases">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🎪</span>Business Case 1 — Rewind Event Carpet</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">Situation</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Beaulieu is <strong>#1 in Europe</strong> for event carpet (trade shows, expo venues, Flanders Expo, etc.)</li>
+              <li>Traditional event carpet: used 2–4 days → straight to <strong>landfill</strong></li>
+              <li>Rewind product: <strong>designed for circularity</strong> — taken back after event, recycled into granules, used in injection moulding (e.g. black plastic parts in car engine compartments)</li>
+              <li>The event carpet market is <strong>declining</strong> — doing nothing is not an option</li>
+            </ul>
+          </div>
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">The Challenge</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Core B2B clients: <strong>event agencies and venues</strong></li>
+              <li>How to develop a B2B marketing strategy to enter <strong>new segments</strong>?</li>
+              <li>What is the <strong>total addressable market</strong> in those segments?</li>
+              <li>How to adapt the messaging for different audiences?</li>
+              <li>Which channels to use to reach new B2B buyers?</li>
+            </ul>
+          </div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:10px;padding:1rem;margin-bottom:0.8rem;">
+          <div style="font-weight:700;color:#15803d;margin-bottom:0.4rem;">Three Analysis Angles (used in the group session)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;font-size:0.83rem;line-height:1.5;">
+            <div><strong>Angle A — Market Expansion:</strong> Which new segments could use needle-felt carpet? (Hospitality, education, retail, sports facilities, temporary installations…)</div>
+            <div><strong>Angle B — Product &amp; Sustainability:</strong> What sustainability trends in the carpet/flooring market can Rewind leverage? How to position circularity as a USP to new buyers?</div>
+            <div><strong>Angle C — Competitive Differentiation:</strong> How does Rewind differ from regular carpet competitors? What keeps new B2B buyers awake at night — and how does Rewind solve it?</div>
+          </div>
+        </div>
+        <div class="alert">Key guiding questions: Who is the B2B buyer in the new segment? What are the market trends? Which channels can reach them? How to adapt the message? → 3-minute pitch format.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧵</span>Business Case 2 — Beaulieu Fibers for Automotive OEMs</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">Situation</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>Beaulieu fibers are used to make <strong>lightweight composites</strong> for car interiors (door panels, dashboards)</li>
+              <li>Direct customer = composite manufacturer (Tier 1 automotive supplier)</li>
+              <li>Real decision-maker = <strong>OEM (BMW, Mercedes, Tesla)</strong> who specifies materials in vehicle design</li>
+              <li>Campaign already running: <em>"The cleaner car"</em> — EVs need light materials for range</li>
+            </ul>
+          </div>
+          <div style="background:var(--light);border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;color:var(--blue);margin-bottom:0.4rem;">The Challenge</div>
+            <ul style="font-size:0.83rem;line-height:1.6;padding-left:1rem;margin:0;">
+              <li>How to reach OEM engineers and R&amp;D teams <strong>without going over the head</strong> of the direct customer (composite manufacturer)?</li>
+              <li>Industry associations as a neutral channel to create pull</li>
+              <li>Stakeholder mapping: who at the OEM cares about this? Procurement? Engineering? Sustainability?</li>
+              <li>Channel strategy: trade press, events, digital, associations?</li>
+            </ul>
+          </div>
+        </div>
+        <div style="background:#eff6ff;border-radius:10px;padding:1rem;">
+          <div style="font-weight:700;color:#1e40af;margin-bottom:0.4rem;">Three Analysis Angles (used in the group session)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;font-size:0.83rem;line-height:1.5;">
+            <div><strong>Angle A — Stakeholder Mapping:</strong> Who exactly are the OEM decision-makers? Map the DMU at automotive OEMs. Who influences material specifications?</div>
+            <div><strong>Angle B — Sustainability Message:</strong> What resonates with OEM sustainability officers? How to quantify the footprint reduction? LCA data as a tool.</div>
+            <div><strong>Angle C — Channel Strategy:</strong> How to reach OEM engineers — automotive trade press, EV-specific events, LinkedIn targeting, association partnerships?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔗</span>Links to Course Theory</div>
+        <table class="compare-table">
+          <thead><tr><th>Beaulieu Concept</th><th>Course Framework</th><th>Session</th></tr></thead>
+          <tbody>
+            <tr><td>Going to customer of customer (OEM pull)</td><td>Derived demand + Consumer Engagement Framework</td><td>S2 + Case Study</td></tr>
+            <tr><td>Lowest carbon PP as USP</td><td>Value-based pricing, Customer Value Model, Point of Difference</td><td>S1</td></tr>
+            <tr><td>Experience Center as trial tool</td><td>"See it to believe it" — product trial in B2B</td><td>S2 Communication</td></tr>
+            <tr><td>Make vs. Buy (JV with Middle East)</td><td>Direct vs. indirect procurement, Kraljic Matrix</td><td>S1</td></tr>
+            <tr><td>Brand proliferation (40+ brands)</td><td>B2B branding, brand awareness in B2B markets</td><td>S2</td></tr>
+            <tr><td>Distribution centres near customers</td><td>Direct vs. indirect channels, distribution intensity</td><td>S2 Distribution</td></tr>
+            <tr><td>Rewind declining market → new segments</td><td>STP — new targeting with existing product</td><td>S2 STP</td></tr>
+            <tr><td>NPS studies for customer experience</td><td>Market research in B2B (qualitative, customer insight)</td><td>S2 Market Research</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+
   <!-- CHECKLIST -->
   <div class="section" id="checklist">
     <div class="section-label">Exam Prep Checklist — click to check off</div>
@@ -1880,6 +3944,89 @@
     </div>
 
     <div class="card">
+      <div class="card-title"><span class="icon">📘</span>Session 2 — Concepts to Know</div>
+      <ul class="checklist">
+        <li onclick="toggle(this)"><div class="chk"></div><span>Purpose of B2B market research: understand customer's jobs to be done</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>4 characteristics of B2B market research (desk research, qualitative, hard to reach DM, external agencies)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Derived demand: what it is and why consumer reactions affect B2B suppliers (Bekaert brassiere wire)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Bosch blue vs green tools: dual B2B/B2C product strategy</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>STP: Segmenting, Targeting, Positioning — definitions and logic</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>4 B2B segmentation variable categories (Geographic, Demographic, Psychographic*, Behavioral*)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Customer portfolio profitability curve: top 15% generate 200%+ of profits; bottom 10% destroy value</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Chuck Lillis quote: knowing who NOT to sell to</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Business Products classification: Entering / Foundation / Facilitating / Finished goods</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Entering goods sub-types: raw materials, processed/semi-manufactured, components/parts</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Foundation vs Facilitating goods distinction (necessary to process vs support/consumed)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Finished goods: tangible vs intangible; sold for resale</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>4 B2B product characteristics: technically complex, after-sales service, spec-based, customized</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>B2B price characteristics: quotation-based, negotiable, non-transparent, not used as promo</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Cost-plus pricing: limitations (ignores customer value)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Competition-based pricing: limitations (cedes control, unknown competitor prices)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Value-based pricing: price based on application/context (Coca-Cola example)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Communication funnel stages: Awareness → Interest → Evaluation → Trial → Adoption</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Media characteristics: personal nature, sensory cues, impact, cost — all increase as funnel narrows</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Conversion funnel: Lead → Prospect → MQL → SQL → Opportunity → Customer</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Lead scoring model: positive and negative signals</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Content marketing definition + 3 goals (thought leadership, engagement, lead gen) + John Deere example</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Trade fair: 7 goals (sell, leads, relationships, competition, launch, image, motivation)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Product trial importance: Cisco TelePresence boarding pass — "see it to believe it"</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Direct vs indirect distribution channels — definitions and trade-offs</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>7 channel activities (Storage, Information, Promotion, Services, Negotiation, Financing, After-sales)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Compensation methods: trade/volume/payment discounts, allowances, bonuses</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Distribution intensity: Maximal vs Selective vs Exclusive → Control vs Conflict</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Marketplace equity = Channel equity + Reseller equity + Brand equity</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>3 distribution channel goals: maximize market access, optimize value-added, minimize cost-to-serve</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Barco Clickshare: push &amp; pull mixed distribution strategy (AV 80% / IT 20%)</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">📙</span>Session 3 — Concepts to Know</div>
+      <ul class="checklist">
+        <li onclick="toggle(this)"><div class="chk"></div><span>Definition of a digital platform (Basu &amp; Muylle): intermediary facilitating interactions between/among stakeholders</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>3 types of digital platforms: Innovation / Engagement / Transaction — definitions and examples</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Combinations: Facebook as Innovation + Engagement + Transaction platform</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>4 platform characteristics: one/multi-sided, multiple producer types, value from participants, effective interaction mechanisms</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Schilling's 3 organizational forms: Hierarchies vs Platform Ecosystems vs Markets</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>The "asset-light" paradox: Amazon/Uber/Facebook/Alibaba/Airbnb/Netflix — and the nuance (Amazon's 100+ fulfillment centers)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Network effects = network externalities: 4 types (same-side positive/negative, cross-side positive/negative)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Lock-in effects: strong network effects → switching costs → difficult to leave</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Multi-homing: participating in multiple platforms simultaneously → reduces lock-in</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Chicken-and-egg problem: cross-side platforms need both sides simultaneously — strategies to solve it</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>4 platform revenue models: provider-funded (Facebook), customer-funded (Windows), both sides (AirBnB/Amazon), pay creators (YouTube)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>4 platform challenges: community growth / monetization timing / content &amp; product control / regulation</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Winner-takes-all dynamics: Facebook revenue $0.27B (2008) → $117.9B (2021) driven by network effects</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Assessing marketplace opportunity: large fragmented market + limited participant resources + interaction value + common core capabilities</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Examples: Amazon Business (B2B marketplace), Booking.com (complementary services), Walmart Marketplace, Decathlon Marketplace</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>P&amp;G on Amazon: B2B2C brand using platform as DTC channel — links to derived demand and consumer engagement</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="icon">🏭</span>Sessions 4 &amp; 5 (Beaulieu) — Concepts to Know</div>
+      <ul class="checklist">
+        <li onclick="toggle(this)"><div class="chk"></div><span>Beaulieu is 100% family-owned → long-term ambition vs. short-term public company pressure</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>5 divisions: Flooring, Polypropylene/Chemicals, Fibers &amp; Yarns, Artificial Grass, Distribution &amp; Real Estate</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Vertical integration "golden formula": carpet → yarn → polypropylene. Still in DNA but no longer sufficient alone</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>"It's not enough to produce and ship" → shift to business development + market innovation</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Innovation (long-term, new product) vs. Business Development (short-term, same product new segment)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>50/50 revenue split: flooring vs. chemicals (PP) + industrial (fibers) — Experience Center is misleading</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Sustainability challenge: 95% of LVT comes from Asia → uneven playing field; PP is energy-intensive</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Make vs. Buy dilemma: JV with Middle East PP supplier; acquisition of Asota (Austrian fiber competitor)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>40+ brands in group — brand proliferation challenge; rationalization ongoing; brand awareness matters in B2B too</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Beaulieu's marketing flywheel: Market Intelligence → Portfolio/Innovation → Commercial Strategy → Branding/Activation → Customer Experience → repeat</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Enablers: Salesforce CRM, marketing automation, KPI dashboards, data &amp; analytics</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Polypropylene USP: lowest carbon footprint PP, externally verified by LCA — used for packaging converters (B2B2C chain)</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Fibers case: going to customer of customer — create demand pull at OEM level (BMW, Tesla) without going over the head of the composite manufacturer</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Experience Center = B2B marketing tool: product trial, customer engagement, visualization — "see it to believe it"</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Rewind event carpet: #1 in Europe, declining market, designed for circularity → recycled into granules → injection moulding</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Business Case 1 angles: market expansion / sustainability positioning / competitive differentiation</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Business Case 2 angles: stakeholder mapping at OEM / sustainability message / channel strategy</span></li>
+        <li onclick="toggle(this)"><div class="chk"></div><span>Link: Beaulieu fibers → derived demand (pull through supply chain) = same concept as Session 2 + Case Study</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="card-title"><span class="icon">✅</span>Admin To-Do</div>
       <ul class="checklist">
         <li onclick="toggle(this)"><div class="chk"></div><span>Join a group on Ufora (max 5 members)</span></li>
@@ -1908,6 +4055,38 @@
     document.getElementById(id).classList.add('active');
     event.currentTarget.classList.add('active');
     window.scrollTo({ top: document.getElementById('s1-subnav').offsetTop - 70, behavior: 'smooth' });
+  }
+
+  function showS2(id) {
+    document.querySelectorAll('.s2-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.s2-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: document.getElementById('s2-subnav').offsetTop - 70, behavior: 'smooth' });
+  }
+
+  function showS3(id) {
+    document.querySelectorAll('.s3-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.s3-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: document.getElementById('s3-subnav').offsetTop - 70, behavior: 'smooth' });
+  }
+
+  function showS4(id) {
+    document.querySelectorAll('.s4-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.s4-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: document.getElementById('s4-subnav').offsetTop - 70, behavior: 'smooth' });
+  }
+
+  function showS5(id) {
+    document.querySelectorAll('.s5-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.s5-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: document.getElementById('s5-subnav').offsetTop - 70, behavior: 'smooth' });
   }
 
   function toggle(li) {
