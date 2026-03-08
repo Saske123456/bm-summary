@@ -1873,6 +1873,8 @@
       <button class="s1-btn s2-btn" onclick="showS2('s2-price')">💰 Price</button>
       <button class="s1-btn s2-btn" onclick="showS2('s2-communication')">📣 Communication</button>
       <button class="s1-btn s2-btn" onclick="showS2('s2-distribution')">🚚 Distribution</button>
+      <button class="s1-btn s2-btn" onclick="showS2('s2-derived')">🔄 Derived Demand</button>
+      <button class="s1-btn s2-btn" onclick="showS2('s2-strategic')">⚡ Strategic Response</button>
     </div>
 
     <!-- SUB-TAB: MARKET RESEARCH -->
@@ -2478,6 +2480,324 @@
       </div>
 
     </div>
+
+    <!-- SUB-TAB: DERIVED DEMAND -->
+    <div class="s2-section" id="s2-derived">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔄</span>What is Derived Demand?</div>
+        <p style="margin-bottom:0.8rem; line-height:1.7;">In B2B markets, demand for a supplier's product is <strong>not generated directly</strong> by the business customer — it is <strong>derived</strong> from the demand that the business customer's own customers (and ultimately end-consumers) have for their products.</p>
+        <div class="quote-block" style="margin-bottom:1rem;">
+          <p>B2B demand is ultimately a function of what consumers want and buy. A supplier three tiers up the supply chain must still understand and respond to shifts in end-consumer preferences.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;">
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem;">
+            <strong style="color:var(--blue);">Session objective:</strong> "Analyzing Derived Demand and its Implications" — understanding how consumer sentiment cascades upstream through the supply chain, and how B2B firms must monitor and react to end-consumer trends.
+          </div>
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem;">
+            <strong style="color:var(--blue);">Key implication:</strong> Even if your direct customer is satisfied, a shift in <em>their</em> customers' preferences can destroy demand for your B2B product overnight — unless you proactively manage it.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🧵</span>Case: Bekaert Brassiere Wire — The Full Value System</div>
+        <p style="margin-bottom:0.8rem; font-size:0.85rem; line-height:1.7;">Bekaert produces brassiere underwire — a classic <strong>entering good</strong> (subsumed/incorporated into the finished product). Demand flows through multiple tiers before reaching the end consumer:</p>
+        <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:0.4rem; text-align:center; font-size:0.72rem; margin-bottom:1rem;">
+          <div style="background:var(--navy); color:#fff; padding:0.6rem 0.3rem; border-radius:6px; font-weight:600;">Rod wire<br>Zinc / PET</div>
+          <div style="display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:var(--muted);">→</div>
+          <div style="background:var(--blue); color:#fff; padding:0.6rem 0.3rem; border-radius:6px; font-weight:600;">BEKAERT<br>Core brassiere wire</div>
+          <div style="display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:var(--muted);">→</div>
+          <div style="background:var(--accent2); color:#fff; padding:0.6rem 0.3rem; border-radius:6px; font-weight:600;">Bra underwire<br>manufacturer</div>
+          <div style="display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:var(--muted);">→</div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:0.4rem; text-align:center; font-size:0.72rem; margin-bottom:1rem;">
+          <div style="background:var(--accent2); color:#fff; padding:0.6rem 0.3rem; border-radius:6px; font-weight:600;">Bra design &amp;<br>production</div>
+          <div style="display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:var(--muted);">→</div>
+          <div style="background:#6b7280; color:#fff; padding:0.6rem 0.3rem; border-radius:6px; font-weight:600;">Retailer</div>
+          <div style="display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:var(--muted);">→</div>
+          <div style="background:var(--success); color:#fff; padding:0.6rem 0.3rem; border-radius:6px; font-weight:600;">Consumer</div>
+          <div></div>
+        </div>
+        <p style="font-size:0.82rem; line-height:1.6; color:var(--muted);">Bekaert is at the <strong>very beginning</strong> of this chain. Yet consumer reactions at the <strong>very end</strong> directly determine whether bra manufacturers continue ordering underwire — and in turn whether Bekaert continues to have a market at all.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">💬</span>Consumer Signal: Viral Complaints on Social Media</div>
+        <p style="margin-bottom:0.8rem; font-size:0.85rem; line-height:1.7;">Consumers began posting on Twitter (X) about problems with bra underwires — the wires were <strong>squeaking</strong>, <strong>stabbing through the fabric</strong>, and <strong>coming loose</strong>. These were not complaints directed at Bekaert — consumers had no idea who Bekaert was. They complained about the bra brand.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="padding:0.7rem; background:#fef2f2; border-radius:8px; border-left:3px solid #ef4444; font-size:0.8rem;">
+            <strong style="color:#991b1b;">😤 "It squeaks!"</strong><br>Wire makes noise through the day → embarrassing in quiet meetings
+          </div>
+          <div style="padding:0.7rem; background:#fef2f2; border-radius:8px; border-left:3px solid #ef4444; font-size:0.8rem;">
+            <strong style="color:#991b1b;">😖 "It's stabbing me!"</strong><br>Wire pokes through the fabric → painful to wear
+          </div>
+          <div style="padding:0.7rem; background:#fef2f2; border-radius:8px; border-left:3px solid #ef4444; font-size:0.8rem;">
+            <strong style="color:#991b1b;">😠 "It came loose!"</strong><br>Wire escapes the casing after washing → product failure
+          </div>
+        </div>
+        <div class="alert" style="background:#fef9c3; border-color:#fde047; border-left-color:#ca8a04; color:#713f12;">
+          🔍 <strong>Why did Bekaert care?</strong> If consumers stop buying bras with underwires, bra manufacturers will stop ordering underwire components, and Bekaert loses its market. Consumer-level dissatisfaction = upstream B2B revenue risk.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🛠️</span>Strategic Response: What Did Bekaert Do?</div>
+        <p style="margin-bottom:0.8rem; font-size:0.85rem; line-height:1.7;">Rather than waiting for its direct customers (bra manufacturers) to complain, Bekaert <strong>proactively monitored consumer sentiment</strong> and adapted its product. The strategic response had two parts:</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div style="padding:0.9rem; background:#f0fdf4; border-radius:8px; border-left:4px solid var(--success); font-size:0.83rem; line-height:1.7;">
+            <strong style="color:#166534;">1. Monitor consumer sentiment ↑ upstream</strong><br>
+            Bekaert began tracking social media and consumer review platforms — not because consumers were their direct customers, but because consumer preferences are the <em>root cause</em> of derived demand. This is the B2B2C insight: B2B companies need consumer intelligence even if they never sell to consumers directly.
+          </div>
+          <div style="padding:0.9rem; background:#eff6ff; border-radius:8px; border-left:4px solid var(--blue); font-size:0.83rem; line-height:1.7;">
+            <strong style="color:#1e3a5f;">2. Develop non-squeaking wire</strong><br>
+            Bekaert's R&amp;D team redesigned the brassiere wire to eliminate the squeak — a material/coating innovation at the B2B level that directly addressed a consumer-level problem. This is a <em>derived demand driven product innovation</em>: consumer pain point → upstream component redesign.
+          </div>
+        </div>
+        <div class="alert" style="background:#f0fdf4; border-color:#86efac; border-left-color:var(--success); color:#14532d;">
+          ✅ <strong>Result:</strong> By solving the consumer problem at the component level, Bekaert added value to its direct customers (bra manufacturers) who could now deliver a higher-quality end product — creating a competitive advantage for Bekaert in the supply chain.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📐</span>Business Products Classification & Derived Demand Implications</div>
+        <p style="margin-bottom:0.8rem; font-size:0.83rem; line-height:1.7;">The type of product determines <strong>how strongly derived demand applies</strong>. Products incorporated into finished goods (entering goods) face the strongest derived demand pressure.</p>
+        <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:1rem;">
+          <thead>
+            <tr style="background:var(--navy); color:#fff;">
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Category</th>
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Used for</th>
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Examples</th>
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Derived demand strength</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Entering goods</td>
+              <td style="padding:0.5rem 0.7rem;">Incorporated into finished product</td>
+              <td style="padding:0.5rem 0.7rem;">Raw materials, semi-manufactured goods, components (e.g. Bekaert wire, Intel chips, ArcelorMittal steel)</td>
+              <td style="padding:0.5rem 0.7rem; color:#dc2626;">⬆⬆⬆ Very high — product disappears into consumer good</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border); background:var(--light);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Foundation goods</td>
+              <td style="padding:0.5rem 0.7rem;">Process entering goods (own use)</td>
+              <td style="padding:0.5rem 0.7rem;">Machinery, accessories, systems (e.g. Bekaert diamond wire saw used by slabbing companies)</td>
+              <td style="padding:0.5rem 0.7rem; color:#d97706;">⬆⬆ High — demand follows production volume</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Facilitating goods</td>
+              <td style="padding:0.5rem 0.7rem;">Support the organisation</td>
+              <td style="padding:0.5rem 0.7rem;">MRO supplies, cleaning services, office supplies</td>
+              <td style="padding:0.5rem 0.7rem; color:#16a34a;">⬆ Moderate — linked to operational activity, not end product</td>
+            </tr>
+            <tr style="background:var(--light);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Finished goods (resale)</td>
+              <td style="padding:0.5rem 0.7rem;">Sold on to end customers</td>
+              <td style="padding:0.5rem 0.7rem;">Tangible (Etilux — labels, packaging) and intangible (Capgemini Salesforce licenses)</td>
+              <td style="padding:0.5rem 0.7rem; color:#dc2626;">⬆⬆⬆ Very high — directly resold to consumers/businesses</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="padding:0.8rem; background:#fff7ed; border-radius:8px; border-left:3px solid var(--accent); font-size:0.82rem; line-height:1.7;">
+          <strong style="color:#92400e;">B2B Customer Types &amp; Derived Demand:</strong><br>
+          • <strong>B2B Manufacturers / OEMs</strong> — incorporate your product, so your demand is fully derived from their end market<br>
+          • <strong>Intermediaries (B2B2C / B2B2B)</strong> — resell your product; derived demand runs through their customer base<br>
+          • <strong>B2G (Government)</strong> — driven by policy and budgets, not consumer demand
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🎯</span>Strategic Implications for B2B Marketers</div>
+        <ul class="key-list">
+          <li><strong>Monitor end-consumer sentiment</strong> even if consumers are not your direct customers — use social listening, market research at the consumer tier</li>
+          <li><strong>Map your full value system</strong> from raw input to end consumer — understand where your product lives and what consumer trends could disrupt demand</li>
+          <li><strong>Invest in B2B2C innovation</strong> — redesign your B2B component/service to eliminate consumer pain points before your direct customers' competitors do it first</li>
+          <li><strong>Engage consumers directly</strong> when possible (pull strategy) — Bekaert could invest in "Bekaert Inside" branding (like Intel Inside) to create consumer pull for bras with Bekaert wire</li>
+          <li><strong>Diversify across value systems</strong> — Bekaert operates in road safety barriers, diamond wire saws, natural stone cutting, brassiere wire; each with its own end-consumer demand curve, reducing overall derived demand volatility</li>
+          <li><strong>Beaulieu International Group</strong> (from our factory visit) is also exposed to derived demand: polymer fibres and flooring materials are incorporated into consumer-facing products — consumer design trends (e.g. away from carpets to LVT) directly shift Beaulieu's B2B orders</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- END SUB-TAB: DERIVED DEMAND -->
+
+    <!-- SUB-TAB: STRATEGIC RESPONSE -->
+    <div class="s2-section" id="s2-strategic">
+
+      <div class="card">
+        <div class="card-title"><span class="icon">⚡</span>The Core Shift: From Traditional to New B2B Approach</div>
+        <p style="margin-bottom:1rem; line-height:1.7;">The strategic response to derived demand requires a <strong>fundamental rethinking</strong> of how B2B companies position themselves in the value chain. Instead of only pushing product/service downstream, they must also pull <strong>information and intelligence upstream</strong> from end-consumers.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div style="padding:1rem; background:#fef2f2; border-radius:8px; border-left:4px solid #ef4444;">
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#991b1b; margin-bottom:0.5rem;">Traditional B2B Approach</div>
+            <div style="text-align:center; font-size:0.85rem; margin-bottom:0.7rem; letter-spacing:0.05em;">
+              <strong>B</strong> &nbsp;→&nbsp; <strong>B¹</strong> &nbsp;→&nbsp; <strong>C</strong>
+            </div>
+            <ul style="font-size:0.8rem; padding-left:1.2rem; line-height:1.8; color:var(--text);">
+              <li>Product/service flows downstream only</li>
+              <li>No interaction between B2B firm and end-consumer</li>
+              <li>No/indirect insight on consumer markets and preferences</li>
+            </ul>
+          </div>
+          <div style="padding:1rem; background:#f0fdf4; border-radius:8px; border-left:4px solid var(--success);">
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#166534; margin-bottom:0.5rem;">New B2B Approach (Strategic Response)</div>
+            <div style="text-align:center; font-size:0.85rem; margin-bottom:0.7rem; letter-spacing:0.05em;">
+              <strong>B</strong> &nbsp;⟵ &nbsp;·····&nbsp; <strong>B¹</strong> &nbsp;·····&nbsp;⟵&nbsp; <strong>C</strong>
+            </div>
+            <ul style="font-size:0.8rem; padding-left:1.2rem; line-height:1.8; color:var(--text);">
+              <li>Engage with end-consumers to improve processes</li>
+              <li>Sell to consumer segments (direct or indirect)</li>
+              <li>Digitally-enhance business/consumer products/services</li>
+              <li>Offer or sell digital business/consumer products/services</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alert" style="background:#eff6ff; border-color:#93c5fd; border-left-color:var(--accent2); color:#1e3a5f;">
+          🔑 <strong>Key insight (Accenture Digital / Muylle et al.):</strong> The dotted arrow in the new B2B approach represents <em>information and intelligence</em> flowing back from consumer (C) to the upstream B2B firm (B). This is the strategic response — actively closing the feedback loop that derived demand creates.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📈</span>Derived Demand Effects to Understand Before Responding</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue); display:block; margin-bottom:0.4rem;">⚡ Acceleration Effect</strong>
+            A small change in consumer demand can create a <em>disproportionately large</em> swing in upstream B2B demand. EV adoption → massive race for lithium, cobalt and nickel (prices up 190%+ in 18 months). Carmakers locked in long-term supply agreements from mining companies as consumer uptake forecasts increased.
+          </div>
+          <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue); display:block; margin-bottom:0.4rem;">⏱ Time-Lag Effect</strong>
+            Derived demand changes hit B2B suppliers with a delay. Boeing 737 MAX grounding (2019) and COVID-19 didn't immediately destroy Solvay's orders — production pipelines buffer the signal — but the impact eventually arrived with full force. Apple slashed production orders for all three iPhone models, only after demand shortfall was confirmed downstream.
+          </div>
+          <div style="padding:0.9rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue); display:block; margin-bottom:0.4rem;">⚖️ Passing the Blame</strong>
+            When end-consumer products fail, the blame can travel <em>upstream</em> to B2B suppliers. VW diesel emissions scandal → Bosch (engine software supplier) was implicated and faced cascading legal claims. Being an invisible B2B supplier does not protect against reputational and legal derived-demand risk.
+          </div>
+        </div>
+        <div style="padding:0.8rem; background:#fff7ed; border-radius:8px; border-left:3px solid var(--accent); font-size:0.82rem; line-height:1.7;">
+          <strong style="color:#92400e;">Supply-side shocks also create derived demand ripples:</strong> Madagascar cyclone → vanilla pod shortage → ice cream makers scramble for supply → price spike hits end consumers. B2B suppliers must monitor both demand-side <em>and</em> supply-side shocks anywhere in their extended value chain.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏗️</span>Strategic Response 1: Design for Customers of Customers</div>
+        <p style="margin-bottom:0.8rem; font-size:0.85rem; line-height:1.7;">Rather than designing products that satisfy your direct B2B customer's specs, design for what the <strong>end-consumer actually experiences</strong>. The end-consumer's voice now travels upstream via social media — B2B suppliers can tap this directly.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue);">✈️ Airbus — "The Cabin Social Media Built"</strong><br>
+            Airbus designed its new "Airspace" cabin concept by analysing what <em>flying passengers</em> were saying on social media — comparing one seat vs. another, one airline vs. another. Direct customers (airlines) buy the planes, but Airbus listened to the passengers. The result: a redesigned cabin that helps airlines sell more tickets, creating stronger derived demand for Airbus aircraft.
+          </div>
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue);">🍫 Bekaert — Non-Squeaking Brassiere Wire</strong><br>
+            Bekaert monitored Twitter complaints from consumers about their bras squeaking. Though consumers never mentioned Bekaert, the component-level cause was clear. Bekaert redesigned the wire to eliminate the squeak — a B2B product innovation directly addressing a consumer pain point that the direct customer (bra manufacturer) had not explicitly requested.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏷️</span>Strategic Response 2: Ingredient Branding (End-User Marketing)</div>
+        <p style="margin-bottom:0.8rem; font-size:0.85rem; line-height:1.7;">B2B suppliers can create <strong>consumer pull</strong> by building a brand that consumers recognise and request — even though they buy the finished product from a B2B2C intermediary. This is called <em>ingredient branding</em>.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="padding:0.8rem; background:#eff6ff; border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--navy);">🖥️ Intel Inside / GORE-TEX / Shimano</strong><br>
+            "Intel Inside" is the canonical example: Intel is a B2B chip supplier, but consumers ask "does this laptop have Intel?" — creating pull that forces PC manufacturers to keep using Intel. Same for GORE-TEX (textiles) and Shimano (bicycle gears). Ingredient brands work best when there are <strong>many OEMs, few suppliers</strong>, and the component is <strong>complex and important</strong> to the final product.
+          </div>
+          <div style="padding:0.8rem; background:#eff6ff; border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--navy);">🎬 HDR by Barco — Cinema Ingredient Branding</strong><br>
+            Barco (B2B cinema projector supplier) launched consumer-facing "HDR by Barco" premium format — promoted directly to moviegoers via Forbes reviews and co-branded with major film launches (Gladiator II). Cinema chains select Barco projectors partly because consumers actively seek out "HDR by Barco" screenings, creating derived demand pull from consumer to cinema (B¹) to Barco (B).
+          </div>
+        </div>
+        <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.8rem; line-height:1.7;">
+          <strong>Ingredient Branding Likelihood of Success (Kotler):</strong><br>
+          ① High number of OEMs + Low number of suppliers → ingredient branding feasible<br>
+          ② High complexity of component relative to final product + High importance for functionality → ingredient branding feasible<br>
+          Both conditions: Intel (microprocessors), GORE-TEX (textile laminates), Shimano (bicycle gears)
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">📊</span>Strategic Response 3: Measure NPS / Consumer Satisfaction</div>
+        <p style="margin-bottom:0.8rem; font-size:0.85rem; line-height:1.7;">B2B companies can <strong>proactively measure</strong> consumer satisfaction with the end product — even if they don't sell to consumers directly — using <strong>Net Promoter Score (NPS)</strong> and similar tools. This gives them leading indicators of derived demand shifts before they show up in order volumes.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;">
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue);">🚗 Carglass (Belron)</strong><br>
+            Carglass installs windscreens — B2B supplier (adhesive, glass) but B2C service. They measure consumer NPS obsessively to understand how the end-customer perceives the repair experience. This consumer intelligence feeds back to improve the B2B product (adhesive formulas, installation tools) and service standards upstream.
+          </div>
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue);">☕ illy / D&L Sauces — Place Strategy</strong><br>
+            illy coffee (B2B supplier to café chains) and D&L sauces (B2B supplier to chip shops) both created consumer-facing apps/maps showing where consumers can find their products. By understanding <em>where</em> consumers consume their product, they feed intelligence back to improve distribution (Place) decisions — a digital consumer engagement tool for a B2B2C product.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🔗</span>Strategic Response 4: Traceability as Competitive Advantage</div>
+        <p style="margin-bottom:0.8rem; font-size:0.85rem; line-height:1.7;">In the age of "passing the blame," <strong>traceability</strong> transforms from a compliance obligation into a <strong>strategic asset</strong>. B2B suppliers who can prove exactly which components went where — and that they met standards — are protected from derived-demand scandals and can charge premium pricing.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue);">🍾 Bekaert — Champagne Cork Wire (Bekilacq®)</strong><br>
+            Bekaert offers lacquered low-carbon steel wire for champagne cork hoods with full traceability. The product's coating formula is documented to provide corrosion resistance and superior machinery output. If a champagne producer faces a consumer complaint about cork quality, Bekaert can prove exactly what its wire delivered — no "passing the blame" risk.
+          </div>
+          <div style="padding:0.8rem; background:var(--light); border-radius:8px; font-size:0.82rem; line-height:1.7;">
+            <strong style="color:var(--blue);">🚗 VW/Bosch Diesel Scandal — The Risk of NOT Having Traceability</strong><br>
+            Bosch supplied engine software to Volkswagen. When the emissions scandal broke, Bosch faced cascading legal claims as a B2B supplier implicated in the consumer-facing scandal. Clear documentation of what was delivered, what was instructed by VW, and what Bosch's role was became essential to limit legal liability — traceability as a defensive strategic tool.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">💡</span>Summary: Strategic Response Options for B2B(2C) Firms</div>
+        <table style="width:100%; border-collapse:collapse; font-size:0.8rem;">
+          <thead>
+            <tr style="background:var(--navy); color:#fff;">
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Response</th>
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Action</th>
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Example</th>
+              <th style="padding:0.5rem 0.7rem; text-align:left;">Marketing Mix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Design for C-of-C</td>
+              <td style="padding:0.5rem 0.7rem;">Redesign B2B product based on end-consumer pain points</td>
+              <td style="padding:0.5rem 0.7rem;">Bekaert non-squeaking wire; Airbus Airspace cabin</td>
+              <td style="padding:0.5rem 0.7rem;">Product</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border); background:var(--light);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Ingredient Branding</td>
+              <td style="padding:0.5rem 0.7rem;">Build consumer pull by branding the B2B component</td>
+              <td style="padding:0.5rem 0.7rem;">Intel Inside; HDR by Barco; GORE-TEX</td>
+              <td style="padding:0.5rem 0.7rem;">Promotion / Brand</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Measure NPS</td>
+              <td style="padding:0.5rem 0.7rem;">Track end-consumer satisfaction as a leading indicator</td>
+              <td style="padding:0.5rem 0.7rem;">Carglass NPS measurement</td>
+              <td style="padding:0.5rem 0.7rem;">Market Research</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border); background:var(--light);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Consumer Place Tools</td>
+              <td style="padding:0.5rem 0.7rem;">Create consumer-facing apps/maps to increase visibility</td>
+              <td style="padding:0.5rem 0.7rem;">illy locator; D&L frituurkaart</td>
+              <td style="padding:0.5rem 0.7rem;">Distribution / Place</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Value-Based Pricing</td>
+              <td style="padding:0.5rem 0.7rem;">Price based on consumer application context, not cost</td>
+              <td style="padding:0.5rem 0.7rem;">Barco laser: value to cinema determines projector price</td>
+              <td style="padding:0.5rem 0.7rem;">Price</td>
+            </tr>
+            <tr style="background:var(--light);">
+              <td style="padding:0.5rem 0.7rem; font-weight:600; color:var(--blue);">Traceability</td>
+              <td style="padding:0.5rem 0.7rem;">Document what was delivered to prevent blame transfer</td>
+              <td style="padding:0.5rem 0.7rem;">Bekaert Bekilacq® champagne wire; Bosch VW diesel</td>
+              <td style="padding:0.5rem 0.7rem;">Defensive / Risk</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <!-- END SUB-TAB: STRATEGIC RESPONSE -->
 
   </div>
 
